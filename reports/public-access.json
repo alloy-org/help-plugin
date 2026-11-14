@@ -1,0 +1,23 @@
+{
+  "checked_at": "2026-11-14T22:17:01.506026+00:00",
+  "public_url": "https://amplenote.noteapps.info/help/chat",
+  "origin_ready": true,
+  "cloudflare_tunnel_status": "healthy",
+  "dns_record_id": "19a4ed9361e21bd8af66ad390a3d7a4b",
+  "dns_publicly_resolves": true,
+  "public_http_status": 403,
+  "public_response_header": {
+    "cf-mitigated": "challenge"
+  },
+  "public_rollout_ready": false,
+  "blocker": "The noteapps.info zone presents a browser JavaScript challenge. MCP lacks zone-setting/configuration-rule permissions for a hostname-only API exception. Additional authorization requested; no rule or existing site setting has been changed.",
+  "validation": {
+    "plugin_unit_tests": 5,
+    "backend_tests_sqlite": 32,
+    "backend_tests_postgresql": 32,
+    "compiled_plugin_live_origin_cases": 3,
+    "screenshot_head_status": 200
+  },
+  "gateway_sha256": "91d501536321f2de4136a1dde9e817aa19c4342b4e8f24e563ad4b2b55dfd873",
+  "answer_source_sha256": "7f6d9a6479f37000f59c4105866023f088c662e512fd3d473b519e151d65a0ed"
+}

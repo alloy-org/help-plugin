@@ -5,6 +5,11 @@ Answers use Amplenote's published help pages, with links and expandable source q
 When those pages do not answer a feature question, the service can show Amplenote's NoteApps
 feature assessment and its recorded screenshot. Other apps' assessments are excluded.
 
+**Deployment status:** the plugin and live GPU gateway are implemented, but the public hostname
+currently receives Cloudflare's JavaScript challenge. A hostname-only rule permission is pending;
+see [infrastructure status](docs/infrastructure.md). The normal Amplenote install will be usable
+once that public-access check passes.
+
 ## Build and install
 
 Use Node.js 20 or later:
@@ -22,6 +27,10 @@ npm run build
 4. In a note, type `/help` and choose the **Help** plugin action. It is also available through
    Quick Open. The action opens an `app.prompt` containing the chat embed.
 5. Ask a question, ask a follow-up, and expand a source card to inspect its quotation or screenshot.
+
+Run `npm run test:live` to check the deployed gateway, source scope, opaque-origin CORS,
+private-route isolation, follow-ups, and recorded screenshots. This is a small live smoke test,
+not a comprehensive accuracy evaluation; its current expected routes reflect the indexed corpus.
 
 No API key or plugin settings are required. No Amplenote notes, tasks, or account data are read.
 The chat history stays in the open window and is sent with follow-up questions; **New chat** clears it.
@@ -63,6 +72,11 @@ After building:
 ```sh
 npm run preview
 ```
+
+For a private-origin integration check while public access is pending, first run
+`ssh -N -L 18091:127.0.0.1:8091 sop-gpu1`, then in another terminal run
+`HELP_UPSTREAM=http://127.0.0.1:18091/help npm run test:live-ui`.
+This runs the compiled plugin host bridge and embedded chat against the real GPU service.
 
 Open `http://127.0.0.1:8093`. This serves the same compiled embed and forwards chat requests to the
 public help gateway. It is a development preview, not an Amplenote sandbox emulator. For a local

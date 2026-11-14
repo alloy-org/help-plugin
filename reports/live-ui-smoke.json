@@ -1,0 +1,173 @@
+{
+  "tested_at": "2026-11-14T22:12:56.016Z",
+  "upstream": "http://127.0.0.1:18091/help",
+  "calls": [
+    {
+      "question": "How do Rich Footnotes work?",
+      "history_length": 0,
+      "seconds": 1.012,
+      "result": {
+        "ok": true,
+        "response": {
+          "kind": "help",
+          "message": "",
+          "claims": [
+            {
+              "text": "Rich Footnotes allow users to add extra context and content to text in Amplenote, such as images, videos, links, and more.",
+              "interpretation": true,
+              "supports": [
+                {
+                  "evidence_id": "help:dea8e449cb48c3b1127e7264:section:13:0",
+                  "quote": "# Insert Rich Footnotes from a plugin (Rich Footnote markdown)\n\n\n\nAs you've probably read, every help document in the Amplenote Help Center is actually just a published note in the "
+                },
+                {
+                  "evidence_id": "help:dea8e449cb48c3b1127e7264:section:1:0",
+                  "quote": "# What Goes In Rich Footnotes?\n\n\n\nAs you can see by clicking any of these list items, Rich Footnotes can imbue plain text (and by extension, text in Amplenote tasks and calendar events) with all "
+                }
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "id": "help:dea8e449cb48c3b1127e7264:section:13:0",
+              "title": "rich footnotes content preview",
+              "url": "https://www.amplenote.com/help/rich_footnotes_content_preview",
+              "site": "amplenote",
+              "quote": "# Insert Rich Footnotes from a plugin (Rich Footnote markdown)\n\n\n\nAs you've probably read, every help document in the Amplenote Help Center is actually just a published note in the ",
+              "version": "8da3e19e75d781a96d910b7e9479d3b5b30a57d2213b32566a3933921bf89f47",
+              "screenshot_url": null,
+              "availability_label": null
+            },
+            {
+              "id": "help:dea8e449cb48c3b1127e7264:section:1:0",
+              "title": "rich footnotes content preview",
+              "url": "https://www.amplenote.com/help/rich_footnotes_content_preview",
+              "site": "amplenote",
+              "quote": "# What Goes In Rich Footnotes?\n\n\n\nAs you can see by clicking any of these list items, Rich Footnotes can imbue plain text (and by extension, text in Amplenote tasks and calendar events) with all ",
+              "version": "ce3efc8a4f87cdb2edde85ec9b2b8363cbe32a6320e16990c7c3c20e27b4ed08",
+              "screenshot_url": null,
+              "availability_label": null
+            }
+          ],
+          "resolved_question": "How do Rich Footnotes work?"
+        }
+      }
+    },
+    {
+      "question": "Can those include images?",
+      "history_length": 2,
+      "seconds": 1.449,
+      "result": {
+        "ok": true,
+        "response": {
+          "kind": "help",
+          "message": "",
+          "claims": [
+            {
+              "text": "Rich footnotes in Amplenote can include images.",
+              "interpretation": false,
+              "supports": [
+                {
+                  "evidence_id": "help:dea8e449cb48c3b1127e7264:section:3:0",
+                  "quote": "# Creating Rich Footnotes\n\n\n\nIf you want to insert a **link** (which includes links to Youtube videos, tweets, etc[^html27]), **image, **or **video** into text, just select and paste. Single "
+                },
+                {
+                  "evidence_id": "help:dea8e449cb48c3b1127e7264:section:13:0",
+                  "quote": "# Insert Rich Footnotes from a plugin (Rich Footnote markdown)\n\n\n\nAs you've probably read, every help document in the Amplenote Help Center is actually just a published note in the "
+                },
+                {
+                  "evidence_id": "help:dea8e449cb48c3b1127e7264:section:1:0",
+                  "quote": "# What Goes In Rich Footnotes?\n\n\n\nAs you can see by clicking any of these list items, Rich Footnotes can imbue plain text (and by extension, text in Amplenote tasks and calendar events) with all "
+                },
+                {
+                  "evidence_id": "help:dea8e449cb48c3b1127e7264:footnote:693e4dc17c05:0",
+                  "quote": "![](https://images.amplenote.com/0bbee202-0327-11e9-b258-7a639e48bef6/4363d48b-4c60-41c4-ac01-0b3a8816de8a.png)\n\nImage text supplied by the source:\n\"Ideas becoming reality\" funnel\nPhase \"Jots\"\n"
+                }
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "id": "help:dea8e449cb48c3b1127e7264:section:3:0",
+              "title": "rich footnotes content preview",
+              "url": "https://www.amplenote.com/help/rich_footnotes_content_preview",
+              "site": "amplenote",
+              "quote": "# Creating Rich Footnotes\n\n\n\nIf you want to insert a **link** (which includes links to Youtube videos, tweets, etc[^html27]), **image, **or **video** into text, just select and paste. Single ",
+              "version": "6ef646e08418055f93fe4cf3163b6528ea7a419dd26daa725a5bcd4362a346f3",
+              "screenshot_url": null,
+              "availability_label": null
+            },
+            {
+              "id": "help:dea8e449cb48c3b1127e7264:section:13:0",
+              "title": "rich footnotes content preview",
+              "url": "https://www.amplenote.com/help/rich_footnotes_content_preview",
+              "site": "amplenote",
+              "quote": "# Insert Rich Footnotes from a plugin (Rich Footnote markdown)\n\n\n\nAs you've probably read, every help document in the Amplenote Help Center is actually just a published note in the ",
+              "version": "8da3e19e75d781a96d910b7e9479d3b5b30a57d2213b32566a3933921bf89f47",
+              "screenshot_url": null,
+              "availability_label": null
+            },
+            {
+              "id": "help:dea8e449cb48c3b1127e7264:section:1:0",
+              "title": "rich footnotes content preview",
+              "url": "https://www.amplenote.com/help/rich_footnotes_content_preview",
+              "site": "amplenote",
+              "quote": "# What Goes In Rich Footnotes?\n\n\n\nAs you can see by clicking any of these list items, Rich Footnotes can imbue plain text (and by extension, text in Amplenote tasks and calendar events) with all ",
+              "version": "ce3efc8a4f87cdb2edde85ec9b2b8363cbe32a6320e16990c7c3c20e27b4ed08",
+              "screenshot_url": null,
+              "availability_label": null
+            },
+            {
+              "id": "help:dea8e449cb48c3b1127e7264:footnote:693e4dc17c05:0",
+              "title": "rich footnotes content preview",
+              "url": "https://www.amplenote.com/help/rich_footnotes_content_preview",
+              "site": "amplenote",
+              "quote": "![](https://images.amplenote.com/0bbee202-0327-11e9-b258-7a639e48bef6/4363d48b-4c60-41c4-ac01-0b3a8816de8a.png)\n\nImage text supplied by the source:\n\"Ideas becoming reality\" funnel\nPhase \"Jots\"\n",
+              "version": "c416014f17e8dc3767b2416570cd083260e6d06fa161c131390cc8007f128805",
+              "screenshot_url": null,
+              "availability_label": null
+            }
+          ],
+          "resolved_question": "Can rich footnotes include images?"
+        }
+      }
+    },
+    {
+      "question": "Does Amplenote support filtering search results by note author?",
+      "history_length": 4,
+      "seconds": 1.379,
+      "result": {
+        "ok": true,
+        "response": {
+          "kind": "feature",
+          "message": "The help articles didn't answer this directly. Here is what NoteApps records about Amplenote; this confirms feature status, not instructions for using it.",
+          "claims": [
+            {
+              "text": "Amplenote — Full text search => Filter on author: Available publicly.",
+              "interpretation": false,
+              "supports": [
+                {
+                  "evidence_id": "noteapps:app:1:feature:64",
+                  "quote": "Feature is available publicly."
+                }
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "id": "noteapps:app:1:feature:64",
+              "title": "Amplenote — Full text search => Filter on author",
+              "url": "https://noteapps.info/apps/amplenote#feature-full-text-search-filter-on-author",
+              "site": "noteapps",
+              "quote": "Feature is available publicly.",
+              "version": "61d752504c34deb995a19e6d1199b3cda738de76e01e9badbeadcb8256818203",
+              "screenshot_url": "https://da6jagld7tjfl.cloudfront.net/cnrsinvv1y43bvsgkz7i5eq9qbde",
+              "availability_label": "Available publicly."
+            }
+          ],
+          "resolved_question": "Does Amplenote support filtering search results by note author?"
+        }
+      }
+    }
+  ]
+}

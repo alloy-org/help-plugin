@@ -3,11 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "engines": { "node": ">=20" },
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "build": "node esbuild.js",
     "test": "npm run build && node --test test/*.test.js",
-    "preview": "node dev/preview.js"
+    "preview": "node dev/preview.js",
+    "test:live": "node test/live-smoke.js",
+    "test:live-ui": "node test/live-ui-smoke.js"
   },
   "devDependencies": {
     "esbuild": "0.25.12",

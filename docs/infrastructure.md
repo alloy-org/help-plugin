@@ -4,10 +4,24 @@ The service runs on `sop-gpu1` as part of [Tribase](https://github.com/alloy-org
 The plugin repository contains the client; Tribase owns ingestion, model configuration,
 the public gateway, and Ansible deployment.
 
+## Current public-access status
+
+The tunnel is healthy and public DNS is configured. The existing NoteApps zone presents a
+JavaScript challenge on this new hostname, so browser API requests currently receive HTTP 403.
+Public plugin access is **pending** an additional Cloudflare authorization for a hostname-only
+configuration-rule exception. No existing website security setting has been changed. See
+`reports/public-access.json` and Tribase's `ansible/cloudflare-help-resources.json` for the exact
+resources and proposed rule. The zone-wide challenge source must be confirmed before applying it.
+
+The compiled host and embed passed live-origin tests over a temporary SSH connection. The
+5/20-request load tests in `reports/gateway-load.json` used that private test connection, not
+public Cloudflare traffic. A recorded NoteApps screenshot returned HTTP 200 with image/png.
+
 ## Resources
 
 - Hostname: `amplenote.noteapps.info`
 - Cloudflare zone: `noteapps.info` (`a5a670b46dd277da8225ece71811d38c`)
+- DNS record ID: `19a4ed9361e21bd8af66ad390a3d7a4b` (proxied CNAME)
 - Tunnel: `tribase-help-sop-gpu1` (`a6b92f43-f18d-4c8d-93ee-637ee514c572`)
 - Connector: official cloudflared `2026.11.0`, pinned by image digest in Tribase inventory
 - Origin: `http://127.0.0.1:8091`, restricted by ingress to `/help/chat` and `/help/health`
