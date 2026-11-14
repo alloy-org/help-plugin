@@ -1,0 +1,16 @@
+{
+  "name": "amplenote-help-plugin",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build": "node esbuild.js",
+    "test": "npm run build && node --test test/*.test.js",
+    "preview": "node dev/preview.js"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.12",
+    "jsdom": "26.1.0"
+  }
+}
