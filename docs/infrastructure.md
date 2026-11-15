@@ -8,8 +8,8 @@ the public gateway, and Ansible deployment.
 
 The public gateway is live. DNS resolves normally, `/help/health` returns HTTP 200, and
 public HTTPS chat and opaque-origin CORS checks pass. The compiled plugin host and embedded DOM
-also pass a three-question public integration check, including a follow-up and a feature fallback.
-Recorded PNG and JPEG screenshots return HTTP 200 and have valid image signatures.
+also pass a four-question public integration check, including a follow-up, calendar troubleshooting, a feature fallback, and a saved feedback vote.
+Recorded screenshots return HTTP 200 and have valid image signatures.
 
 A custom WAF skip rule applies only when `http.host eq "amplenote.noteapps.info"`. It skips
 remaining custom rules, Super Bot Fight Mode, Browser Integrity Check, and the browser-oriented
@@ -20,8 +20,8 @@ The rule is `56ee269d3db849e0b5fbf71cb3e632f9` in ruleset
 `reports/public-access.json` and Tribase's `ansible/cloudflare-help-resources.json`.
 
 The 5/20-request tests in `reports/gateway-load.json` used a private SSH connection. Public HTTPS
-measurements are recorded separately in `reports/public-gateway-load.json`. These use three
-repeated questions with a warm model and prefix cache; they do not measure broad answer accuracy
+measurements are recorded separately in `reports/public-gateway-load.json`. These use small
+repeated question sets with a warm model and prefix cache; they do not measure broad answer accuracy
 or sustained throughput. Installation inside Amplenote remains a user acceptance step.
 
 ## Resources
@@ -31,7 +31,7 @@ or sustained throughput. Installation inside Amplenote remains a user acceptance
 - DNS record ID: `19a4ed9361e21bd8af66ad390a3d7a4b` (proxied CNAME)
 - Tunnel: `tribase-help-sop-gpu1` (`a6b92f43-f18d-4c8d-93ee-637ee514c572`)
 - Connector: official cloudflared `2026.11.0`, pinned by image digest in Tribase inventory
-- Origin: `http://127.0.0.1:8091`, restricted by ingress to `/help/chat` and `/help/health`
+- Origin: `http://127.0.0.1:8091`, restricted by ingress to `/help/chat`, `/help/feedback`, and `/help/health`
 - Connector project: `tribase-help`; configuration in `/home/deployuser/tribase/cloudflared`
 
 Only the new `amplenote.noteapps.info` DNS record belongs to this deployment. No records or settings
@@ -80,3 +80,32 @@ To disable the gateway itself, set `tribase_help_chat_enabled: false` and rerun 
 Source coverage is defined by Tribase's inventories, not a guarantee that every unlisted page exists
 in the index. Grounding checks and the help-versus-feature relevance gate use a language model;
 representative answer review remains useful as the plugin develops.
+
+## Retrieval regression and feedback review
+
+The original calendar-sidebar failure was retrieval/routing: the indexed Task Domains
+introduction ranked below a six-section cutoff, and the fallback replaced every help link with
+unrelated feature assessments. The gateway now expands queries, ranks article introductions with
+`Xenova/ms-marco-MiniLM-L-6-v2` on CPU, includes configuration sections from the strongest articles,
+and keeps recommendations separate from the verified synopsis. Score caching is bounded and
+contains no cached answer. Feature-existence fallback is excluded for troubleshooting/how-to
+questions and independently checks feature-label relevance.
+
+PostgreSQL tables `help_interactions` and `help_feedback` store questions, resolved wording,
+retrieval traces, response/evidence snapshots, and one updatable vote plus optional comment.
+No account identity, IP, full conversation history, or plaintext feedback token is persisted in
+these tables. Source documents remain the authority; comments never enter generation prompts.
+A ranking preference requires two affirmative answers to an identical normalized question and
+unchanged evidence versions. It cannot delete sources or change factual claims.
+
+Review recent unanswered questions and negative feedback privately on the server:
+
+```sh
+ssh sop-gpu1 'sudo docker exec tribase-api-1 python -m scripts.review_help_feedback --limit 50 --negative-only'
+```
+
+Omit `--negative-only` to see all recent queries. The review output excludes feedback credentials.
+Use this queue for source edits and regression examples; source edits take effect through normal
+help refresh. Questions and feedback remain stored until an operator removes them; clearing the
+plugin's local chat does not delete server records. The feedback endpoint has its own per-IP rate
+limit, accepts no app/corpus selector, and exposes no public query-log reader.

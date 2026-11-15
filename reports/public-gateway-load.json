@@ -1,193 +1,193 @@
 {
-  "tested_at": "2026-11-15T00:07:18.249458+00:00",
-  "transport": "Public HTTPS through Cloudflare to the live GPU gateway; three repeated questions with a warm model and prefix cache",
+  "tested_at": "2026-11-15T01:14:39.778678+00:00",
+  "transport": "Public HTTPS through Cloudflare to the live GPU gateway; four repeated questions with a warm model and prefix cache",
   "levels": [
     {
       "active_requests": 5,
-      "p50_seconds": 1.562,
-      "p95_seconds": 1.902,
+      "p50_seconds": 3.788,
+      "p95_seconds": 4.516,
       "requests": [
         {
-          "question": "How do Rich Footnotes work?",
-          "seconds": 1.437,
+          "question": "Why doesn't my task show up next to calendar?",
+          "seconds": 3.747,
           "kind": "help",
-          "source_count": 2,
+          "source_count": 1,
+          "screenshot_count": 0
+        },
+        {
+          "question": "How do Rich Footnotes work?",
+          "seconds": 4.516,
+          "kind": "help",
+          "source_count": 8,
           "screenshot_count": 0
         },
         {
           "question": "Does Amplenote support filtering search results by note author?",
-          "seconds": 1.871,
+          "seconds": 4.022,
           "kind": "feature",
           "source_count": 1,
           "screenshot_count": 1
         },
         {
           "question": "Does Amplenote support handwriting recognition?",
-          "seconds": 1.562,
-          "kind": "feature",
-          "source_count": 1,
-          "screenshot_count": 1
-        },
-        {
-          "question": "How do Rich Footnotes work?",
-          "seconds": 1.458,
+          "seconds": 3.788,
           "kind": "help",
-          "source_count": 2,
+          "source_count": 1,
           "screenshot_count": 0
         },
         {
-          "question": "Does Amplenote support filtering search results by note author?",
-          "seconds": 1.902,
-          "kind": "feature",
+          "question": "Why doesn't my task show up next to calendar?",
+          "seconds": 3.786,
+          "kind": "help",
           "source_count": 1,
-          "screenshot_count": 1
+          "screenshot_count": 0
         }
       ]
     },
     {
       "active_requests": 20,
-      "p50_seconds": 2.502,
-      "p95_seconds": 3.216,
+      "p50_seconds": 5.017,
+      "p95_seconds": 6.018,
       "requests": [
         {
-          "question": "How do Rich Footnotes work?",
-          "seconds": 2.502,
+          "question": "Why doesn't my task show up next to calendar?",
+          "seconds": 4.901,
           "kind": "help",
-          "source_count": 2,
+          "source_count": 1,
+          "screenshot_count": 0
+        },
+        {
+          "question": "How do Rich Footnotes work?",
+          "seconds": 6.0,
+          "kind": "help",
+          "source_count": 8,
           "screenshot_count": 0
         },
         {
           "question": "Does Amplenote support filtering search results by note author?",
-          "seconds": 3.019,
+          "seconds": 5.367,
           "kind": "feature",
           "source_count": 1,
           "screenshot_count": 1
         },
         {
           "question": "Does Amplenote support handwriting recognition?",
-          "seconds": 2.192,
-          "kind": "feature",
+          "seconds": 5.014,
+          "kind": "help",
           "source_count": 1,
-          "screenshot_count": 1
+          "screenshot_count": 0
+        },
+        {
+          "question": "Why doesn't my task show up next to calendar?",
+          "seconds": 3.893,
+          "kind": "help",
+          "source_count": 1,
+          "screenshot_count": 0
         },
         {
           "question": "How do Rich Footnotes work?",
-          "seconds": 2.372,
+          "seconds": 5.439,
           "kind": "help",
-          "source_count": 2,
+          "source_count": 8,
           "screenshot_count": 0
         },
         {
           "question": "Does Amplenote support filtering search results by note author?",
-          "seconds": 2.967,
+          "seconds": 5.179,
           "kind": "feature",
           "source_count": 1,
           "screenshot_count": 1
         },
         {
           "question": "Does Amplenote support handwriting recognition?",
-          "seconds": 2.423,
-          "kind": "feature",
+          "seconds": 5.013,
+          "kind": "help",
           "source_count": 1,
-          "screenshot_count": 1
+          "screenshot_count": 0
+        },
+        {
+          "question": "Why doesn't my task show up next to calendar?",
+          "seconds": 4.901,
+          "kind": "help",
+          "source_count": 1,
+          "screenshot_count": 0
         },
         {
           "question": "How do Rich Footnotes work?",
-          "seconds": 2.499,
+          "seconds": 6.018,
           "kind": "help",
-          "source_count": 2,
+          "source_count": 8,
           "screenshot_count": 0
         },
         {
           "question": "Does Amplenote support filtering search results by note author?",
-          "seconds": 3.063,
+          "seconds": 5.283,
           "kind": "feature",
           "source_count": 1,
           "screenshot_count": 1
         },
         {
           "question": "Does Amplenote support handwriting recognition?",
-          "seconds": 2.668,
-          "kind": "feature",
+          "seconds": 3.771,
+          "kind": "help",
           "source_count": 1,
-          "screenshot_count": 1
+          "screenshot_count": 0
+        },
+        {
+          "question": "Why doesn't my task show up next to calendar?",
+          "seconds": 5.017,
+          "kind": "help",
+          "source_count": 1,
+          "screenshot_count": 0
         },
         {
           "question": "How do Rich Footnotes work?",
-          "seconds": 2.422,
+          "seconds": 5.88,
           "kind": "help",
-          "source_count": 2,
+          "source_count": 8,
           "screenshot_count": 0
         },
         {
           "question": "Does Amplenote support filtering search results by note author?",
-          "seconds": 3.138,
+          "seconds": 5.138,
           "kind": "feature",
           "source_count": 1,
           "screenshot_count": 1
         },
         {
           "question": "Does Amplenote support handwriting recognition?",
-          "seconds": 2.247,
-          "kind": "feature",
+          "seconds": 5.008,
+          "kind": "help",
           "source_count": 1,
-          "screenshot_count": 1
+          "screenshot_count": 0
+        },
+        {
+          "question": "Why doesn't my task show up next to calendar?",
+          "seconds": 5.006,
+          "kind": "help",
+          "source_count": 1,
+          "screenshot_count": 0
         },
         {
           "question": "How do Rich Footnotes work?",
-          "seconds": 2.572,
+          "seconds": 6.06,
           "kind": "help",
-          "source_count": 2,
+          "source_count": 8,
           "screenshot_count": 0
         },
         {
           "question": "Does Amplenote support filtering search results by note author?",
-          "seconds": 3.224,
+          "seconds": 5.264,
           "kind": "feature",
           "source_count": 1,
           "screenshot_count": 1
         },
         {
           "question": "Does Amplenote support handwriting recognition?",
-          "seconds": 2.46,
-          "kind": "feature",
-          "source_count": 1,
-          "screenshot_count": 1
-        },
-        {
-          "question": "How do Rich Footnotes work?",
-          "seconds": 2.326,
+          "seconds": 4.996,
           "kind": "help",
-          "source_count": 2,
+          "source_count": 1,
           "screenshot_count": 0
-        },
-        {
-          "question": "Does Amplenote support filtering search results by note author?",
-          "seconds": 3.216,
-          "kind": "feature",
-          "source_count": 1,
-          "screenshot_count": 1
-        },
-        {
-          "question": "Does Amplenote support handwriting recognition?",
-          "seconds": 2.49,
-          "kind": "feature",
-          "source_count": 1,
-          "screenshot_count": 1
-        },
-        {
-          "question": "How do Rich Footnotes work?",
-          "seconds": 2.535,
-          "kind": "help",
-          "source_count": 2,
-          "screenshot_count": 0
-        },
-        {
-          "question": "Does Amplenote support filtering search results by note author?",
-          "seconds": 3.206,
-          "kind": "feature",
-          "source_count": 1,
-          "screenshot_count": 1
         }
       ]
     }

@@ -96,3 +96,63 @@ test("a failed chat request restores the question for retry", async () => {
     assert.equal(dom.window.document.querySelector("[role=alert]").textContent, "Please retry.");
   } finally { dom.window.close(); }
 });
+
+test("related help remains visible without a synopsis and feedback can retry or change a vote", async () => {
+  const calls = [];
+  const response = { kind: "excerpts", message: "Closest help articles", claims: [], sources: [],
+    interaction_id: "a".repeat(32), feedback_token: "b".repeat(43),
+    articles: [0, 1, 2, 3, 4].map(index => ({ title: "Help article " + index,
+      url: "https://www.amplenote.com/help/topic_" + index, snippet: "A relevant configuration check." })) };
+  response.articles.push({ title: "Unsafe", url: "javascript:alert(1)" });
+  let feedbackAttempts = 0;
+  const dom = new JSDOM(loadPlugin().renderEmbed.run(), {
+    runScripts: "dangerously", beforeParse(window) {
+      window.callAmplenotePlugin = async (action, payload) => {
+        calls.push({ action, payload });
+        if (action === "ask") return { ok: true, response };
+        return ++feedbackAttempts === 1 ? { ok: false, error: "Please retry." } : { ok: true, response: { ok: true } };
+      };
+    },
+  });
+  try {
+    const doc = dom.window.document;
+    doc.getElementById("question").value = "Why are my tasks missing?";
+    doc.getElementById("question-form").dispatchEvent(new dom.window.Event("submit", { cancelable: true }));
+    await new Promise(resolve => setTimeout(resolve, 15));
+    assert.equal(doc.querySelectorAll(".article-list a").length, 5);
+    assert.equal(doc.querySelector("a[href^='javascript:']"), null);
+    const [yes, no] = doc.querySelectorAll(".feedback-actions button");
+    doc.querySelector(".feedback textarea").value = "Task Domain setup was missing.";
+    no.click();
+    await new Promise(resolve => setTimeout(resolve, 15));
+    assert.equal(no.disabled, false);
+    assert.match(doc.querySelector(".feedback-status").textContent, /retry/);
+    no.click();
+    await new Promise(resolve => setTimeout(resolve, 15));
+    assert.equal(no.getAttribute("aria-pressed"), "true");
+    assert.equal(calls.at(-1).payload.helpful, false);
+    assert.equal(calls.at(-1).payload.comment, "Task Domain setup was missing.");
+    yes.click();
+    await new Promise(resolve => setTimeout(resolve, 15));
+    assert.equal(calls.at(-1).payload.helpful, true);
+    assert.equal(yes.getAttribute("aria-pressed"), "true");
+    assert.equal(no.getAttribute("aria-pressed"), "false");
+  } finally { dom.window.close(); }
+});
+
+test("feedback bridge sends a bounded vote bound to the displayed answer", async () => {
+  let sent;
+  const plugin = loadPlugin(async (url, options) => {
+    sent = { url, body: JSON.parse(options.body) };
+    return { ok: true, json: async () => ({ ok: true }) };
+  });
+  const result = await plugin.onEmbedCall({}, "feedback", {
+    interaction_id: "a".repeat(32), feedback_token: "b".repeat(43), helpful: false,
+    comment: "x".repeat(2000), sites: ["gitclear"], question: "must-not-send",
+  });
+  assert.equal(result.ok, true);
+  assert.equal(sent.url, "https://amplenote.noteapps.info/help/feedback");
+  assert.equal(sent.body.comment.length, 1000);
+  assert.deepEqual(Object.keys(sent.body).sort(), ["comment", "feedback_token", "helpful", "interaction_id"]);
+  assert.equal((await plugin.onEmbedCall({}, "feedback", { helpful: true })).ok, false);
+});

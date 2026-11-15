@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-15T00:08:20.240066+00:00",
+  "checked_at": "2026-11-15T01:16:08.395406+00:00",
   "public_url": "https://amplenote.noteapps.info/help/chat",
   "origin_ready": true,
   "cloudflare_tunnel_status": "healthy",
@@ -8,11 +8,11 @@
   "public_http_status": 200,
   "public_rollout_ready": true,
   "validation": {
-    "plugin_unit_tests": 5,
-    "backend_tests_sqlite": 32,
-    "backend_tests_postgresql": 32,
-    "compiled_plugin_live_public_cases": 3,
-    "public_chat_cases": 4,
+    "plugin_unit_tests": 7,
+    "backend_tests_sqlite": 43,
+    "backend_tests_postgresql": 43,
+    "compiled_plugin_live_public_cases": 4,
+    "public_chat_cases": 7,
     "opaque_origin_cors": "passed",
     "private_routes_return_404": [
       "/coverage",
@@ -22,12 +22,19 @@
     ],
     "caller_corpus_override_rejected": true,
     "screenshot_formats_verified": [
-      "png",
-      "jpeg"
-    ]
+      "png"
+    ],
+    "feedback_vote_saved_and_checked_in_postgresql": true,
+    "focused_input": {
+      "textarea_border": "0px",
+      "textarea_outline": "none",
+      "composer_border": "1px",
+      "composer_shadow": "none"
+    },
+    "feedback_review_utility_packaged": true
   },
-  "gateway_sha256": "91d501536321f2de4136a1dde9e817aa19c4342b4e8f24e563ad4b2b55dfd873",
-  "answer_source_sha256": "7f6d9a6479f37000f59c4105866023f088c662e512fd3d473b519e151d65a0ed",
+  "gateway_sha256": "30cf76460157e9284a28d96a0caf121a7b97aeb3a7809ac989d5e9e02b6cfba2",
+  "answer_source_sha256": "28944a224c1ac9f99345c1824f8fc2d9a6afeb943b0d990727ab7e971806f40c",
   "browser_challenge_exception": {
     "id": "56ee269d3db849e0b5fbf71cb3e632f9",
     "ruleset_id": "fa3eee1bcfac410da2d6c943ad189ca2",
@@ -57,5 +64,38 @@
     "ddos_not_skipped": true,
     "zone_security_level": "medium"
   },
-  "limitations": "Small representative smoke suite, not a comprehensive answer-accuracy evaluation. Compiled host and DOM tested against public HTTPS; installation inside Amplenote remains a user acceptance step."
+  "limitations": "Representative smoke tests, not a comprehensive answer-accuracy evaluation. Updated plugin note code matches the compiled build; in-Amplenote acceptance of this version remains a user check.",
+  "compiled_plugin_sha256": "8c5455cdf8f866820b1dac66d79e05127a54674ed00a9a0a591aeff6055955df",
+  "regression": {
+    "question": "Why doesn't my task show up next to calendar?",
+    "task_domains_document_was_indexed": true,
+    "old_explanation_section_rank": 10,
+    "old_section_cutoff": 6,
+    "calendar_cases": [
+      {
+        "question": "Why doesn't my task show up next to calendar?",
+        "kind": "help",
+        "task_domains_article_rank": 1,
+        "related_article_count": 5
+      },
+      {
+        "question": "My calendar sidebar has no tasks. What should I check?",
+        "kind": "help",
+        "task_domains_article_rank": 1,
+        "related_article_count": 5
+      },
+      {
+        "question": "Where do I choose which notes and tags supply the calendar task list?",
+        "kind": "help",
+        "task_domains_article_rank": 1,
+        "related_article_count": 5
+      }
+    ]
+  },
+  "public_paths": [
+    "/help/chat",
+    "/help/health",
+    "/help/feedback"
+  ],
+  "plugin_note": "https://www.amplenote.com/notes/3f3292c0-e08a-11f1-85ef-1bb38c248460"
 }

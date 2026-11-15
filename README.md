@@ -32,8 +32,11 @@ private-route isolation, follow-ups, and recorded screenshots. This is a small l
 not a comprehensive accuracy evaluation; its current expected routes reflect the indexed corpus.
 
 No API key or plugin settings are required. No Amplenote notes, tasks, or account data are read.
-The chat history stays in the open window and is sent with follow-up questions; **New chat** clears it.
-The Help action does not insert an answer into your current note.
+The chat history stays in the open window and is sent with follow-up questions; **New chat** clears
+that local history. The server saves each submitted question, its resolved follow-up wording, the
+answer and evidence versions, retrieval trace, and any yes/no vote and optional comment. These question/feedback tables contain
+no Amplenote account identity or IP address. The composer discloses question/feedback
+storage. The Help action does not insert an answer into your current note.
 
 ## Source and build layout
 
@@ -53,14 +56,25 @@ Its embedded client has no external script or stylesheet dependencies.
 
 The endpoint is `https://amplenote.noteapps.info/help/chat`. It accepts only `question` and
 bounded `history`; callers cannot select another corpus, app ID, model, or upstream URL.
-The gateway first checks whether a grounded help answer addresses the actual question.
+The gateway expands the question into up to three alternate keyword searches, combines lexical
+and semantic matches, and reranks article introductions with a small local cross-encoder.
+The strongest articles supply the synopsis context; a separate **Related Amplenote help** list
+retains up to five distinct help-page links even when no synopsis can be verified. Troubleshooting
+answers suggest supported checks without claiming to inspect the user's account.
+The gateway checks whether a grounded help answer addresses the actual question.
 Its fallback queries only Amplenote's NoteApps records and preserves unknown, beta, pending-review,
 and qualified states. Screenshot links are recorded evidence; a missing image does not establish
 anything about feature support.
 
 The public gateway supplies CORS headers for sandboxed browser origins. No Amplenote CORS proxy
 is required, and no private Tribase API credential is shipped to the browser. A Cloudflare Tunnel
-exposes only `/help/chat` and `/help/health`; its other paths return 404.
+exposes only `/help/chat`, `/help/feedback`, and `/help/health`; its other paths return 404.
+
+**Yes, this answers my question** and **No, this doesn't answer** save one changeable vote per
+answer; expand **Add detail** before voting to include a comment. A per-answer token authorizes
+that vote, and the server stores only its hash. Feedback never becomes factual evidence or
+rewrites help pages. Two positive votes on the same question can give unchanged source evidence
+a small ranking boost; operators can review negative feedback to improve source pages and tests.
 
 See [infrastructure](docs/infrastructure.md) for the deployed resources and operations.
 

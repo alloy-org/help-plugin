@@ -6,10 +6,13 @@ const base = process.env.HELP_API_URL || "https://amplenote.noteapps.info/help";
 const report = { tested_at: new Date().toISOString(), endpoint: base, cases: [], boundary: [], screenshots: [] };
 const first = "How do Rich Footnotes work?";
 const cases = [
+  { question: "Why doesn't my task show up next to calendar?", kind: "help", taskDomains: true },
+  { question: "My calendar sidebar has no tasks. What should I check?", kind: "help", taskDomains: true },
+  { question: "Where do I choose which notes and tags supply the calendar task list?", kind: "help", taskDomains: true },
   { question: first, kind: "help" },
   { question: "Can those include images?", kind: "help", history: [{ role: "user", content: first }, { role: "assistant", content: "Rich Footnotes attach extra context to text." }] },
   { question: "Does Amplenote support filtering search results by note author?", kind: "feature", screenshot: true },
-  { question: "Does Amplenote support handwriting recognition?", kind: "feature", screenshot: true },
+  { question: "Does Amplenote support handwriting recognition?", kind: ["help", "feature"], screenshot: true, handwriting: true },
 ];
 for (const item of cases) {
   const started = performance.now();
@@ -18,8 +21,16 @@ for (const item of cases) {
   assert.equal(response.status, 200);
   assert.equal(response.headers.get("access-control-allow-origin"), "*");
   const answer = await response.json();
-  assert.equal(answer.kind, item.kind, "Expected route for " + item.question);
+  assert.ok((Array.isArray(item.kind) ? item.kind : [item.kind]).includes(answer.kind), "Expected route for " + item.question);
   assert.ok(answer.claims.length);
+  assert.ok(answer.articles.length >= 3 && answer.articles.length <= 5, "Always retain distinct help recommendations");
+  assert.equal(new Set(answer.articles.map(article => article.url)).size, answer.articles.length);
+  assert.ok(answer.articles.every(article => new URL(article.url).hostname === "www.amplenote.com"));
+  if (item.taskDomains) {
+    assert.match(answer.claims.map(claim => claim.text).join(" "), /task domain/i);
+    assert.ok(answer.articles.slice(0, 3).some(article => article.url.endsWith("/using_calendar_task_domains")));
+    assert.ok(answer.sources.some(source => source.url.endsWith("/using_calendar_task_domains")), "Synopsis cites the indexed Task Domains page");
+  }
   const sources = new Map(answer.sources.map(source => [source.id, source]));
   for (const claim of answer.claims) {
     assert.ok(claim.supports.length);
@@ -37,8 +48,23 @@ for (const item of cases) {
       }
     }
   }
-  if (item.screenshot) assert.ok(answer.sources.some(source => source.screenshot_url));
-  report.cases.push({ question: item.question, seconds: Math.round((performance.now() - started) / 10) / 100, response: answer });
+  if (item.handwriting && answer.kind === "help") {
+    assert.ok(answer.sources.some(source => source.url.endsWith("/ocr_capture_image_contents_to_text") && /handwrit/i.test(source.quote)),
+      "A help answer about handwriting must cite the OCR article's actual handwritten-text evidence");
+  }
+  if (item.screenshot && answer.kind === "feature") assert.ok(answer.sources.some(source => source.screenshot_url));
+  const { feedback_token, ...recordedAnswer } = answer;
+  report.cases.push({ question: item.question, seconds: Math.round((performance.now() - started) / 10) / 100, response: recordedAnswer });
+  if (item.question === cases[0].question) {
+    const vote = { interaction_id: answer.interaction_id, feedback_token, helpful: false, comment: "Automated smoke test: feedback persistence" };
+    const denied = await fetch(base + "/feedback", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ...vote, feedback_token: "x".repeat(43) }) });
+    assert.equal(denied.status, 404);
+    const saved = await fetch(base + "/feedback", { method: "POST", headers: { "Content-Type": "application/json", "Origin": "null" }, body: JSON.stringify(vote) });
+    assert.equal(saved.status, 200);
+    assert.equal(saved.headers.get("access-control-allow-origin"), "*");
+    assert.equal((await saved.json()).ok, true);
+    report.feedback = { interaction_id: answer.interaction_id, valid_vote_status: saved.status, invalid_token_status: denied.status };
+  }
   console.log(answer.kind + ": " + item.question);
 }
 const preflight = await fetch(base + "/chat", { method: "OPTIONS", headers: { "Origin": "null", "Access-Control-Request-Method": "POST", "Access-Control-Request-Headers": "content-type" } });
