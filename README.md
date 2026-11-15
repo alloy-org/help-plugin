@@ -5,10 +5,9 @@ Answers use Amplenote's published help pages, with links and expandable source q
 When those pages do not answer a feature question, the service can show Amplenote's NoteApps
 feature assessment and its recorded screenshot. Other apps' assessments are excluded.
 
-**Deployment status:** the plugin and live GPU gateway are implemented, but the public hostname
-currently receives Cloudflare's JavaScript challenge. A hostname-only rule permission is pending;
-see [infrastructure status](docs/infrastructure.md). The normal Amplenote install will be usable
-once that public-access check passes.
+**Deployment status:** the public GPU gateway is live at `https://amplenote.noteapps.info/help`.
+Public chat, follow-ups, source links, screenshot files, and the compiled plugin's chat UI pass
+integration checks. Build and install below to test it inside Amplenote.
 
 ## Build and install
 
@@ -73,10 +72,10 @@ After building:
 npm run preview
 ```
 
-For a private-origin integration check while public access is pending, first run
+Run `npm run test:live-ui` to exercise the compiled host bridge and embedded chat against the
+public GPU gateway. For a private-origin diagnostic, first run
 `ssh -N -L 18091:127.0.0.1:8091 sop-gpu1`, then in another terminal run
 `HELP_UPSTREAM=http://127.0.0.1:18091/help npm run test:live-ui`.
-This runs the compiled plugin host bridge and embedded chat against the real GPU service.
 
 Open `http://127.0.0.1:8093`. This serves the same compiled embed and forwards chat requests to the
 public help gateway. It is a development preview, not an Amplenote sandbox emulator. For a local

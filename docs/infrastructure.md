@@ -6,16 +6,23 @@ the public gateway, and Ansible deployment.
 
 ## Current public-access status
 
-The tunnel is healthy and public DNS is configured. The existing NoteApps zone presents a
-JavaScript challenge on this new hostname, so browser API requests currently receive HTTP 403.
-Public plugin access is **pending** an additional Cloudflare authorization for a hostname-only
-configuration-rule exception. No existing website security setting has been changed. See
-`reports/public-access.json` and Tribase's `ansible/cloudflare-help-resources.json` for the exact
-resources and proposed rule. The zone-wide challenge source must be confirmed before applying it.
+The public gateway is live. DNS resolves normally, `/help/health` returns HTTP 200, and
+public HTTPS chat and opaque-origin CORS checks pass. The compiled plugin host and embedded DOM
+also pass a three-question public integration check, including a follow-up and a feature fallback.
+Recorded PNG and JPEG screenshots return HTTP 200 and have valid image signatures.
 
-The compiled host and embed passed live-origin tests over a temporary SSH connection. The
-5/20-request load tests in `reports/gateway-load.json` used that private test connection, not
-public Cloudflare traffic. A recorded NoteApps screenshot returned HTTP 200 with image/png.
+A custom WAF skip rule applies only when `http.host eq "amplenote.noteapps.info"`. It skips
+remaining custom rules, Super Bot Fight Mode, Browser Integrity Check, and the browser-oriented
+security-level check for this API hostname. The existing NoteApps custom rule is unchanged;
+managed WAF and DDoS protection remain active, and the zone security level remains `medium`.
+The rule is `56ee269d3db849e0b5fbf71cb3e632f9` in ruleset
+`fa3eee1bcfac410da2d6c943ad189ca2`. Exact parameters and verification are recorded in
+`reports/public-access.json` and Tribase's `ansible/cloudflare-help-resources.json`.
+
+The 5/20-request tests in `reports/gateway-load.json` used a private SSH connection. Public HTTPS
+measurements are recorded separately in `reports/public-gateway-load.json`. These use three
+repeated questions with a warm model and prefix cache; they do not measure broad answer accuracy
+or sustained throughput. Installation inside Amplenote remains a user acceptance step.
 
 ## Resources
 
@@ -56,7 +63,8 @@ ssh sop-gpu1 'curl -fsS http://127.0.0.1:20241/ready'
 ```
 
 To disable public access, stop the isolated `tribase-help` Compose project and remove only the
-`amplenote.noteapps.info` DNS record. The private Tribase service and indexed data continue running.
+`amplenote.noteapps.info` DNS record and its hostname-only browser-challenge exception. The private
+Tribase service and indexed data continue running.
 To disable the gateway itself, set `tribase_help_chat_enabled: false` and rerun `deploy.yml`.
 
 ## Acceptance checks

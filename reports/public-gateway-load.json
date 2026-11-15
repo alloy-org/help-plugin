@@ -1,0 +1,195 @@
+{
+  "tested_at": "2026-11-15T00:07:18.249458+00:00",
+  "transport": "Public HTTPS through Cloudflare to the live GPU gateway; three repeated questions with a warm model and prefix cache",
+  "levels": [
+    {
+      "active_requests": 5,
+      "p50_seconds": 1.562,
+      "p95_seconds": 1.902,
+      "requests": [
+        {
+          "question": "How do Rich Footnotes work?",
+          "seconds": 1.437,
+          "kind": "help",
+          "source_count": 2,
+          "screenshot_count": 0
+        },
+        {
+          "question": "Does Amplenote support filtering search results by note author?",
+          "seconds": 1.871,
+          "kind": "feature",
+          "source_count": 1,
+          "screenshot_count": 1
+        },
+        {
+          "question": "Does Amplenote support handwriting recognition?",
+          "seconds": 1.562,
+          "kind": "feature",
+          "source_count": 1,
+          "screenshot_count": 1
+        },
+        {
+          "question": "How do Rich Footnotes work?",
+          "seconds": 1.458,
+          "kind": "help",
+          "source_count": 2,
+          "screenshot_count": 0
+        },
+        {
+          "question": "Does Amplenote support filtering search results by note author?",
+          "seconds": 1.902,
+          "kind": "feature",
+          "source_count": 1,
+          "screenshot_count": 1
+        }
+      ]
+    },
+    {
+      "active_requests": 20,
+      "p50_seconds": 2.502,
+      "p95_seconds": 3.216,
+      "requests": [
+        {
+          "question": "How do Rich Footnotes work?",
+          "seconds": 2.502,
+          "kind": "help",
+          "source_count": 2,
+          "screenshot_count": 0
+        },
+        {
+          "question": "Does Amplenote support filtering search results by note author?",
+          "seconds": 3.019,
+          "kind": "feature",
+          "source_count": 1,
+          "screenshot_count": 1
+        },
+        {
+          "question": "Does Amplenote support handwriting recognition?",
+          "seconds": 2.192,
+          "kind": "feature",
+          "source_count": 1,
+          "screenshot_count": 1
+        },
+        {
+          "question": "How do Rich Footnotes work?",
+          "seconds": 2.372,
+          "kind": "help",
+          "source_count": 2,
+          "screenshot_count": 0
+        },
+        {
+          "question": "Does Amplenote support filtering search results by note author?",
+          "seconds": 2.967,
+          "kind": "feature",
+          "source_count": 1,
+          "screenshot_count": 1
+        },
+        {
+          "question": "Does Amplenote support handwriting recognition?",
+          "seconds": 2.423,
+          "kind": "feature",
+          "source_count": 1,
+          "screenshot_count": 1
+        },
+        {
+          "question": "How do Rich Footnotes work?",
+          "seconds": 2.499,
+          "kind": "help",
+          "source_count": 2,
+          "screenshot_count": 0
+        },
+        {
+          "question": "Does Amplenote support filtering search results by note author?",
+          "seconds": 3.063,
+          "kind": "feature",
+          "source_count": 1,
+          "screenshot_count": 1
+        },
+        {
+          "question": "Does Amplenote support handwriting recognition?",
+          "seconds": 2.668,
+          "kind": "feature",
+          "source_count": 1,
+          "screenshot_count": 1
+        },
+        {
+          "question": "How do Rich Footnotes work?",
+          "seconds": 2.422,
+          "kind": "help",
+          "source_count": 2,
+          "screenshot_count": 0
+        },
+        {
+          "question": "Does Amplenote support filtering search results by note author?",
+          "seconds": 3.138,
+          "kind": "feature",
+          "source_count": 1,
+          "screenshot_count": 1
+        },
+        {
+          "question": "Does Amplenote support handwriting recognition?",
+          "seconds": 2.247,
+          "kind": "feature",
+          "source_count": 1,
+          "screenshot_count": 1
+        },
+        {
+          "question": "How do Rich Footnotes work?",
+          "seconds": 2.572,
+          "kind": "help",
+          "source_count": 2,
+          "screenshot_count": 0
+        },
+        {
+          "question": "Does Amplenote support filtering search results by note author?",
+          "seconds": 3.224,
+          "kind": "feature",
+          "source_count": 1,
+          "screenshot_count": 1
+        },
+        {
+          "question": "Does Amplenote support handwriting recognition?",
+          "seconds": 2.46,
+          "kind": "feature",
+          "source_count": 1,
+          "screenshot_count": 1
+        },
+        {
+          "question": "How do Rich Footnotes work?",
+          "seconds": 2.326,
+          "kind": "help",
+          "source_count": 2,
+          "screenshot_count": 0
+        },
+        {
+          "question": "Does Amplenote support filtering search results by note author?",
+          "seconds": 3.216,
+          "kind": "feature",
+          "source_count": 1,
+          "screenshot_count": 1
+        },
+        {
+          "question": "Does Amplenote support handwriting recognition?",
+          "seconds": 2.49,
+          "kind": "feature",
+          "source_count": 1,
+          "screenshot_count": 1
+        },
+        {
+          "question": "How do Rich Footnotes work?",
+          "seconds": 2.535,
+          "kind": "help",
+          "source_count": 2,
+          "screenshot_count": 0
+        },
+        {
+          "question": "Does Amplenote support filtering search results by note author?",
+          "seconds": 3.206,
+          "kind": "feature",
+          "source_count": 1,
+          "screenshot_count": 1
+        }
+      ]
+    }
+  ]
+}

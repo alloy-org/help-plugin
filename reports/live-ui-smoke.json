@@ -1,11 +1,11 @@
 {
-  "tested_at": "2026-11-14T22:12:56.016Z",
-  "upstream": "http://127.0.0.1:18091/help",
+  "tested_at": "2026-11-15T00:00:30.804Z",
+  "upstream": "https://amplenote.noteapps.info/help",
   "calls": [
     {
       "question": "How do Rich Footnotes work?",
       "history_length": 0,
-      "seconds": 1.012,
+      "seconds": 1.192,
       "result": {
         "ok": true,
         "response": {
@@ -56,7 +56,7 @@
     {
       "question": "Can those include images?",
       "history_length": 2,
-      "seconds": 1.449,
+      "seconds": 1.063,
       "result": {
         "ok": true,
         "response": {
@@ -135,7 +135,7 @@
     {
       "question": "Does Amplenote support filtering search results by note author?",
       "history_length": 4,
-      "seconds": 1.379,
+      "seconds": 1.394,
       "result": {
         "ok": true,
         "response": {

@@ -54,8 +54,18 @@ assert.equal(forbiddenScope.status, 422);
 for (const url of new Set(report.cases.flatMap(item => item.response.sources.map(source => source.screenshot_url).filter(Boolean)))) {
   const response = await fetch(url, { method: "HEAD", signal: AbortSignal.timeout(20000) });
   assert.equal(response.status, 200, "Recorded screenshot should be reachable: " + url);
-  assert.ok(response.headers.get("content-type").startsWith("image/"));
-  report.screenshots.push({ url, status: response.status, content_type: response.headers.get("content-type") });
+  const ranged = await fetch(url, { headers: { Range: "bytes=0-31" }, signal: AbortSignal.timeout(20000) });
+  assert.ok([200, 206].includes(ranged.status));
+  const reader = ranged.body.getReader();
+  const { value } = await reader.read();
+  await reader.cancel();
+  const prefix = Buffer.from(value).subarray(0, 16);
+  const format = prefix.subarray(0, 8).equals(Buffer.from("89504e470d0a1a0a", "hex")) ? "png"
+    : prefix.subarray(0, 3).equals(Buffer.from("ffd8ff", "hex")) ? "jpeg"
+    : prefix.subarray(0, 3).toString() === "GIF" ? "gif"
+    : prefix.subarray(0, 4).toString() === "RIFF" && prefix.subarray(8, 12).toString() === "WEBP" ? "webp" : null;
+  assert.ok(format, "Recorded screenshot must contain recognized image bytes: " + url);
+  report.screenshots.push({ url, status: response.status, content_type: response.headers.get("content-type"), verified_format: format });
 }
 await mkdir("reports", { recursive: true });
 await writeFile("reports/live-smoke.json", JSON.stringify(report, null, 2) + "\n");
