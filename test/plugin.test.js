@@ -13,9 +13,22 @@ test("compiled artifact evaluates to a plugin and opens a prompt embed without r
   await plugin.appOption.Help({ prompt: async (...args) => { invocation = args; } });
   assert.equal(invocation[1].inputs[0].type, "embed");
   assert.equal(invocation[1].primaryAction.label, "Close");
+  assert.equal(invocation[1].desiredWidth, 900);
   assert.equal(plugin.renderEmbed.check({ context: { renderEmbedTarget: "prompt" } }), true);
   assert.equal(plugin.renderEmbed.check({ context: { renderEmbedTarget: "notesDashboard" } }), false);
   assert.match(plugin.renderEmbed.run(), /id="question-form"/);
+});
+
+test("prompt retries without desiredWidth on clients that reject the key", async () => {
+  const plugin = loadPlugin();
+  const calls = [];
+  await plugin.appOption.Help({ prompt: async (...args) => {
+    calls.push(args);
+    if ("desiredWidth" in args[1]) throw new Error("Unknown prompt option: desiredWidth");
+  } });
+  assert.equal(calls.length, 2);
+  assert.equal("desiredWidth" in calls[1][1], false);
+  assert.equal(calls[1][1].inputs[0].type, "embed");
 });
 
 test("host bridge sends only bounded chat input and no privileged API key", async () => {

@@ -28,9 +28,10 @@ npm run build
 5. Ask a question, ask a follow-up, and expand a source card to inspect its quotation or screenshot.
 6. Choose **Expand chat** in the prompt footer to open the full-width plugin view. This starts a new chat.
 
-The current prompt API has no width setting. The compact popup sizes its embed to leave room for
+The popup requests a 900px `desiredWidth`; clients without that prompt key fall back to the default
+width (the fallback can be removed in December 2026). The compact popup sizes its embed to leave room for
 the host header/footer, keeps the composer visible, and scrolls only its transcript. The expanded
-view uses the available width, with a 1,200px reading limit. No Amplenote web-app release is needed.
+view uses the available width, with a 1,200px reading limit.
 Source clicks call the host's `app.navigate` through the plugin bridge. Amplenote web supports help
 URLs there; if a client rejects another source URL (such as NoteApps), the UI offers its address
 for copying rather than attempting a blocked iframe popup.
