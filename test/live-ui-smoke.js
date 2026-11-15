@@ -7,7 +7,7 @@ import { JSDOM } from "jsdom";
 const upstream = process.env.HELP_UPSTREAM || "https://amplenote.noteapps.info/help";
 const calls = [];
 const plugin = vm.runInNewContext(await readFile("build/compiled.js", "utf8"), {
-  AbortController, clearTimeout, setTimeout,
+  AbortController, clearTimeout, setTimeout, URL,
   fetch: (url, options) => fetch(upstream + new URL(url).pathname.replace(/^\/help/, ""), options),
 });
 const dom = new JSDOM(plugin.renderEmbed.run(), {

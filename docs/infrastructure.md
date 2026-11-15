@@ -109,3 +109,22 @@ Use this queue for source edits and regression examples; source edits take effec
 help refresh. Questions and feedback remain stored until an operator removes them; clearing the
 plugin's local chat does not delete server records. The feedback endpoint has its own per-IP rate
 limit, accepts no app/corpus selector, and exposes no public query-log reader.
+
+## Email-capture regression
+
+Mail-to-Note was indexed but lost when the reranker used only article introductions. Ranking now
+includes matched sections, uses the original question without concatenating keyword rewrites,
+and semantically reviews how-to candidates. The model may omit unrelated recommendations.
+Context is selected separately for each leading article and can include a directly linked second
+article even when its score falls just outside the normal synthesis threshold. Structured output
+constrains quotation pairs and one verification decision per claim; post-validation remains strict.
+
+For how-to questions, the best matching section of each leading article can refer the retriever
+to at most two indexed help guides. This is one bounded hop using stored URLs, with no external
+network fetch or unindexed page accepted. It protects setup guides whose titles use vocabulary
+that differs from the question (for example, Gmail message versus Mail-to-Note).
+
+Troubleshooting and location questions retain introductory prerequisite explanations in article
+ranking. How-to workflow questions can rank a matching section above a general introduction.
+A generated claim containing a URL is omitted independently; remaining prose still must pass
+exact quotation and support verification before it can be returned.

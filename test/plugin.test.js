@@ -5,7 +5,7 @@ import vm from "node:vm";
 import { JSDOM } from "jsdom";
 
 const compiled = await readFile(new URL("../build/compiled.js", import.meta.url), "utf8");
-const loadPlugin = fetch => vm.runInNewContext(compiled, { AbortController, clearTimeout, fetch, setTimeout });
+const loadPlugin = fetch => vm.runInNewContext(compiled, { AbortController, clearTimeout, fetch, setTimeout, URL });
 
 test("compiled artifact evaluates to a plugin and opens a prompt embed without reading notes", async () => {
   const plugin = loadPlugin();
@@ -155,4 +155,58 @@ test("feedback bridge sends a bounded vote bound to the displayed answer", async
   assert.equal(sent.body.comment.length, 1000);
   assert.deepEqual(Object.keys(sent.body).sort(), ["comment", "feedback_token", "helpful", "interaction_id"]);
   assert.equal((await plugin.onEmbedCall({}, "feedback", { helpful: true })).ok, false);
+});
+
+
+test("source navigation uses the host bridge and validates links again at the host boundary", async () => {
+  const plugin = loadPlugin();
+  const opened = [];
+  const app = { navigate: async url => { opened.push(url); return true; } };
+  assert.equal((await plugin.onEmbedCall(app, "navigate", {url: "https://www.amplenote.com/help/mail-to-note"})).ok, true);
+  assert.equal((await plugin.onEmbedCall(app, "navigate", {url: "https://evil.invalid/"})).ok, false);
+  assert.equal((await plugin.onEmbedCall(app, "navigate", {url: "https://www.amplenote.com@evil.invalid/help/mail-to-note"})).ok, false);
+  assert.equal(opened.length, 1);
+  assert.equal((await plugin.onEmbedCall({navigate: async () => false}, "navigate", {url: "https://noteapps.info/apps/amplenote"})).ok, false);
+  const dom = new JSDOM(plugin.renderEmbed.run(), {runScripts: "dangerously", beforeParse(window) {
+    window.callAmplenotePlugin = async (action, payload) => {
+      if (action === "ask") return {ok: true, response: {articles: [{url: opened[0], title: "Mail-to-note"}]}};
+      assert.equal(action, "navigate");
+      assert.equal(payload.url, opened[0]);
+      return {ok: false, error: "Copy its address to your browser."};
+    };
+  }});
+  try {
+    const doc = dom.window.document;
+    doc.getElementById("question").value = "Email capture?";
+    doc.getElementById("question-form").dispatchEvent(new dom.window.Event("submit", {cancelable: true}));
+    await new Promise(resolve => setTimeout(resolve, 15));
+    const link = doc.querySelector(".article-list a");
+    assert.equal(link.hasAttribute("target"), false);
+    const event = new dom.window.MouseEvent("click", {bubbles: true, cancelable: true});
+    link.dispatchEvent(event);
+    assert.equal(event.defaultPrevented, true);
+    await new Promise(resolve => setTimeout(resolve, 15));
+    assert.equal(doc.querySelector(".link-error input").value, opened[0]);
+  } finally {dom.window.close();}
+});
+
+test("Expand opens the full-width plugin section and prompt height follows the browser window", async () => {
+  const plugin = loadPlugin();
+  let url, args;
+  await plugin.appOption.Help({context: {pluginUUID: "uuid"}, prompt: async () => [null, "expand"], openEmbed: async value => {args=value;}, navigate: async value => {url=value;}});
+  assert.equal(url, "https://www.amplenote.com/notes/plugins/uuid");
+  assert.equal(args.view, "helpChat");
+  assert.equal(plugin.renderEmbed.check({context: {renderEmbedTarget: "section"}}), true);
+  const heights = [];
+  const dom = new JSDOM(plugin.renderEmbed.run(), {runScripts: "dangerously", beforeParse(window) {
+    window.outerHeight = 850;
+    window.setAmplenoteEmbedHeight = height => heights.push(height);
+  }});
+  try {
+    assert.equal(heights[0], 370);
+    dom.window.outerHeight = 700;
+    dom.window.dispatchEvent(new dom.window.Event("resize"));
+    assert.equal(heights.at(-1), 220);
+  } finally {dom.window.close();}
+  assert.match(plugin.renderEmbed.run({context: {renderEmbedTarget: "section"}}), /data-view="full"/);
 });

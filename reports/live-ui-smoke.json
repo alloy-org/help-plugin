@@ -1,12 +1,12 @@
 {
-  "tested_at": "2026-11-15T01:10:40.818Z",
+  "tested_at": "2026-11-15T03:09:45.826Z",
   "upstream": "https://amplenote.noteapps.info/help",
   "calls": [
     {
       "action": "ask",
       "question": "How do Rich Footnotes work?",
       "history_length": 0,
-      "seconds": 3.55,
+      "seconds": 7.791,
       "result": {
         "ok": true,
         "response": {
@@ -14,56 +14,16 @@
           "message": "",
           "claims": [
             {
-              "text": "Rich Footnotes allow users to add context to text by embedding links to images, videos, tweets, Google Sheets, and other content.",
-              "interpretation": false,
+              "text": "Rich Footnotes allow users to add context to text, enabling a more detailed exploration of ideas.",
+              "interpretation": true,
               "supports": [
                 {
                   "evidence_id": "help:dea8e449cb48c3b1127e7264:section:0:0",
                   "quote": "Rich Footnotes are a feature that lets Amplenote users imbue **text** with** ****context**[^html1]."
                 },
                 {
-                  "evidence_id": "help:dea8e449cb48c3b1127e7264:section:13:0",
-                  "quote": "As you've probably read, every help document in the Amplenote Help Center is actually just a published note in the support@amplenote.com notebook. This feature is especially handy when you want to "
-                },
-                {
-                  "evidence_id": "help:dea8e449cb48c3b1127e7264:section:1:0",
-                  "quote": "As you can see by clicking any of these list items, Rich Footnotes can imbue plain text (and by extension, text in Amplenote tasks and calendar events) with all sorts of extra meaning:"
-                }
-              ]
-            },
-            {
-              "text": "Users can create Rich Footnotes by highlighting text and using keyboard shortcuts or toolbar icons, and they can be embedded directly into notes, tasks, and calendar events.",
-              "interpretation": false,
-              "supports": [
-                {
-                  "evidence_id": "help:dea8e449cb48c3b1127e7264:section:3:0",
-                  "quote": "If you want to insert a **link** (which includes links to Youtube videos, tweets, etc[^html27]), **image, **or **video** into text, just select and paste. Single keystroke -- can't be easier."
-                },
-                {
-                  "evidence_id": "help:dea8e449cb48c3b1127e7264:section:4:0",
-                  "quote": "*Using the input field to link to an existing note or create a new one*"
-                },
-                {
-                  "evidence_id": "help:dea8e449cb48c3b1127e7264:section:6:0",
-                  "quote": "Content previews work on top of existing [Rich Footnotes](https://www.amplenote.com/help/notes_and_writing_rich_footnotes#What_are_Rich_Footnotes%3F). You can have tweets, Google Sheets and videos "
-                }
-              ]
-            },
-            {
-              "text": "Rich Footnotes can include content previews, such as embedded videos, tweets, and Google Sheets, and they can be linked to existing notes or used to create new ones.",
-              "interpretation": false,
-              "supports": [
-                {
-                  "evidence_id": "help:dea8e449cb48c3b1127e7264:section:6:0",
-                  "quote": "Content previews work on top of existing [Rich Footnotes](https://www.amplenote.com/help/notes_and_writing_rich_footnotes#What_are_Rich_Footnotes%3F). You can have tweets, Google Sheets and videos "
-                },
-                {
-                  "evidence_id": "help:dea8e449cb48c3b1127e7264:section:7:0",
-                  "quote": "Content previews **work on all published notes**, so embedded content will show up on [`amplenote.com/public/*` "
-                },
-                {
-                  "evidence_id": "help:dea8e449cb48c3b1127e7264:section:9:0",
-                  "quote": "Here is a link to a [spreadsheet **](https://docs.google.com/spreadsheets/d/1Iv357u8XZ6OQfgZwxiByCrHI4oPuZY7d5K4j1qytC0M/edit?usp=sharing). As the owner of the sheet, you can open up the sheet "
+                  "evidence_id": "help:dea8e449cb48c3b1127e7264:footnote:a88c0c53c0e1:0",
+                  "quote": "Which is to say, any given word can diverge from the main topic. This offers extra details to a subset of curious users. Some readers drop with mental energy to dig further into phrases to fully "
                 }
               ]
             }
@@ -80,72 +40,12 @@
               "availability_label": null
             },
             {
-              "id": "help:dea8e449cb48c3b1127e7264:section:13:0",
+              "id": "help:dea8e449cb48c3b1127e7264:footnote:a88c0c53c0e1:0",
               "title": "rich footnotes content preview",
               "url": "https://www.amplenote.com/help/rich_footnotes_content_preview",
               "site": "amplenote",
-              "quote": "As you've probably read, every help document in the Amplenote Help Center is actually just a published note in the support@amplenote.com notebook. This feature is especially handy when you want to ",
-              "version": "8da3e19e75d781a96d910b7e9479d3b5b30a57d2213b32566a3933921bf89f47",
-              "screenshot_url": null,
-              "availability_label": null
-            },
-            {
-              "id": "help:dea8e449cb48c3b1127e7264:section:1:0",
-              "title": "rich footnotes content preview",
-              "url": "https://www.amplenote.com/help/rich_footnotes_content_preview",
-              "site": "amplenote",
-              "quote": "As you can see by clicking any of these list items, Rich Footnotes can imbue plain text (and by extension, text in Amplenote tasks and calendar events) with all sorts of extra meaning:",
-              "version": "ce3efc8a4f87cdb2edde85ec9b2b8363cbe32a6320e16990c7c3c20e27b4ed08",
-              "screenshot_url": null,
-              "availability_label": null
-            },
-            {
-              "id": "help:dea8e449cb48c3b1127e7264:section:3:0",
-              "title": "rich footnotes content preview",
-              "url": "https://www.amplenote.com/help/rich_footnotes_content_preview",
-              "site": "amplenote",
-              "quote": "If you want to insert a **link** (which includes links to Youtube videos, tweets, etc[^html27]), **image, **or **video** into text, just select and paste. Single keystroke -- can't be easier.",
-              "version": "6ef646e08418055f93fe4cf3163b6528ea7a419dd26daa725a5bcd4362a346f3",
-              "screenshot_url": null,
-              "availability_label": null
-            },
-            {
-              "id": "help:dea8e449cb48c3b1127e7264:section:4:0",
-              "title": "rich footnotes content preview",
-              "url": "https://www.amplenote.com/help/rich_footnotes_content_preview",
-              "site": "amplenote",
-              "quote": "*Using the input field to link to an existing note or create a new one*",
-              "version": "2a2eff2d2c39fc7358e90ae2fe8a894cc9f30aff31b8c203bb993fef3cc2b843",
-              "screenshot_url": null,
-              "availability_label": null
-            },
-            {
-              "id": "help:dea8e449cb48c3b1127e7264:section:6:0",
-              "title": "rich footnotes content preview",
-              "url": "https://www.amplenote.com/help/rich_footnotes_content_preview",
-              "site": "amplenote",
-              "quote": "Content previews work on top of existing [Rich Footnotes](https://www.amplenote.com/help/notes_and_writing_rich_footnotes#What_are_Rich_Footnotes%3F). You can have tweets, Google Sheets and videos ",
-              "version": "7daf507819971c4c7c60cf92b78aa01c730a384e2c5921ad23da20440b097a12",
-              "screenshot_url": null,
-              "availability_label": null
-            },
-            {
-              "id": "help:dea8e449cb48c3b1127e7264:section:7:0",
-              "title": "rich footnotes content preview",
-              "url": "https://www.amplenote.com/help/rich_footnotes_content_preview",
-              "site": "amplenote",
-              "quote": "Content previews **work on all published notes**, so embedded content will show up on [`amplenote.com/public/*` ",
-              "version": "cdb6ea08e579d39fa381f944fb030f483ddce748759e934266f399ba9194b8c4",
-              "screenshot_url": null,
-              "availability_label": null
-            },
-            {
-              "id": "help:dea8e449cb48c3b1127e7264:section:9:0",
-              "title": "rich footnotes content preview",
-              "url": "https://www.amplenote.com/help/rich_footnotes_content_preview",
-              "site": "amplenote",
-              "quote": "Here is a link to a [spreadsheet **](https://docs.google.com/spreadsheets/d/1Iv357u8XZ6OQfgZwxiByCrHI4oPuZY7d5K4j1qytC0M/edit?usp=sharing). As the owner of the sheet, you can open up the sheet ",
-              "version": "3e65e76c905ad74c33ed6eb936b6dc89639dd0dbc160caf663f30e735ce1dacc",
+              "quote": "Which is to say, any given word can diverge from the main topic. This offers extra details to a subset of curious users. Some readers drop with mental energy to dig further into phrases to fully ",
+              "version": "b7c81b64f3c0fd97f41389a9f2503abbaa310fc2c2fce04918da56517cd13cfc",
               "screenshot_url": null,
               "availability_label": null
             }
@@ -161,28 +61,81 @@
               "version": "42118064229efd268da9ba762cf77be08fe3c282f142c7d7f98296503eb95aaf"
             },
             {
+              "document_id": "help:256def9d86a40298fa164df5",
+              "title": "Improve research & thinking depth via Rich Footnotes (\"writing in 3d\")",
+              "url": "https://www.amplenote.com/help/improved_research_thinking_depth_write_in_3d",
+              "snippet": "\"That language is an instrument of human reason, and not merely a medium for the expression of thought, is a truth generally admitted.\" - George Boole, quoted in Iverson's Turing Award Lecture The relation between language, writing, and reasoning holds a tapestry of implications ",
+              "evidence_id": "help:256def9d86a40298fa164df5:section:0:0",
+              "version": "3feb18551834c4493a03ffc41b6b4d1e10a884da76821d4e8a53e3c59e5ff0b9"
+            },
+            {
               "document_id": "help:be78faa19feba211b209573a",
               "title": "Images & Videos: Mastering the medium, plus suggested use cases",
               "url": "https://www.amplenote.com/help/using_videos",
               "snippet": "# Images & Videos: Mastering the medium, plus suggested use cases",
               "evidence_id": "help:be78faa19feba211b209573a:section:0:0",
               "version": "d8b4cb62718af6a2f450a49b654b68c867185d57449fc37384fee5b849a7509f"
+            }
+          ],
+          "interaction_id": "9d26382bffb0435998a0eb8e39f76a07"
+        }
+      }
+    },
+    {
+      "action": "ask",
+      "question": "Can those include images?",
+      "history_length": 2,
+      "seconds": 10.69,
+      "result": {
+        "ok": true,
+        "response": {
+          "kind": "help",
+          "message": "",
+          "claims": [
+            {
+              "text": "Rich Footnotes can include images.",
+              "interpretation": false,
+              "supports": [
+                {
+                  "evidence_id": "help:a8117f9627d36fd81aeac0f1:section:13:0",
+                  "quote": "- [Image](https://images.amplenote.com/0bbee202-0327-11e9-b258-7a639e48bef6/4363d48b-4c60-41c4-ac01-0b3a8816de8a.png)[^html2]"
+                },
+                {
+                  "evidence_id": "help:a8117f9627d36fd81aeac0f1:section:13:0",
+                  "quote": "This task references an [image](https://images.amplenote.com/0bbee202-0327-11e9-b258-7a639e48bef6/4363d48b-4c60-41c4-ac01-0b3a8816de8a.png)[^html8], "
+                }
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "id": "help:a8117f9627d36fd81aeac0f1:section:13:0",
+              "title": "add-details-text-image-to-task",
+              "url": "https://www.amplenote.com/help/add-details-text-image-to-task",
+              "site": "amplenote",
+              "quote": "- [Image](https://images.amplenote.com/0bbee202-0327-11e9-b258-7a639e48bef6/4363d48b-4c60-41c4-ac01-0b3a8816de8a.png)[^html2]",
+              "version": "9625c90b8d8abdada62a1c8ba8bc2427a369094c5192637bbc58638adf027985",
+              "screenshot_url": null,
+              "availability_label": null
+            }
+          ],
+          "resolved_question": "Can rich footnotes include images?",
+          "articles": [
+            {
+              "document_id": "help:a8117f9627d36fd81aeac0f1",
+              "title": "Creating tasks & to-do lists, and configuring task options",
+              "url": "https://www.amplenote.com/help/add-details-text-image-to-task",
+              "snippet": "Tasks are first-class citizens in Amplenote. All tasks reside within a note, but it's easy to view tasks apart from their note-bound context. In this help article, we'll cover how to create tasks, and what options Amplenote provides for configuring them.",
+              "evidence_id": "help:a8117f9627d36fd81aeac0f1:section:0:0",
+              "version": "5846835b7d6ff23c31452dd877f459857da16e877a41b1d9699bf94bf569a317"
             },
             {
-              "document_id": "help:bf86fd9987af235d5f5b472f",
-              "title": "Cool ways in which we are using Amplecap (usage examples)",
-              "url": "https://www.amplenote.com/help/cool_ways_to_use_amplecap",
-              "snippet": "# Cool ways in which we are using Amplecap (usage examples)",
-              "evidence_id": "help:bf86fd9987af235d5f5b472f:section:0:0",
-              "version": "3f2a761979b09cead25a249aa643f04ebdfcd112c058930c935605122e6c7a26"
-            },
-            {
-              "document_id": "help:629dba071352819923af23f9",
-              "title": "⌨️ Keyboard Shortcuts (Hotkeys) & Markdown Syntax Examples",
-              "url": "https://www.amplenote.com/help/keyboard_shortcuts_and_markdown_syntax_examples",
-              "snippet": "# ⌨️ Keyboard Shortcuts (Hotkeys) & Markdown Syntax Examples",
-              "evidence_id": "help:629dba071352819923af23f9:section:0:0",
-              "version": "cfcc9527b65df9787bf2546c6ce876f19fc87b3c4af54a8fe5d638c8fc7be7e7"
+              "document_id": "help:dea8e449cb48c3b1127e7264",
+              "title": "Rich Footnotes and content previews",
+              "url": "https://www.amplenote.com/help/rich_footnotes_content_preview",
+              "snippet": "Rich Footnotes are a feature that lets Amplenote users imbue text with context. You might like: this video explaining the various kinds of rich footnotes: Any word, any sentence can be transformed from the usual 2d \"word on a page\" into \"writing in 3d,\" as we describe Rich Footno",
+              "evidence_id": "help:dea8e449cb48c3b1127e7264:section:0:0",
+              "version": "42118064229efd268da9ba762cf77be08fe3c282f142c7d7f98296503eb95aaf"
             },
             {
               "document_id": "help:256def9d86a40298fa164df5",
@@ -191,129 +144,6 @@
               "snippet": "\"That language is an instrument of human reason, and not merely a medium for the expression of thought, is a truth generally admitted.\" - George Boole, quoted in Iverson's Turing Award Lecture The relation between language, writing, and reasoning holds a tapestry of implications ",
               "evidence_id": "help:256def9d86a40298fa164df5:section:0:0",
               "version": "3feb18551834c4493a03ffc41b6b4d1e10a884da76821d4e8a53e3c59e5ff0b9"
-            }
-          ],
-          "interaction_id": "d0e1305552fd42bfb983fc8bac5f3d36"
-        }
-      }
-    },
-    {
-      "action": "ask",
-      "question": "Can those include images?",
-      "history_length": 2,
-      "seconds": 3.391,
-      "result": {
-        "ok": true,
-        "response": {
-          "kind": "help",
-          "message": "",
-          "claims": [
-            {
-              "text": "Rich footnotes can include images.",
-              "interpretation": false,
-              "supports": [
-                {
-                  "evidence_id": "help:dea8e449cb48c3b1127e7264:section:3:0",
-                  "quote": "the keyboard shortcut (`Ctrl K` for Windows or `Cmd K` for Mac). Or, you can click the toolbar icons available. On desktop:"
-                },
-                {
-                  "evidence_id": "help:dea8e449cb48c3b1127e7264:section:13:0",
-                  "quote": "As you've probably read, every help document in the Amplenote Help Center is actually just a published note in the support@amplenote.com notebook. This feature is especially handy when you want to "
-                },
-                {
-                  "evidence_id": "help:dea8e449cb48c3b1127e7264:section:1:0",
-                  "quote": "As you can see by clicking any of these list items, Rich Footnotes can imbue plain text (and by extension, text in Amplenote tasks and calendar events) with all sorts of extra meaning:"
-                }
-              ]
-            },
-            {
-              "text": "Users can paste images directly into text to create rich footnotes.",
-              "interpretation": false,
-              "supports": [
-                {
-                  "evidence_id": "help:dea8e449cb48c3b1127e7264:section:3:0",
-                  "quote": "the keyboard shortcut (`Ctrl K` for Windows or `Cmd K` for Mac). Or, you can click the toolbar icons available. On desktop:"
-                },
-                {
-                  "evidence_id": "help:dea8e449cb48c3b1127e7264:section:13:0",
-                  "quote": "As you've probably read, every help document in the Amplenote Help Center is actually just a published note in the support@amplenote.com notebook. This feature is especially handy when you want to "
-                },
-                {
-                  "evidence_id": "help:dea8e449cb48c3b1127e7264:section:1:0",
-                  "quote": "As you can see by clicking any of these list items, Rich Footnotes can imbue plain text (and by extension, text in Amplenote tasks and calendar events) with all sorts of extra meaning:"
-                }
-              ]
-            },
-            {
-              "text": "Images in rich footnotes can be displayed as part of the note content.",
-              "interpretation": false,
-              "supports": [
-                {
-                  "evidence_id": "help:dea8e449cb48c3b1127e7264:section:13:0",
-                  "quote": "As you've probably read, every help document in the Amplenote Help Center is actually just a published note in the support@amplenote.com notebook. This feature is especially handy when you want to "
-                },
-                {
-                  "evidence_id": "help:dea8e449cb48c3b1127e7264:section:1:0",
-                  "quote": "As you can see by clicking any of these list items, Rich Footnotes can imbue plain text (and by extension, text in Amplenote tasks and calendar events) with all sorts of extra meaning:"
-                },
-                {
-                  "evidence_id": "help:dea8e449cb48c3b1127e7264:footnote:693e4dc17c05:0",
-                  "quote": "Image text supplied by the source:\n\"Ideas becoming reality\" funnel\nPhase \"Jots\"\nWrite/Capture\nPhase II \"Notes\"\nRewrite/Organize\nV\nPhase III \"Tasks\"\nMake Actionable\nPhase IV \"Calendar\"\n"
-                }
-              ]
-            }
-          ],
-          "sources": [
-            {
-              "id": "help:dea8e449cb48c3b1127e7264:section:3:0",
-              "title": "rich footnotes content preview",
-              "url": "https://www.amplenote.com/help/rich_footnotes_content_preview",
-              "site": "amplenote",
-              "quote": "the keyboard shortcut (`Ctrl K` for Windows or `Cmd K` for Mac). Or, you can click the toolbar icons available. On desktop:",
-              "version": "6ef646e08418055f93fe4cf3163b6528ea7a419dd26daa725a5bcd4362a346f3",
-              "screenshot_url": null,
-              "availability_label": null
-            },
-            {
-              "id": "help:dea8e449cb48c3b1127e7264:section:13:0",
-              "title": "rich footnotes content preview",
-              "url": "https://www.amplenote.com/help/rich_footnotes_content_preview",
-              "site": "amplenote",
-              "quote": "As you've probably read, every help document in the Amplenote Help Center is actually just a published note in the support@amplenote.com notebook. This feature is especially handy when you want to ",
-              "version": "8da3e19e75d781a96d910b7e9479d3b5b30a57d2213b32566a3933921bf89f47",
-              "screenshot_url": null,
-              "availability_label": null
-            },
-            {
-              "id": "help:dea8e449cb48c3b1127e7264:section:1:0",
-              "title": "rich footnotes content preview",
-              "url": "https://www.amplenote.com/help/rich_footnotes_content_preview",
-              "site": "amplenote",
-              "quote": "As you can see by clicking any of these list items, Rich Footnotes can imbue plain text (and by extension, text in Amplenote tasks and calendar events) with all sorts of extra meaning:",
-              "version": "ce3efc8a4f87cdb2edde85ec9b2b8363cbe32a6320e16990c7c3c20e27b4ed08",
-              "screenshot_url": null,
-              "availability_label": null
-            },
-            {
-              "id": "help:dea8e449cb48c3b1127e7264:footnote:693e4dc17c05:0",
-              "title": "rich footnotes content preview",
-              "url": "https://www.amplenote.com/help/rich_footnotes_content_preview",
-              "site": "amplenote",
-              "quote": "Image text supplied by the source:\n\"Ideas becoming reality\" funnel\nPhase \"Jots\"\nWrite/Capture\nPhase II \"Notes\"\nRewrite/Organize\nV\nPhase III \"Tasks\"\nMake Actionable\nPhase IV \"Calendar\"\n",
-              "version": "c416014f17e8dc3767b2416570cd083260e6d06fa161c131390cc8007f128805",
-              "screenshot_url": null,
-              "availability_label": null
-            }
-          ],
-          "resolved_question": "Can rich footnotes include images?",
-          "articles": [
-            {
-              "document_id": "help:dea8e449cb48c3b1127e7264",
-              "title": "Rich Footnotes and content previews",
-              "url": "https://www.amplenote.com/help/rich_footnotes_content_preview",
-              "snippet": "Rich Footnotes are a feature that lets Amplenote users imbue text with context. You might like: this video explaining the various kinds of rich footnotes: Any word, any sentence can be transformed from the usual 2d \"word on a page\" into \"writing in 3d,\" as we describe Rich Footno",
-              "evidence_id": "help:dea8e449cb48c3b1127e7264:section:0:0",
-              "version": "42118064229efd268da9ba762cf77be08fe3c282f142c7d7f98296503eb95aaf"
             },
             {
               "document_id": "help:5c2414edec40869b302e9d01",
@@ -330,25 +160,9 @@
               "snippet": "# ⌨️ Keyboard Shortcuts (Hotkeys) & Markdown Syntax Examples",
               "evidence_id": "help:629dba071352819923af23f9:section:0:0",
               "version": "cfcc9527b65df9787bf2546c6ce876f19fc87b3c4af54a8fe5d638c8fc7be7e7"
-            },
-            {
-              "document_id": "help:256def9d86a40298fa164df5",
-              "title": "Improve research & thinking depth via Rich Footnotes (\"writing in 3d\")",
-              "url": "https://www.amplenote.com/help/improved_research_thinking_depth_write_in_3d",
-              "snippet": "\"That language is an instrument of human reason, and not merely a medium for the expression of thought, is a truth generally admitted.\" - George Boole, quoted in Iverson's Turing Award Lecture The relation between language, writing, and reasoning holds a tapestry of implications ",
-              "evidence_id": "help:256def9d86a40298fa164df5:section:0:0",
-              "version": "3feb18551834c4493a03ffc41b6b4d1e10a884da76821d4e8a53e3c59e5ff0b9"
-            },
-            {
-              "document_id": "help:019379bf228dee8fe0e88f29",
-              "title": "App Interface: Plugin methods to interact with user notes",
-              "url": "https://www.amplenote.com/help/developing_amplenote_plugins/app_interface",
-              "snippet": "# App Interface: Plugin methods to interact with user notes",
-              "evidence_id": "help:019379bf228dee8fe0e88f29:section:0:0",
-              "version": "30e502ee95b88fe23f076bb7c0836b8f15a5a9cb9b0d5579c44c2302ac92f2a0"
             }
           ],
-          "interaction_id": "6088d2d2834a4e40b0271e942d4fee32"
+          "interaction_id": "aa834340c2b5437aa7033022ef743630"
         }
       }
     },
@@ -356,7 +170,7 @@
       "action": "ask",
       "question": "Does Amplenote support filtering search results by note author?",
       "history_length": 4,
-      "seconds": 2.887,
+      "seconds": 12.069,
       "result": {
         "ok": true,
         "response": {
@@ -389,12 +203,28 @@
           "resolved_question": "Does Amplenote support filtering search results by note author?",
           "articles": [
             {
+              "document_id": "help:28b1b36064a460d7e02c3c6c",
+              "title": "Search queries: tag, filter, and other queries",
+              "url": "https://www.amplenote.com/help/search_filter_tags_groups",
+              "snippet": "Below are some examples of using the in and the group keywords for filtering search results. These keywords work in the regular search bar as well as in the Ctrl-O quick-search menu, on both web and mobile 🕵️‍♀️.",
+              "evidence_id": "help:28b1b36064a460d7e02c3c6c:section:0:0",
+              "version": "a83447dbc5ccd093f9849841a5baddef04b13bff5ae99a27a233d162ace02f54"
+            },
+            {
               "document_id": "help:aa439f5246a44e65caee4244",
               "title": "Filtering tasks: tags and note references (backlinks aka \"projects\")",
               "url": "https://www.amplenote.com/help/filter_tasks_by_note_reference_backlink",
               "snippet": "Also cool: check out this video on how to organize tasks with inline tags: One of the most handy ways of filtering your tasks is by the tag of the note they are part of / the note that they link to as an Inline Tag. open_in_new Tag filtering works by selecting tasks that match th",
               "evidence_id": "help:aa439f5246a44e65caee4244:section:0:0",
               "version": "11cddcae628fe69b0174f91fa7ee4208f7c5f3bb118b95198b0809c83cd38037"
+            },
+            {
+              "document_id": "help:ea1c5e9930162fb07835ca26",
+              "title": "🔎 Note Reference Filtering (aka \"Inline Tags\")",
+              "url": "https://www.amplenote.com/help/inline_tags_note_reference_filtering",
+              "snippet": "Also cool: check out this video explanation of \"inline tags vs traditional tags\":",
+              "evidence_id": "help:ea1c5e9930162fb07835ca26:section:0:0",
+              "version": "ba60800cb61afa3288b3989c849e17502cb9028e7036d321fbf252a78e55f234"
             },
             {
               "document_id": "help:58c7b8d7a8581843410a7132",
@@ -411,25 +241,9 @@
               "snippet": "Backlinking in Amplenote provides a convenient way to connect your notes (and thus, ideas) together into a network of knowledge. It's the perfect tool for those who want to collect thoughts, ideas, and research around a particular area of interest.",
               "evidence_id": "help:407e9ceba575ba28553625a2:section:0:0",
               "version": "83369187f4b899436f542125347a443b998d570c2fcb78fcc098be80f042ed89"
-            },
-            {
-              "document_id": "help:1119bade4bc6b96d1fdc6f94",
-              "title": "How do I use Quick Open navigation?",
-              "url": "https://www.amplenote.com/help/organizing_notes_quick_search",
-              "snippet": "# How do I use Quick Open navigation?",
-              "evidence_id": "help:1119bade4bc6b96d1fdc6f94:section:0:0",
-              "version": "e3e65b856b212693b78d80007298ceebfaab392264ff28378a686f1315322667"
-            },
-            {
-              "document_id": "help:0b9778fe4f5a623a581ad19f",
-              "title": "🔗 Note linking guide (at @ and double-bracket [[ notation)",
-              "url": "https://www.amplenote.com/help/double-bracket-note-link-syntax",
-              "snippet": "Amplenote allows you to invoke an \"Express Link\" dialog by typing @ (or the legacy [[), then linking to either an existing note, a section of a note, or a new note you create. Video tutorial: learn about the note linking hotkey and how to use note links for easier navigation, dec",
-              "evidence_id": "help:0b9778fe4f5a623a581ad19f:section:0:0",
-              "version": "16558c7262c8485b724c77db1c1af9f908ae7f4a3a52d54453d5c1229ed3d7d5"
             }
           ],
-          "interaction_id": "feeb490ad9094b4188caac57f9187dd9"
+          "interaction_id": "63f92ac6183b4558a8ea2a6b573cfcfb"
         }
       }
     },
@@ -437,7 +251,7 @@
       "action": "ask",
       "question": "Why doesn't my task show up next to calendar?",
       "history_length": 0,
-      "seconds": 2.999,
+      "seconds": 7.368,
       "result": {
         "ok": true,
         "response": {
@@ -445,9 +259,13 @@
           "message": "",
           "claims": [
             {
-              "text": "You need to set up a Task Domain in Amplenote to have tasks appear next to the calendar.",
+              "text": "You need to set up a Task Domain for tasks to appear next to the calendar.",
               "interpretation": false,
               "supports": [
+                {
+                  "evidence_id": "help:27931d965fef42291c447db5:section:0:0",
+                  "quote": "calendar](https://www.amplenote.com/help/calendar_visual_guided_walkthrough)[^html1]. Until you've set up a Task Domain, you won't see tasks next to the calendar."
+                },
                 {
                   "evidence_id": "help:27931d965fef42291c447db5:section:0:0",
                   "quote": "Task Domains are *collections of notes+tags* that Amplenote extracts to-do's from in order to populate the task list [you see next to the "
@@ -455,22 +273,26 @@
               ]
             },
             {
-              "text": "The default Task Domains are 'Work', 'Personal', and 'Misc', and you can rename or hide them as needed.",
+              "text": "The default Task Domains are 'Work', 'Personal', and 'Misc', and you can rename or hide them.",
               "interpretation": false,
               "supports": [
                 {
                   "evidence_id": "help:27931d965fef42291c447db5:section:0:0",
-                  "quote": "[**Here is the direct link to set up your Task Domain**](https://www.amplenote.com/task_calendar) so you can start using the calendar."
+                  "quote": "The three default Task Domains we offer are \"Work,\" \"Personal,\" and \"Misc.\" As discussed below, any of these Task Domains can be renamed or hidden. The purpose of configuring a Task Domain like "
+                },
+                {
+                  "evidence_id": "help:27931d965fef42291c447db5:section:0:0",
+                  "quote": "\"Work\" is to declare the superset of notes and tags that contain tasks relevant to all the projects you aspire to make progress on."
                 }
               ]
             },
             {
-              "text": "Tasks are synced to external calendars if you have set up the Task Domain correctly.",
+              "text": "Tasks from a Task Domain can be dragged onto the calendar and synchronized with external calendars.",
               "interpretation": false,
               "supports": [
                 {
                   "evidence_id": "help:27931d965fef42291c447db5:section:0:0",
-                  "quote": "](https://www.youtube.com/watch?v=4cNj7otqr48)"
+                  "quote": "The tasks you schedule from a Task Domain can be drag-and-dropped directly on the Amplenote calendar and they can be automatically synchronized to one or more external Google or Outlook calendars."
                 }
               ]
             }
@@ -481,7 +303,7 @@
               "title": "using calendar task domains",
               "url": "https://www.amplenote.com/help/using_calendar_task_domains",
               "site": "amplenote",
-              "quote": "Task Domains are *collections of notes+tags* that Amplenote extracts to-do's from in order to populate the task list [you see next to the ",
+              "quote": "calendar](https://www.amplenote.com/help/calendar_visual_guided_walkthrough)[^html1]. Until you've set up a Task Domain, you won't see tasks next to the calendar.",
               "version": "d195cc8f91a363355d74b8b5373f74e8fddbac7928160a948c3f59156da7a5a7",
               "screenshot_url": null,
               "availability_label": null
@@ -498,14 +320,6 @@
               "version": "d195cc8f91a363355d74b8b5373f74e8fddbac7928160a948c3f59156da7a5a7"
             },
             {
-              "document_id": "help:b6993c1e373fe4c5b05d350a",
-              "title": "Color external and internal calendar events and tasks",
-              "url": "https://www.amplenote.com/help/color_calendar_events",
-              "snippet": "# Color external and internal calendar events and tasks",
-              "evidence_id": "help:b6993c1e373fe4c5b05d350a:section:0:0",
-              "version": "c7117ce24b92d435f16178c6fdd95c15dda7737c63ddbc584dc63ba1c91be546"
-            },
-            {
               "document_id": "help:27b4b425b0cd426c43ce2de1",
               "title": "Connect Google, Outlook, or Apple Calendars with two-way sync",
               "url": "https://www.amplenote.com/help/connect_a_calendar",
@@ -514,30 +328,38 @@
               "version": "f4dcef7faa2aae360e4a04801b5d450740d23dc8fa76bf69e9aee8fd473a386c"
             },
             {
-              "document_id": "help:0397d7cadbbecc1e1b798e4d",
-              "title": "Calendar View: Detailed Visual Guide",
-              "url": "https://www.amplenote.com/help/change_first_day_of_the_week",
-              "snippet": "# Calendar View: Detailed Visual Guide",
-              "evidence_id": "help:0397d7cadbbecc1e1b798e4d:section:0:0",
-              "version": "2354729ff89b19e010715d3d5450cb340626963cc792b900127b1d8fbc3fab12"
+              "document_id": "help:b6993c1e373fe4c5b05d350a",
+              "title": "Color external and internal calendar events and tasks",
+              "url": "https://www.amplenote.com/help/color_calendar_events",
+              "snippet": "# Color external and internal calendar events and tasks",
+              "evidence_id": "help:b6993c1e373fe4c5b05d350a:section:0:0",
+              "version": "c7117ce24b92d435f16178c6fdd95c15dda7737c63ddbc584dc63ba1c91be546"
             },
             {
-              "document_id": "help:4d59bf97e1cce07878695cb4",
-              "title": "Scheduling events vs scheduling tasks (how to schedule events)",
-              "url": "https://www.amplenote.com/help/calendar_events_vs_tasks",
-              "snippet": "Amplenote recognizes the distinction between a \"task\" and an \"event\" as follows: || Task|Event| |---|---|---| |Appearance|open_in_new|open_in_new| |Visibility|Shows up in calendar|Shows up in calendar| |Repeat|Can be set up to repeat|Can be set up to repeat| |External calendar sy",
-              "evidence_id": "help:4d59bf97e1cce07878695cb4:section:0:0",
-              "version": "94532b0e8e60ba28ce2334073b63e901b0b318f52bf31139a2eaed6509fb86be"
+              "document_id": "help:517344d87949f117cf07fec0",
+              "title": "Calendar View: Detailed Visual Guide",
+              "url": "https://www.amplenote.com/help/calendar_visual_guided_walkthrough",
+              "snippet": "# Calendar View: Detailed Visual Guide",
+              "evidence_id": "help:517344d87949f117cf07fec0:section:0:0",
+              "version": "75d352e443cd9a6972ce893a344362d0ea1347404f425deddd3e346bfcd097ca"
+            },
+            {
+              "document_id": "help:4afee92d696eb8953c71229f",
+              "title": "Plugin API Reference Documentation: Appendix I: Types",
+              "url": "https://www.amplenote.com/help/developing_amplenote_plugins/appendix_i",
+              "snippet": "# Plugin API Reference Documentation: Appendix I: Types",
+              "evidence_id": "help:4afee92d696eb8953c71229f:section:0:0",
+              "version": "8842f3bbb7bf5323feadefbbfcab359f1eac90a8cb1cc8feee2322afcdec0c2f"
             }
           ],
-          "interaction_id": "36fee085fe3a4de1a5d1412d2df0382f"
+          "interaction_id": "546fe21f610e4a928f117b6c350fc69d"
         }
       }
     },
     {
       "action": "feedback",
       "history_length": 0,
-      "seconds": 0.138,
+      "seconds": 0.142,
       "result": {
         "ok": true,
         "response": {

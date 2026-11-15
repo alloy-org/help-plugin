@@ -97,5 +97,6 @@
     "/help/health",
     "/help/feedback"
   ],
-  "plugin_note": "https://www.amplenote.com/notes/3f3292c0-e08a-11f1-85ef-1bb38c248460"
+  "plugin_note": "https://www.amplenote.com/notes/3f3292c0-e08a-11f1-85ef-1bb38c248460",
+  "latest_verification_report": "round3-regressions.json"
 }

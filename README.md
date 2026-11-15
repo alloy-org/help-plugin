@@ -26,6 +26,14 @@ npm run build
 4. In a note, type `/help` and choose the **Help** plugin action. It is also available through
    Quick Open. The action opens an `app.prompt` containing the chat embed.
 5. Ask a question, ask a follow-up, and expand a source card to inspect its quotation or screenshot.
+6. Choose **Expand chat** in the prompt footer to open the full-width plugin view. This starts a new chat.
+
+The current prompt API has no width setting. The compact popup sizes its embed to leave room for
+the host header/footer, keeps the composer visible, and scrolls only its transcript. The expanded
+view uses the available width, with a 1,200px reading limit. No Amplenote web-app release is needed.
+Source clicks call the host's `app.navigate` through the plugin bridge. Amplenote web supports help
+URLs there; if a client rejects another source URL (such as NoteApps), the UI offers its address
+for copying rather than attempting a blocked iframe popup.
 
 Run `npm run test:live` to check the deployed gateway, source scope, opaque-origin CORS,
 private-route isolation, follow-ups, and recorded screenshots. This is a small live smoke test,
@@ -57,7 +65,11 @@ Its embedded client has no external script or stylesheet dependencies.
 The endpoint is `https://amplenote.noteapps.info/help/chat`. It accepts only `question` and
 bounded `history`; callers cannot select another corpus, app ID, model, or upstream URL.
 The gateway expands the question into up to three alternate keyword searches, combines lexical
-and semantic matches, and reranks article introductions with a small local cross-encoder.
+and semantic matches, and reranks both introductions and matching sections with a small local
+cross-encoder. How-to matches receive a bounded semantic review that preserves the direction
+of the requested workflow. The context budget is shared across the strongest articles so a long
+general guide cannot crowd out a linked setup guide. Citation decoding permits only real source/
+quotation pairs; exact-text and independent claim verification still apply.
 The strongest articles supply the synopsis context; a separate **Related Amplenote help** list
 retains up to five distinct help-page links even when no synopsis can be verified. Troubleshooting
 answers suggest supported checks without claiming to inspect the user's account.

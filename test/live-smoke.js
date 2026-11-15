@@ -6,6 +6,9 @@ const base = process.env.HELP_API_URL || "https://amplenote.noteapps.info/help";
 const report = { tested_at: new Date().toISOString(), endpoint: base, cases: [], boundary: [], screenshots: [] };
 const first = "How do Rich Footnotes work?";
 const cases = [
+  { question: "How do I insert a task from an email", kind: "help", mailToNote: true },
+  { question: "How do I forward an email into my Amplenote task list?", kind: "help", mailToNote: true },
+  { question: "How can I turn a Gmail message into an Amplenote task?", kind: "help", mailToNote: true },
   { question: "Why doesn't my task show up next to calendar?", kind: "help", taskDomains: true },
   { question: "My calendar sidebar has no tasks. What should I check?", kind: "help", taskDomains: true },
   { question: "Where do I choose which notes and tags supply the calendar task list?", kind: "help", taskDomains: true },
@@ -30,6 +33,11 @@ for (const item of cases) {
     assert.match(answer.claims.map(claim => claim.text).join(" "), /task domain/i);
     assert.ok(answer.articles.slice(0, 3).some(article => article.url.endsWith("/using_calendar_task_domains")));
     assert.ok(answer.sources.some(source => source.url.endsWith("/using_calendar_task_domains")), "Synopsis cites the indexed Task Domains page");
+  }
+  if (item.mailToNote) {
+    assert.ok(answer.articles.slice(0, 3).some(article => article.url.endsWith("/mail-to-note")), "Mail-to-Note appears among the first three recommendations");
+    assert.match(answer.claims.map(claim => claim.text).join(" "), /mail-to-note|forward|email address/i);
+    assert.ok(answer.sources.every(source => !source.url.endsWith("/task_digest_emails")), "Incoming email capture must not cite an outgoing task digest");
   }
   const sources = new Map(answer.sources.map(source => [source.id, source]));
   for (const claim of answer.claims) {
