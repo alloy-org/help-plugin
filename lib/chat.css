@@ -17,10 +17,10 @@ h1 { margin: 2px 0 0; font-size: 25px; line-height: 1.3; letter-spacing: -.03em;
 .conversation.is-welcome { flex: 0 1 auto; }
 .welcome { padding-top: 0; }
 .welcome > p { color: var(--muted); margin: 0 0 12px; }
-.suggestions { display: grid; gap: 8px; max-width: 460px; }
-.suggestions button { display: flex; justify-content: space-between; text-align: left; padding: 8px 12px; border: 1px solid var(--border); border-radius: 9px; color: var(--text); background: transparent; font-size: 14px; }
+.suggestions { display: flex; flex-wrap: nowrap; gap: 8px; width: 100%; overflow-x: auto; padding: 3px; }
+.suggestions button { flex: 0 0 auto; white-space: nowrap; display: flex; justify-content: space-between; text-align: left; padding: 8px 12px; border: 1px solid var(--border); border-radius: 9px; color: var(--text); background: transparent; font-size: 14px; }
 .suggestions button:hover { border-color: var(--accent); background: var(--accent-soft); }
-.suggestions span { color: var(--accent); }
+.suggestions span { margin-left: 10px; color: var(--accent); }
 .message { margin: 0 0 23px; }
 .message.user { margin-left: 12%; }
 .user .message-content { background: var(--surface); border-radius: 12px 12px 3px 12px; padding: 10px 15px; white-space: pre-wrap; overflow-wrap: anywhere; }
@@ -73,4 +73,8 @@ textarea { flex: 1; min-width: 0; max-height: 130px; border: 0; resize: vertical
 /* Keep answers in normal document flow; only the transcript scrolls. */
 .message, .message-content, .related-help, .source-card { flex-shrink: 0; }
 .link-error input { display: block; width: 100%; padding: 5px; font: inherit; color: var(--text); background: var(--surface); border: 1px solid var(--border); }
-@media (max-height: 380px) { .chat-shell { padding: 8px 12px; } .eyebrow, .welcome > p, .composer-footer { display: none; } h1 { font-size: 19px; } .chat-header { padding-bottom: 6px; } .suggestions { grid-template-columns: repeat(3,minmax(0,1fr)); max-width: none; gap: 5px; } .suggestions button { padding: 6px; font-size: 11px; } textarea { resize: none; } }
+@media (max-height: 380px) { .chat-shell { padding: 8px 12px; } .eyebrow, .welcome > p, .composer-footer { display: none; } h1 { font-size: 19px; } .chat-header { padding-bottom: 6px; } .suggestions { gap: 5px; } .suggestions button { padding: 6px; font-size: 11px; } textarea { resize: none; } }
+
+.answer-screenshot { margin: 18px 0; }
+.answer-screenshot img { display: block; max-width: 100%; max-height: 360px; object-fit: contain; border: 1px solid var(--border); border-radius: 7px; }
+.answer-screenshot figcaption { margin-top: 6px; color: var(--muted); font-size: 12px; }

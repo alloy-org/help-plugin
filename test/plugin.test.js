@@ -210,3 +210,45 @@ test("Expand opens the full-width plugin section and prompt height follows the b
   } finally {dom.window.close();}
   assert.match(plugin.renderEmbed.run({context: {renderEmbedTarget: "section"}}), /data-view="full"/);
 });
+
+test("follow-up history retains the last option of a thorough answer within its limit", async () => {
+  const calls = [];
+  const response = {claims: Array.from({length:8}, (_, index) => ({text: `Option ${index}: ` + "Detailed sourced explanation. ".repeat(30),supports:[]}))};
+  const dom = new JSDOM(loadPlugin().renderEmbed.run(), {runScripts:"dangerously", beforeParse(window) {
+    window.callAmplenotePlugin = async (action,payload) => {calls.push(payload);return {ok:true,response};};
+  }});
+  try {
+    const doc = dom.window.document;
+    for (const question of ["What are my options?", "Explain the last option"]){
+      doc.getElementById("question").value=question;
+      doc.getElementById("question-form").dispatchEvent(new dom.window.Event("submit",{cancelable:true}));
+      await new Promise(resolve=>setTimeout(resolve,15));
+    }
+    const previous=calls[1].history.find(message=>message.role==="assistant").content;
+    assert.match(previous,/Option 0:/);
+    assert.match(previous,/Option 7:/);
+    assert.ok(previous.length<=2000);
+  } finally {dom.window.close();}
+});
+
+
+test("help screenshots are visible inline with provenance and are omitted when unavailable", async () => {
+  const source = {id:"help",site:"amplenote",title:"Note Agent",url:"https://www.amplenote.com/help/ample_agent_pro_quick_start_usage",
+    screenshot_url:"https://images.amplenote.com/guide/note-agent.png",screenshot_caption:"From the help guide: Note Agent",quote:"Transform your note."};
+  const dom = new JSDOM(loadPlugin().renderEmbed.run(), {runScripts:"dangerously",beforeParse(window){
+    window.callAmplenotePlugin=async()=>({ok:true,response:{claims:[{text:"Use Note Agent.",supports:[{evidence_id:"help"}]}],sources:[source,{...source,id:"bad",screenshot_url:"https://images.amplenote.com.evil.invalid/image.png"}]}});
+  }});
+  try {
+    const doc=dom.window.document;
+    doc.getElementById("question").value="Help with AI";
+    doc.getElementById("question-form").dispatchEvent(new dom.window.Event("submit",{cancelable:true}));
+    await new Promise(resolve=>setTimeout(resolve,15));
+    assert.equal(doc.querySelectorAll(".answer-screenshot img").length,1);
+    assert.match(doc.querySelector(".answer-screenshot figcaption").textContent,/Note Agent/);
+    assert.equal(doc.querySelector(".answer-screenshot a").href,source.url);
+    assert.equal(doc.querySelectorAll(".source-content img").length,0);
+    doc.querySelector(".answer-screenshot img").dispatchEvent(new dom.window.Event("error"));
+    assert.equal(doc.querySelector(".answer-screenshot"),null);
+    assert.ok(doc.querySelector(".source-content a"));
+  } finally {dom.window.close();}
+});

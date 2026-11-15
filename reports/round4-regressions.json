@@ -1,0 +1,137 @@
+{
+  "tested_at": "2026-11-15T04:11:08.859912+00:00",
+  "plugin_note": "https://www.amplenote.com/notes/3f3292c0-e08a-11f1-85ef-1bb38c248460",
+  "compiled_sha256": "783ed4066dc2b1a5bb2e9420c3898013e6eb0e9251737178410952185bb0d558",
+  "checks": {
+    "plugin_unit_tests": 11,
+    "backend_sqlite_tests": 57,
+    "backend_postgresql_tests": 57,
+    "public_query_cases": 12,
+    "compiled_ui_chat_cases": 5,
+    "feedback_saved": true,
+    "actual_image_files_checked": 17,
+    "browser_images_loaded": 2,
+    "one_row_topics_and_input_visible": true
+  },
+  "ai_cases": [
+    {
+      "question": "How do I have AI write a note for me?",
+      "points": 4,
+      "word_count": 107,
+      "source_urls": [
+        "https://www.amplenote.com/help/ample_agent_pro_quick_start_usage"
+      ],
+      "screenshots": [
+        {
+          "url": "https://images.amplenote.com/f8609366-38db-11f1-835b-e59b1941e7c9/5daefbae-77d6-4cbe-88bd-805fc462495b.png",
+          "caption": "From the help guide: Note Agent",
+          "source_page": "https://www.amplenote.com/help/ample_agent_pro_quick_start_usage"
+        },
+        {
+          "url": "https://images.amplenote.com/f8609366-38db-11f1-835b-e59b1941e7c9/4a3bfb29-1822-4d9a-a7aa-9c3d38cb2571.png",
+          "caption": "From the help guide: Task Agent",
+          "source_page": "https://www.amplenote.com/help/ample_agent_pro_quick_start_usage"
+        }
+      ]
+    },
+    {
+      "question": "What AI features are available in Amplenote?",
+      "points": 7,
+      "word_count": 176,
+      "source_urls": [
+        "https://www.amplenote.com/help/ample_agent_pro_quick_start_usage",
+        "https://www.amplenote.com/help/using_default_ai_plugin",
+        "https://www.amplenote.com/help/ai_mcp_server_connect_amplenote_claude_codex"
+      ],
+      "screenshots": [
+        {
+          "url": "https://images.amplenote.com/f8609366-38db-11f1-835b-e59b1941e7c9/8724488f-9e7f-44a8-8d68-88202ff5e2fe.png",
+          "caption": "From the help guide: Thesaurus",
+          "source_page": "https://www.amplenote.com/help/ample_agent_pro_quick_start_usage"
+        },
+        {
+          "url": "https://images.amplenote.com/f8609366-38db-11f1-835b-e59b1941e7c9/4a3bfb29-1822-4d9a-a7aa-9c3d38cb2571.png",
+          "caption": "From the help guide: Task Agent",
+          "source_page": "https://www.amplenote.com/help/ample_agent_pro_quick_start_usage"
+        }
+      ]
+    }
+  ],
+  "concurrency_check": {
+    "concurrency": 5,
+    "passed": 5,
+    "cases": [
+      {
+        "question": "How do I have AI write a note for me?",
+        "seconds": 5.54,
+        "kind": "help",
+        "claim_count": 4,
+        "screenshots": 2
+      },
+      {
+        "question": "What AI features are available in Amplenote?",
+        "seconds": 8.4,
+        "kind": "help",
+        "claim_count": 7,
+        "screenshots": 2
+      },
+      {
+        "question": "How do I insert a task from an email",
+        "seconds": 8.27,
+        "kind": "help",
+        "claim_count": 6,
+        "screenshots": 2
+      },
+      {
+        "question": "Why doesn't my task show up next to calendar?",
+        "seconds": 7.11,
+        "kind": "help",
+        "claim_count": 8,
+        "screenshots": 2
+      },
+      {
+        "question": "How do Rich Footnotes work?",
+        "seconds": 5.28,
+        "kind": "help",
+        "claim_count": 4,
+        "screenshots": 2
+      }
+    ],
+    "scope": "Small functional concurrency check; not a sustained throughput benchmark."
+  },
+  "layout": {
+    "height": 220,
+    "metrics": {
+      "inputVisible": true,
+      "inputBottom": 176.78125,
+      "composerBottom": 187.78125,
+      "frameHeight": 220,
+      "gap": 12,
+      "topicRow": true,
+      "bodyScroll": false
+    }
+  },
+  "backend_sha256": {
+    "help_topics.py": "4dd947a5778b82c20a8ce8041697e27883dfa5b65d06b72cbb4c5639a4d7857a",
+    "help_search.py": "8cf5d66237200a1b459d89bf040d2497fe6939e8101903337a67f1ebf6b8992b",
+    "help_chat.py": "33031417abadd68891af2d7ca3da81c00b695b9b6c5723e517439fc965a7aa0f",
+    "answer.py": "29033ee4573ba73ab3e50485a9406237be704723f7d30e4beb416359b12fa8cd",
+    "models.py": "5bf3d27c15e5b57c26eb5b101be934204ad1da287a2fd24349e893c76871aaa1"
+  },
+  "changes": [
+    "Suggested topics occupy one horizontally scrollable row",
+    "Current Agent Pro guide leads general AI questions; broad overviews retain MCP and AmpleAI routes",
+    "Broad answers can use five documents and eight verified points; focused capability checks use three",
+    "Relevant setup ancestors accompany matching subsections",
+    "Verification receives exact selected quotations and original source numbers",
+    "Capability relevance checks distinguish the requested operation from related features",
+    "Up to two source-bound help screenshots appear inline with captions and original-page links",
+    "Reranker batches use eight passages to bound memory"
+  ],
+  "limits": [
+    "Examples are public-corpus smoke checks, not a comprehensive accuracy evaluation",
+    "Screenshots illustrate published source material, not the user account",
+    "Native popup width remains deferred; Expand chat remains available",
+    "Changes are uncommitted"
+  ]
+}

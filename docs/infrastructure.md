@@ -128,3 +128,20 @@ Troubleshooting and location questions retain introductory prerequisite explanat
 ranking. How-to workflow questions can rank a matching section above a general introduction.
 A generated claim containing a URL is omitted independently; remaining prose still must pass
 exact quotation and support verification before it can be returned.
+
+## Current AI entry points, fuller answers, and illustrations
+
+`search_service/help_topics.py` in Tribase maintains the primary Agent Pro guide and alternative
+MCP/AmpleAI routes for general AI questions. Named-tool questions retain their focus. This is
+editorial source routing; capabilities still require versioned indexed evidence. Broad answers
+can synthesize five documents and eight points. Focused capability checks keep a three-point
+limit and compare the requested operation with the actual selected quotations.
+
+Context selection retains setup sections above matching subsections. Independent verification
+receives explicit claim indices, exact selected quotations, and their original source numbers.
+Reranker batches are capped at eight passages to bound CPU memory use.
+
+Up to two distinct help screenshots may come from a cited section or its own stored rich footnote.
+The gateway allows only Amplenote's image host and the existing NoteApps screenshot CDN. The UI
+shows images inline with captions and original-page links, and removes an unavailable image.
+The screenshots illustrate public documentation; no private user-account screenshots are read.

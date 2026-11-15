@@ -1,0 +1,218 @@
+{
+  "tested_at": "2026-11-15T03:11:23.768790+00:00",
+  "plugin_note": "https://www.amplenote.com/notes/3f3292c0-e08a-11f1-85ef-1bb38c248460",
+  "compiled_sha256": "9e81b40bebd7f819be11c602685f79614dd8605c8886e15f1754b1b1d19cd37d",
+  "unit_tests": {
+    "plugin": 9,
+    "backend_sqlite": 48,
+    "backend_postgresql": 48
+  },
+  "public_cases": [
+    {
+      "question": "How do I insert a task from an email",
+      "kind": "help",
+      "seconds": 11.47,
+      "article_urls": [
+        "https://www.amplenote.com/help/create_a_task_from_a_jot",
+        "https://www.amplenote.com/help/mail-to-note",
+        "https://www.amplenote.com/help/how_the_ceo_of_amplenote_chooses_what_to_work_on",
+        "https://www.amplenote.com/help/task_digest_emails",
+        "https://www.amplenote.com/help/using_calendar_task_domains"
+      ]
+    },
+    {
+      "question": "How do I forward an email into my Amplenote task list?",
+      "kind": "help",
+      "seconds": 12.8,
+      "article_urls": [
+        "https://www.amplenote.com/help/create_a_task_from_a_jot",
+        "https://www.amplenote.com/help/mail-to-note",
+        "https://www.amplenote.com/help/how_the_ceo_of_amplenote_chooses_what_to_work_on"
+      ]
+    },
+    {
+      "question": "How can I turn a Gmail message into an Amplenote task?",
+      "kind": "help",
+      "seconds": 10.38,
+      "article_urls": [
+        "https://www.amplenote.com/help/create_a_task_from_a_jot",
+        "https://www.amplenote.com/help/mail-to-note",
+        "https://www.amplenote.com/help/task_inbox_note_explained_with_recommendations"
+      ]
+    },
+    {
+      "question": "Why doesn't my task show up next to calendar?",
+      "kind": "help",
+      "seconds": 4.67,
+      "article_urls": [
+        "https://www.amplenote.com/help/using_calendar_task_domains",
+        "https://www.amplenote.com/help/connect_a_calendar",
+        "https://www.amplenote.com/help/color_calendar_events",
+        "https://www.amplenote.com/help/calendar_visual_guided_walkthrough",
+        "https://www.amplenote.com/help/developing_amplenote_plugins/appendix_i"
+      ]
+    },
+    {
+      "question": "My calendar sidebar has no tasks. What should I check?",
+      "kind": "help",
+      "seconds": 8.33,
+      "article_urls": [
+        "https://www.amplenote.com/help/using_calendar_task_domains",
+        "https://www.amplenote.com/help/color_calendar_events",
+        "https://www.amplenote.com/help/calendar_visual_guided_walkthrough",
+        "https://www.amplenote.com/help/connect_a_calendar",
+        "https://www.amplenote.com/help/calendar_events_vs_tasks"
+      ]
+    },
+    {
+      "question": "Where do I choose which notes and tags supply the calendar task list?",
+      "kind": "help",
+      "seconds": 8.18,
+      "article_urls": [
+        "https://www.amplenote.com/help/calendar_visual_guided_walkthrough",
+        "https://www.amplenote.com/help/using_calendar_task_domains",
+        "https://www.amplenote.com/help/appearance_theme_coloring",
+        "https://www.amplenote.com/help/color_calendar_events",
+        "https://www.amplenote.com/help/filter_tasks_by_note_reference_backlink"
+      ]
+    },
+    {
+      "question": "How do Rich Footnotes work?",
+      "kind": "help",
+      "seconds": 1.6,
+      "article_urls": [
+        "https://www.amplenote.com/help/rich_footnotes_content_preview",
+        "https://www.amplenote.com/help/improved_research_thinking_depth_write_in_3d",
+        "https://www.amplenote.com/help/using_videos"
+      ]
+    },
+    {
+      "question": "Can those include images?",
+      "kind": "help",
+      "seconds": 1.15,
+      "article_urls": [
+        "https://www.amplenote.com/help/add-details-text-image-to-task",
+        "https://www.amplenote.com/help/rich_footnotes_content_preview",
+        "https://www.amplenote.com/help/improved_research_thinking_depth_write_in_3d",
+        "https://www.amplenote.com/help/ocr_capture_image_contents_to_text",
+        "https://www.amplenote.com/help/keyboard_shortcuts_and_markdown_syntax_examples"
+      ]
+    },
+    {
+      "question": "Does Amplenote support filtering search results by note author?",
+      "kind": "feature",
+      "seconds": 2.25,
+      "article_urls": [
+        "https://www.amplenote.com/help/search_filter_tags_groups",
+        "https://www.amplenote.com/help/filter_tasks_by_note_reference_backlink",
+        "https://www.amplenote.com/help/inline_tags_note_reference_filtering",
+        "https://www.amplenote.com/help/all_about_search_lookup_filtering",
+        "https://www.amplenote.com/help/locate_backlink_note_content"
+      ]
+    },
+    {
+      "question": "Does Amplenote support handwriting recognition?",
+      "kind": "feature",
+      "seconds": 7.86,
+      "article_urls": [
+        "https://www.amplenote.com/help/handwriting_drawing_in_notes",
+        "https://www.amplenote.com/help/ocr_capture_image_contents_to_text",
+        "https://www.amplenote.com/help/devices_and_syncing_supported_devices",
+        "https://www.amplenote.com/help/student_academic_discount",
+        "https://www.amplenote.com/help/peek_viewer_sidebar_note_view"
+      ]
+    }
+  ],
+  "compiled_ui": {
+    "chat_cases": 4,
+    "feedback_saved": true
+  },
+  "browser_layout": [
+    {
+      "mode": "prompt",
+      "metrics": {
+        "inputVisible": true,
+        "inputBottom": 371.671875,
+        "composerBottom": 405.671875,
+        "frameHeight": 420,
+        "gap": 12,
+        "bodyScroll": false
+      },
+      "viewport_width": 1400,
+      "viewport_height": 900,
+      "requested_iframe_height": 420
+    },
+    {
+      "mode": "answer",
+      "metrics": {
+        "inputVisible": true,
+        "inputBottom": 170.78125,
+        "composerBottom": 181.78125,
+        "frameHeight": 220,
+        "gap": 12,
+        "bodyScroll": false
+      },
+      "navigation": "https://www.amplenote.com/help/mail-to-note",
+      "answerLayout": {
+        "nonzero": true,
+        "overlap": false
+      },
+      "viewport_width": 1400,
+      "viewport_height": 700,
+      "requested_iframe_height": 220
+    },
+    {
+      "mode": "prompt",
+      "metrics": {
+        "inputVisible": true,
+        "inputBottom": 188.375,
+        "composerBottom": 199.375,
+        "frameHeight": 220,
+        "gap": 12,
+        "bodyScroll": false
+      },
+      "viewport_width": 390,
+      "viewport_height": 700,
+      "requested_iframe_height": 220
+    },
+    {
+      "mode": "full",
+      "metrics": {
+        "inputVisible": true,
+        "inputBottom": 371.671875,
+        "composerBottom": 405.671875,
+        "frameHeight": 813,
+        "gap": 12,
+        "bodyScroll": false
+      },
+      "viewport_width": 2000,
+      "viewport_height": 1000
+    }
+  ],
+  "changes": [
+    "Composer remains visible in constrained popup frames; only transcript scrolls",
+    "Welcome gap reduced to 12px in browser checks",
+    "Expand chat closes the prompt and opens the full-width plugin section",
+    "Source links call app.navigate via a validated bridge; rejected links offer a copyable URL",
+    "Workflow search ranks matching sections, reviews intent, and follows a bounded hop to indexed setup guides",
+    "Troubleshooting and location search preserve prerequisite introductions",
+    "Citation decoding uses real quote indices and one verification decision per claim",
+    "Linked generated claims are omitted independently; remaining claims still pass evidence verification"
+  ],
+  "width": {
+    "native_popup_change": "deferred per user direction",
+    "expand_available": true,
+    "reading_width_px": 1200
+  },
+  "deployed_backend_sha256": {
+    "help_search.py": "ac029c86d5d538c0abe27f4c16c9906bc590e8c5f2794f434edeea748d99c79d",
+    "answer.py": "6528fc1d293291ec997c875019519bfe6afce51237a37b1f0fb69b51cfde67a0",
+    "database.py": "ad5f0971936a872c763a3cb2e3c545eddf73f73b07024d4d631c7561574e7602"
+  },
+  "limits": [
+    "Browser layout checks use a sandboxed test frame and mocked host navigation; installed Amplenote still needs user acceptance",
+    "A client that rejects NoteApps/screenshot navigation gets a copyable address",
+    "No new load benchmark was run for this retrieval revision; previous load reports are historical",
+    "Source changes are uncommitted"
+  ]
+}

@@ -60,6 +60,15 @@ try {
   assert.equal(no.getAttribute("aria-pressed"), "true");
   assert.match(document.querySelector(".feedback-status").textContent, /saved/);
   document.getElementById("new-chat").click();
+  document.getElementById("question").value="How do I have AI write a note for me?";
+  document.getElementById("question-form").dispatchEvent(new dom.window.Event("submit",{cancelable:true}));
+  const imagePending=Date.now();
+  while(document.getElementById("send").disabled && Date.now()-imagePending<70000) await new Promise(resolve=>setTimeout(resolve,30));
+  assert.equal(calls.at(-1).result.response.kind,"help");
+  assert.match(document.querySelector(".assistant").textContent,/agent pro/i);
+  assert.ok(document.querySelector(".answer-screenshot img[src^='https://images.amplenote.com/']"));
+  assert.ok(document.querySelector(".answer-screenshot figcaption a[href$='/ample_agent_pro_quick_start_usage']"));
+  document.getElementById("new-chat").click();
   assert.equal(document.querySelectorAll(".message").length, 0);
   await mkdir("reports", { recursive: true });
   await writeFile("reports/live-ui-smoke.json", JSON.stringify({ tested_at: new Date().toISOString(), upstream, calls }, null, 2) + "\n");

@@ -1,52 +1,507 @@
 {
-  "tested_at": "2026-11-15T03:09:03.345Z",
+  "tested_at": "2026-11-15T04:05:49.197Z",
   "endpoint": "https://amplenote.noteapps.info/help",
   "cases": [
     {
-      "question": "How do I insert a task from an email",
-      "seconds": 11.47,
+      "question": "How do I have AI write a note for me?",
+      "seconds": 14.44,
       "response": {
         "kind": "help",
         "message": "",
         "claims": [
           {
-            "text": "To insert a task from an email, you can use the mail-to-note feature by creating a dedicated email address for a note and sending emails to it.",
+            "text": "To have AI write a note for you, you can use the 'Note Agent' feature within Ample Agent Pro. This allows you to give specific instructions to AI to transform or augment your note.",
+            "interpretation": true,
+            "supports": [
+              {
+                "evidence_id": "help:7ed137a5c8b6a5aa4c0f6dda:section:5:0",
+                "quote": "Want to apply a transformation directly to your note? The \"Note Agent\" option [added by Ample Agent Pro to Note "
+              },
+              {
+                "evidence_id": "help:7ed137a5c8b6a5aa4c0f6dda:section:5:0",
+                "quote": "Options](https://images.amplenote.com/f8609366-38db-11f1-835b-e59b1941e7c9/6d23b88f-6266-4e2a-a5c3-922f916fcabd.png)[^html1] is ready to augment, transform, or otherwise undertake time-saving work."
+              },
+              {
+                "evidence_id": "help:7ed137a5c8b6a5aa4c0f6dda:section:5:0",
+                "quote": "*Your wish is Note Agent's command*"
+              }
+            ]
+          },
+          {
+            "text": "The 'Note Agent' can perform a variety of tasks such as applying tags, extracting action items, rewriting for clarity, and generating titles for your notes.",
+            "interpretation": true,
+            "supports": [
+              {
+                "evidence_id": "help:7ed137a5c8b6a5aa4c0f6dda:section:5:0",
+                "quote": "Some prompts that we have issued to Note Agent while dogfooding it:"
+              },
+              {
+                "evidence_id": "help:7ed137a5c8b6a5aa4c0f6dda:section:5:0",
+                "quote": "Apply tags to this note based on the existing tag hierarchy"
+              },
+              {
+                "evidence_id": "help:7ed137a5c8b6a5aa4c0f6dda:section:5:0",
+                "quote": "Extract action items / tasks (also possible via the `/suggest` action)"
+              },
+              {
+                "evidence_id": "help:7ed137a5c8b6a5aa4c0f6dda:section:5:0",
+                "quote": "Identify removable words/phrases"
+              }
+            ]
+          },
+          {
+            "text": "You can also use the 'Complete that thought' feature, which allows AI to finish a sentence or paragraph you're writing.",
+            "interpretation": true,
+            "supports": [
+              {
+                "evidence_id": "help:7ed137a5c8b6a5aa4c0f6dda:section:14:0",
+                "quote": "Use `/complete` to let AI take a shot at finishing the sentence or paragraph you're writing."
+              }
+            ]
+          },
+          {
+            "text": "For more complex tasks, you can use the 'Task Agent' to let AI work on your tasks by making web searches and referencing related notes within your account.",
+            "interpretation": true,
+            "supports": [
+              {
+                "evidence_id": "help:7ed137a5c8b6a5aa4c0f6dda:section:4:0",
+                "quote": "Why not let AI take a first pass at your todo items?"
+              },
+              {
+                "evidence_id": "help:7ed137a5c8b6a5aa4c0f6dda:section:4:0",
+                "quote": "*Use \"/agent\" within a task to activate Task Agent*"
+              },
+              {
+                "evidence_id": "help:7ed137a5c8b6a5aa4c0f6dda:section:4:0",
+                "quote": "Task Agent will use any available Rich Footnotes or other context from your todo item, and combine it with your optional input about \"what does success look like?\" for the task. It will then "
+              },
+              {
+                "evidence_id": "help:7ed137a5c8b6a5aa4c0f6dda:section:4:0",
+                "quote": "asynchronously work on your task by making web searches and referencing related notes within your account. The end product is a \"result note\" that is linked from your task. For example, given the "
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "help:7ed137a5c8b6a5aa4c0f6dda:section:5:0",
+            "title": "ample agent pro quick start usage",
+            "url": "https://www.amplenote.com/help/ample_agent_pro_quick_start_usage",
+            "site": "amplenote",
+            "quote": "Want to apply a transformation directly to your note? The \"Note Agent\" option [added by Ample Agent Pro to Note ",
+            "version": "a4d7d1a16403555eb82dc92841253678a6bec4aaf200657f2c125e1e93b51d36",
+            "screenshot_url": "https://images.amplenote.com/f8609366-38db-11f1-835b-e59b1941e7c9/5daefbae-77d6-4cbe-88bd-805fc462495b.png",
+            "screenshot_caption": "From the help guide: Note Agent",
+            "availability_label": null
+          },
+          {
+            "id": "help:7ed137a5c8b6a5aa4c0f6dda:section:14:0",
+            "title": "ample agent pro quick start usage",
+            "url": "https://www.amplenote.com/help/ample_agent_pro_quick_start_usage",
+            "site": "amplenote",
+            "quote": "Use `/complete` to let AI take a shot at finishing the sentence or paragraph you're writing.",
+            "version": "c4d2cf484505706c511f00066bd532602037145d8ed803312c45bd0c85238bda",
+            "screenshot_url": null,
+            "screenshot_caption": null,
+            "availability_label": null
+          },
+          {
+            "id": "help:7ed137a5c8b6a5aa4c0f6dda:section:4:0",
+            "title": "ample agent pro quick start usage",
+            "url": "https://www.amplenote.com/help/ample_agent_pro_quick_start_usage",
+            "site": "amplenote",
+            "quote": "Why not let AI take a first pass at your todo items?",
+            "version": "a88ba40c7b3432bb0495f271d71285b2b5675432b47328bbe0b72c142bfcccc3",
+            "screenshot_url": "https://images.amplenote.com/f8609366-38db-11f1-835b-e59b1941e7c9/4a3bfb29-1822-4d9a-a7aa-9c3d38cb2571.png",
+            "screenshot_caption": "From the help guide: Task Agent",
+            "availability_label": null
+          }
+        ],
+        "resolved_question": "How do I have AI write a note for me?",
+        "articles": [
+          {
+            "document_id": "help:7ed137a5c8b6a5aa4c0f6dda",
+            "title": "Ample Agent Pro: Quick Start & Usage Guide",
+            "url": "https://www.amplenote.com/help/ample_agent_pro_quick_start_usage",
+            "snippet": "The \"Ample Agent Pro\" plugin is Amplenote's signature package of AI tooling to infuse your Amplenote experience with an ever-growing suite of functionality. Like Task Score, Rich Footnotes, and the Idea Execution Funnel, Ample Agent Pro offers a much different flavor of AI than w",
+            "evidence_id": "help:7ed137a5c8b6a5aa4c0f6dda:section:0:0",
+            "version": "e04f485547f10bdd48987710682d3d62ca5b078689f23a1a8ea29611033fde6a"
+          },
+          {
+            "document_id": "help:35dcb7f0a93305607d8eac7e",
+            "title": "Claude & Codex: Enable MCP access to read and write notes on desktop",
+            "url": "https://www.amplenote.com/help/ai_mcp_server_connect_amplenote_claude_codex",
+            "snippet": "For subscribers with an Unlimited plan or above, Amplenote offers a powerful connection option to let a frontier LLM read through your notes and write/proofread/edit or search your note content. This connection is called an \"MCP Server.\" As of its v1 debut in 2026, the process of",
+            "evidence_id": "help:35dcb7f0a93305607d8eac7e:section:0:0",
+            "version": "b61fadccbff2a7cd27568ec691c6af56bef007865cfaae2fa5a668233e71eb0f"
+          },
+          {
+            "document_id": "help:eec82f1ac759c000a7910e50",
+            "title": "Using the AmpleAI plugin",
+            "url": "https://www.amplenote.com/help/using_default_ai_plugin",
+            "snippet": "The AmpleAI plugin is a plugin developed by Amplenote staff to allow users to tap into the rapidly growing potential of large language models (henceforth, LLMs) in the 2020s. The most updated plugin documentation is located on the plugin's marketplace page, but that documentation",
+            "evidence_id": "help:eec82f1ac759c000a7910e50:section:0:0",
+            "version": "ffebe25e40979393f235d11ab032b2b2816720664c12865b0466a82ce5e28887"
+          }
+        ],
+        "interaction_id": "52f8cc47f52c4014b004522e38239cc8"
+      }
+    },
+    {
+      "question": "What AI features are available in Amplenote?",
+      "seconds": 20.67,
+      "response": {
+        "kind": "help",
+        "message": "",
+        "claims": [
+          {
+            "text": "Amplenote's Ample Agent Pro plugin provides AI features that integrate with the user's notes and tasks, offering functionalities like Thesaurus, Task Agent, and more.",
+            "interpretation": true,
+            "supports": [
+              {
+                "evidence_id": "help:7ed137a5c8b6a5aa4c0f6dda:section:0:0",
+                "quote": "The \"Ample Agent Pro\" plugin is Amplenote's signature package of AI tooling to infuse your Amplenote experience with an ever-growing suite of functionality."
+              },
+              {
+                "evidence_id": "help:7ed137a5c8b6a5aa4c0f6dda:section:0:0",
+                "quote": "Like Task Score, Rich Footnotes, and the Idea Execution Funnel, Ample Agent Pro offers a much different flavor of AI than what is typically found in other note and task apps."
+              },
+              {
+                "evidence_id": "help:7ed137a5c8b6a5aa4c0f6dda:section:10:0",
+                "quote": "People should be able to understand that the \"Thesaurus\" feature can be very handy in authoring blog posts, help documents, or team communications."
+              },
+              {
+                "evidence_id": "help:7ed137a5c8b6a5aa4c0f6dda:section:4:0",
+                "quote": "Why not let AI take a first pass at your todo items?"
+              }
+            ]
+          },
+          {
+            "text": "The Ample Agent Pro plugin allows users to access and utilize API keys for various LLM providers such as Anthropic, OpenAI, Gemini, and Grok.",
+            "interpretation": true,
+            "supports": [
+              {
+                "evidence_id": "help:7ed137a5c8b6a5aa4c0f6dda:section:24:0",
+                "quote": "Level up your thinking horsepower by adding API keys for the various LLMs that you have signed up for."
+              },
+              {
+                "evidence_id": "help:7ed137a5c8b6a5aa4c0f6dda:section:24:0",
+                "quote": "For most Ample Agent Pro features (all those in the \"Complimentary features\" section), we will initially consume quota that is allocated for each paying user. However, any AI power user knows that $8 "
+              },
+              {
+                "evidence_id": "help:7ed137a5c8b6a5aa4c0f6dda:section:24:0",
+                "quote": "worth of spend (the initial cost of Ample Agent Pro) isn't going to get your very far when you're requesting complex, multi-web-query research, or value-creating, long-running tasks."
+              },
+              {
+                "evidence_id": "help:7ed137a5c8b6a5aa4c0f6dda:section:24:0",
+                "quote": "Use the [`**/provider**` slash command](https://images.amplenote.com/f8609366-38db-11f1-835b-e59b1941e7c9/9815832f-3e87-452a-ba51-8e0abb70320e.png)[^html9] to add your API keys for Anthropic, OpenAI, "
+              }
+            ]
+          },
+          {
+            "text": "Ample Agent Pro includes complimentary features that are available within a monthly quota, such as Thesaurus, Task Agent, and other AI-driven tools.",
+            "interpretation": true,
+            "supports": [
+              {
+                "evidence_id": "help:7ed137a5c8b6a5aa4c0f6dda:section:25:0",
+                "quote": "Ample Agent Pro has been built with an eye toward ensuring that most users will never have to worry about their AI quota. An effectively unlimited number of **non-research** interactions (e.g., "
+              },
+              {
+                "evidence_id": "help:7ed137a5c8b6a5aa4c0f6dda:section:25:0",
+                "quote": "\"thesaurus,\" \"revise,\" \"complete the thought\") should be possible. However, the Ample Agent Pro queries that call upon agents (like Note Agent and Task Agent) can hypothetically exhaust one's monthly "
+              },
+              {
+                "evidence_id": "help:7ed137a5c8b6a5aa4c0f6dda:section:25:0",
+                "quote": "allocation of queries."
+              },
+              {
+                "evidence_id": "help:7ed137a5c8b6a5aa4c0f6dda:section:25:0",
+                "quote": "To allow users to thoughtfully utilize all features as much as possible, we can show you the amount of your quota that you have consumed by calling `/quota`. Beyond the basically-unlimited number of "
+              }
+            ]
+          },
+          {
+            "text": "The AmpleAI plugin is a separate plugin developed by Amplenote staff that allows users to access the latest developments in AI, with functionality that includes AI Search Agent, Question & Answer, and more.",
+            "interpretation": true,
+            "supports": [
+              {
+                "evidence_id": "help:eec82f1ac759c000a7910e50:section:0:0",
+                "quote": "The [AmpleAI plugin](https://www.amplenote.com/plugins/75h72w8xghmHDdr8p5FiX6fh) is a plugin developed by Amplenote staff to allow users to tap into the rapidly growing potential of large language "
+              },
+              {
+                "evidence_id": "help:eec82f1ac759c000a7910e50:section:0:0",
+                "quote": "models (henceforth, LLMs) in the 2020s. The most updated plugin documentation is located on the [plugin's marketplace page](https://www.amplenote.com/plugins/75h72w8xghmHDdr8p5FiX6fh), but that "
+              },
+              {
+                "evidence_id": "help:eec82f1ac759c000a7910e50:section:0:0",
+                "quote": "documentation is left somewhat brief. More robust detail on the functionality offered by the plugin can be found on this page."
+              },
+              {
+                "evidence_id": "help:eec82f1ac759c000a7910e50:section:1:0",
+                "quote": "Functionality for AmpleAI comes in many flavors. In the list that follows, functionality is separated by how it is invoked."
+              }
+            ]
+          },
+          {
+            "text": "Amplenote offers an MCP Server connection for users with an Unlimited plan or above, allowing frontier LLMs like Claude and Codex to read, write, and edit notes directly.",
+            "interpretation": true,
+            "supports": [
+              {
+                "evidence_id": "help:35dcb7f0a93305607d8eac7e:section:0:0",
+                "quote": "For subscribers with an Unlimited plan or above, Amplenote offers a powerful connection option to let a frontier LLM read through your notes and write/proofread/edit or search your note content."
+              },
+              {
+                "evidence_id": "help:35dcb7f0a93305607d8eac7e:section:0:0",
+                "quote": "This connection is called an \"MCP Server.\" As of its v1 debut in 2026, the process of enabling your local MCP server requires a few steps of one-time setup. This page details the necessary setup."
+              },
+              {
+                "evidence_id": "help:35dcb7f0a93305607d8eac7e:section:1:0",
+                "quote": "Why bother setting this thing up in the first place? Many, many reasons."
+              },
+              {
+                "evidence_id": "help:35dcb7f0a93305607d8eac7e:section:1:0",
+                "quote": "Conceptually, the connection you make when you enable the MCP server is that an agent the frontier of intelligence can stand in for you, reading, editing or authoring any note, table, or task in your "
+              }
+            ]
+          },
+          {
+            "text": "The MCP Server provides a separate window for AI interaction, allowing users to work on tasks without slowing down their Amplenote app.",
+            "interpretation": true,
+            "supports": [
+              {
+                "evidence_id": "help:35dcb7f0a93305607d8eac7e:section:1:0",
+                "quote": "working from a totally separate window with all its own memory and resources."
+              },
+              {
+                "evidence_id": "help:35dcb7f0a93305607d8eac7e:section:1:0",
+                "quote": "That means you can continue using Amplenote without any slowdown, or uncertainty about the progress of the task underway. For long-running commands, being able to interact with your personal "
+              },
+              {
+                "evidence_id": "help:35dcb7f0a93305607d8eac7e:section:1:0",
+                "quote": "knowledge store through a standalone app is a great way to minimize the distraction within your Amplenote app as you continue to work."
+              },
+              {
+                "evidence_id": "help:35dcb7f0a93305607d8eac7e:section:1:0",
+                "quote": "Conceptually, the connection you make when you enable the MCP server is that an agent the frontier of intelligence can stand in for you, reading, editing or authoring any note, table, or task in your "
+              }
+            ]
+          },
+          {
+            "text": "The AmpleAI plugin is open-source and allows users to customize their AI experience, with the ability to update and improve the plugin's functionality.",
+            "interpretation": true,
+            "supports": [
+              {
+                "evidence_id": "help:eec82f1ac759c000a7910e50:section:14:0",
+                "quote": "AmpleAI offers a growing toolbox of functionality for users that want to benefit from the latest cutting-edge developments in AI. [The source code for this plugin is open "
+              },
+              {
+                "evidence_id": "help:eec82f1ac759c000a7910e50:section:14:0",
+                "quote": "source](https://github.com/alloy-org/ai-plugin). Why have we chosen to avail critical AI functionality via a plugin, instead of including it in the default Amplenote installation? Many reasons, which "
+              },
+              {
+                "evidence_id": "help:eec82f1ac759c000a7910e50:section:14:0",
+                "quote": "you are free to skip if you don't care:"
+              },
+              {
+                "evidence_id": "help:eec82f1ac759c000a7910e50:section:14:0",
+                "quote": "**To inspire users to recognize **[**the potential afforded by plugins**](https://www.amplenote.com/help/guide_to_developing_amplenote_plugins). We want to give our programmer (or aspiring "
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "help:7ed137a5c8b6a5aa4c0f6dda:section:0:0",
+            "title": "ample agent pro quick start usage",
+            "url": "https://www.amplenote.com/help/ample_agent_pro_quick_start_usage",
+            "site": "amplenote",
+            "quote": "The \"Ample Agent Pro\" plugin is Amplenote's signature package of AI tooling to infuse your Amplenote experience with an ever-growing suite of functionality.",
+            "version": "e04f485547f10bdd48987710682d3d62ca5b078689f23a1a8ea29611033fde6a",
+            "screenshot_url": null,
+            "screenshot_caption": null,
+            "availability_label": null
+          },
+          {
+            "id": "help:7ed137a5c8b6a5aa4c0f6dda:section:10:0",
+            "title": "ample agent pro quick start usage",
+            "url": "https://www.amplenote.com/help/ample_agent_pro_quick_start_usage",
+            "site": "amplenote",
+            "quote": "People should be able to understand that the \"Thesaurus\" feature can be very handy in authoring blog posts, help documents, or team communications.",
+            "version": "d536bbec485f26a4ffe5dd0a0ae39036a003c8077b2898d2b65c641255e8230b",
+            "screenshot_url": "https://images.amplenote.com/f8609366-38db-11f1-835b-e59b1941e7c9/8724488f-9e7f-44a8-8d68-88202ff5e2fe.png",
+            "screenshot_caption": "From the help guide: Thesaurus",
+            "availability_label": null
+          },
+          {
+            "id": "help:7ed137a5c8b6a5aa4c0f6dda:section:4:0",
+            "title": "ample agent pro quick start usage",
+            "url": "https://www.amplenote.com/help/ample_agent_pro_quick_start_usage",
+            "site": "amplenote",
+            "quote": "Why not let AI take a first pass at your todo items?",
+            "version": "a88ba40c7b3432bb0495f271d71285b2b5675432b47328bbe0b72c142bfcccc3",
+            "screenshot_url": "https://images.amplenote.com/f8609366-38db-11f1-835b-e59b1941e7c9/4a3bfb29-1822-4d9a-a7aa-9c3d38cb2571.png",
+            "screenshot_caption": "From the help guide: Task Agent",
+            "availability_label": null
+          },
+          {
+            "id": "help:7ed137a5c8b6a5aa4c0f6dda:section:24:0",
+            "title": "ample agent pro quick start usage",
+            "url": "https://www.amplenote.com/help/ample_agent_pro_quick_start_usage",
+            "site": "amplenote",
+            "quote": "Level up your thinking horsepower by adding API keys for the various LLMs that you have signed up for.",
+            "version": "2a27468001ad15d4c9732eb08508d9dbda8b3f7d504932224393a4183d27f56f",
+            "screenshot_url": null,
+            "screenshot_caption": null,
+            "availability_label": null
+          },
+          {
+            "id": "help:7ed137a5c8b6a5aa4c0f6dda:section:25:0",
+            "title": "ample agent pro quick start usage",
+            "url": "https://www.amplenote.com/help/ample_agent_pro_quick_start_usage",
+            "site": "amplenote",
+            "quote": "Ample Agent Pro has been built with an eye toward ensuring that most users will never have to worry about their AI quota. An effectively unlimited number of **non-research** interactions (e.g., ",
+            "version": "20728f617b5c674e7da661faa54718e48bb8f9044952406c59557ec42e81439e",
+            "screenshot_url": null,
+            "screenshot_caption": null,
+            "availability_label": null
+          },
+          {
+            "id": "help:eec82f1ac759c000a7910e50:section:0:0",
+            "title": "using default ai plugin",
+            "url": "https://www.amplenote.com/help/using_default_ai_plugin",
+            "site": "amplenote",
+            "quote": "The [AmpleAI plugin](https://www.amplenote.com/plugins/75h72w8xghmHDdr8p5FiX6fh) is a plugin developed by Amplenote staff to allow users to tap into the rapidly growing potential of large language ",
+            "version": "ffebe25e40979393f235d11ab032b2b2816720664c12865b0466a82ce5e28887",
+            "screenshot_url": null,
+            "screenshot_caption": null,
+            "availability_label": null
+          },
+          {
+            "id": "help:eec82f1ac759c000a7910e50:section:1:0",
+            "title": "using default ai plugin",
+            "url": "https://www.amplenote.com/help/using_default_ai_plugin",
+            "site": "amplenote",
+            "quote": "Functionality for AmpleAI comes in many flavors. In the list that follows, functionality is separated by how it is invoked.",
+            "version": "f768db79a28d9df409b1608f2b2f10de4478deab97d392c46719849008801abc",
+            "screenshot_url": null,
+            "screenshot_caption": null,
+            "availability_label": null
+          },
+          {
+            "id": "help:35dcb7f0a93305607d8eac7e:section:0:0",
+            "title": "ai mcp server connect amplenote claude codex",
+            "url": "https://www.amplenote.com/help/ai_mcp_server_connect_amplenote_claude_codex",
+            "site": "amplenote",
+            "quote": "For subscribers with an Unlimited plan or above, Amplenote offers a powerful connection option to let a frontier LLM read through your notes and write/proofread/edit or search your note content.",
+            "version": "b61fadccbff2a7cd27568ec691c6af56bef007865cfaae2fa5a668233e71eb0f",
+            "screenshot_url": null,
+            "screenshot_caption": null,
+            "availability_label": null
+          },
+          {
+            "id": "help:35dcb7f0a93305607d8eac7e:section:1:0",
+            "title": "ai mcp server connect amplenote claude codex",
+            "url": "https://www.amplenote.com/help/ai_mcp_server_connect_amplenote_claude_codex",
+            "site": "amplenote",
+            "quote": "Why bother setting this thing up in the first place? Many, many reasons.",
+            "version": "b99be6698aaf7677b8c233d9f4bbeaf17d89337dca2bc5c96bcd2b4fc7c0bf6e",
+            "screenshot_url": null,
+            "screenshot_caption": null,
+            "availability_label": null
+          },
+          {
+            "id": "help:eec82f1ac759c000a7910e50:section:14:0",
+            "title": "using default ai plugin",
+            "url": "https://www.amplenote.com/help/using_default_ai_plugin",
+            "site": "amplenote",
+            "quote": "AmpleAI offers a growing toolbox of functionality for users that want to benefit from the latest cutting-edge developments in AI. [The source code for this plugin is open ",
+            "version": "d326827fafc40b6a1faaec69eeb6fcf04b6778a581f9f073be2d85c694df87e5",
+            "screenshot_url": null,
+            "screenshot_caption": null,
+            "availability_label": null
+          }
+        ],
+        "resolved_question": "What AI features are available in Amplenote?",
+        "articles": [
+          {
+            "document_id": "help:7ed137a5c8b6a5aa4c0f6dda",
+            "title": "Ample Agent Pro: Quick Start & Usage Guide",
+            "url": "https://www.amplenote.com/help/ample_agent_pro_quick_start_usage",
+            "snippet": "The \"Ample Agent Pro\" plugin is Amplenote's signature package of AI tooling to infuse your Amplenote experience with an ever-growing suite of functionality. Like Task Score, Rich Footnotes, and the Idea Execution Funnel, Ample Agent Pro offers a much different flavor of AI than w",
+            "evidence_id": "help:7ed137a5c8b6a5aa4c0f6dda:section:0:0",
+            "version": "e04f485547f10bdd48987710682d3d62ca5b078689f23a1a8ea29611033fde6a"
+          },
+          {
+            "document_id": "help:35dcb7f0a93305607d8eac7e",
+            "title": "Claude & Codex: Enable MCP access to read and write notes on desktop",
+            "url": "https://www.amplenote.com/help/ai_mcp_server_connect_amplenote_claude_codex",
+            "snippet": "For subscribers with an Unlimited plan or above, Amplenote offers a powerful connection option to let a frontier LLM read through your notes and write/proofread/edit or search your note content. This connection is called an \"MCP Server.\" As of its v1 debut in 2026, the process of",
+            "evidence_id": "help:35dcb7f0a93305607d8eac7e:section:0:0",
+            "version": "b61fadccbff2a7cd27568ec691c6af56bef007865cfaae2fa5a668233e71eb0f"
+          },
+          {
+            "document_id": "help:eec82f1ac759c000a7910e50",
+            "title": "Using the AmpleAI plugin",
+            "url": "https://www.amplenote.com/help/using_default_ai_plugin",
+            "snippet": "The AmpleAI plugin is a plugin developed by Amplenote staff to allow users to tap into the rapidly growing potential of large language models (henceforth, LLMs) in the 2020s. The most updated plugin documentation is located on the plugin's marketplace page, but that documentation",
+            "evidence_id": "help:eec82f1ac759c000a7910e50:section:0:0",
+            "version": "ffebe25e40979393f235d11ab032b2b2816720664c12865b0466a82ce5e28887"
+          }
+        ],
+        "interaction_id": "f05ac4e665304972a6b5d7ad77830611"
+      }
+    },
+    {
+      "question": "How do I insert a task from an email",
+      "seconds": 14.37,
+      "response": {
+        "kind": "help",
+        "message": "",
+        "claims": [
+          {
+            "text": "To insert a task from an email, you can use the mail-to-note feature in Amplenote. This feature allows you to send emails directly to a note, and the content of the email will be added as a task within that note.",
             "interpretation": true,
             "supports": [
               {
                 "evidence_id": "help:21fb3a453586ad55424cd60f:section:6:0",
                 "quote": "Every note offers the provision to have an email address associated with it using our [mail-to-note feature](https://www.amplenote.com/help/mail-to-note). By [creating a contact in "
               },
+              {
+                "evidence_id": "help:6675edca90f2d02a23c857a0:section:2:0",
+                "quote": "|**Email address to use**|**What will happen to emails sent to it**|\n|---|---|\n|```<br>[Email token]~[Note ID]@amplenote.email<br>```|Your email will be added as a **task in that particular note**|\n"
+              }
+            ]
+          },
+          {
+            "text": "To use the mail-to-note feature, you need to have an email address associated with a note. This can be done by clicking the triple-dot icon in the upper right corner of any note on the web version of Amplenote and selecting 'Copy mail-to-note address'.",
+            "interpretation": true,
+            "supports": [
+              {
+                "evidence_id": "help:6675edca90f2d02a23c857a0:section:1:0",
+                "quote": "You can get an email address for any note by clicking the [triple-dot icon in the upper right corner](https://images.amplenote.com/c97d12ae-eef4-11ea-9941-3294fb3dabbf/9797ea74-9ba3-4710-a0cd-2399df50"
+              },
+              {
+                "evidence_id": "help:6675edca90f2d02a23c857a0:footnote:a88c0c53c0e1:0",
+                "quote": "Image text supplied by the source:\nMail-to-note\n...\n# amplenote/help & # add a tag\nB Z H1 H2 H3\nMail-to-note is a powerful feature that enables a user to send images or content to a note of their "
+              }
+            ]
+          },
+          {
+            "text": "Once you have the mail-to-note address, you can create a contact in your email client (such as Gmail) with this address. This allows you to quickly forward emails to your note without having to copy the address each time.",
+            "interpretation": true,
+            "supports": [
               {
                 "evidence_id": "help:6675edca90f2d02a23c857a0:section:4:0",
                 "quote": "A common use case for mail-to-note is to get emails out of your inbox and into your task list. If you expect to regularly send tasks to a note, it's smart to create a contact for that note so that "
               },
               {
-                "evidence_id": "help:6675edca90f2d02a23c857a0:section:2:0",
-                "quote": "|**Email address to use**|**What will happen to emails sent to it**|\n|---|---|\n|```<br>[Email token]~[Note ID]@amplenote.email<br>```|Your email will be added as a **task in that particular note**|\n"
-              }
-            ]
-          },
-          {
-            "text": "You can create a contact in your email app (like Gmail) with the note's mail-to-note address to easily forward emails to your task list.",
-            "interpretation": true,
-            "supports": [
-              {
-                "evidence_id": "help:21fb3a453586ad55424cd60f:section:6:0",
-                "quote": "Every note offers the provision to have an email address associated with it using our [mail-to-note feature](https://www.amplenote.com/help/mail-to-note). By [creating a contact in "
-              },
-              {
                 "evidence_id": "help:6675edca90f2d02a23c857a0:section:4:0",
-                "quote": "To create a new contact in Gmail, first click on their 9-dot button that should be located near the top of your page. Then, scroll down the options available to \"Contacts.\" As of 2020, this is the "
-              },
-              {
-                "evidence_id": "help:6675edca90f2d02a23c857a0:section:2:0",
-                "quote": "|**Email address to use**|**What will happen to emails sent to it**|\n|---|---|\n|```<br>[Email token]~[Note ID]@amplenote.email<br>```|Your email will be added as a **task in that particular note**|\n"
+                "quote": "you don't have to go copy the note address every damn time."
               }
             ]
           },
           {
-            "text": "Emails sent to the mail-to-note address can be added as tasks in a specific note, a new note, or in a daily jot, depending on the address format used.",
+            "text": "When you send an email to the mail-to-note address, the content of the email will be added as a task in the specified note. Additionally, you can use specific email addresses to add the email as a task in a daily jot or a new note with tags.",
             "interpretation": true,
             "supports": [
               {
@@ -60,6 +515,54 @@
               {
                 "evidence_id": "help:6675edca90f2d02a23c857a0:section:2:0",
                 "quote": "|```<br>[Email token]~today@amplenote.email<br>```|Your email will be added as a **task in the current daily jot**|\n"
+              },
+              {
+                "evidence_id": "help:6675edca90f2d02a23c857a0:section:2:0",
+                "quote": "|```<br>[Email token]~tomorrow@amplenote.email<br>```|Your email will be added as a **task in the next day's daily jot**|"
+              }
+            ]
+          },
+          {
+            "text": "You can also derive other email addresses from the mail-to-note address by modifying the part after the tilde `~` sign. This allows you to specify where the email content should be added, such as in a new note with specific tags or in a daily jot.",
+            "interpretation": true,
+            "supports": [
+              {
+                "evidence_id": "help:6675edca90f2d02a23c857a0:section:2:0",
+                "quote": "From the address obtained above, you can derive a few other addresses, based on your needs. Simply remove or edit the part after the tilde `~` sign as explained below:"
+              },
+              {
+                "evidence_id": "help:6675edca90f2d02a23c857a0:section:2:0",
+                "quote": "|**Email address to use**|**What will happen to emails sent to it**|\n|---|---|\n|```<br>[Email token]~[Note ID]@amplenote.email<br>```|Your email will be added as a **task in that particular note**|\n"
+              },
+              {
+                "evidence_id": "help:6675edca90f2d02a23c857a0:section:2:0",
+                "quote": "|```<br>[Email token]@amplenote.email<br>```|Your email will be added to a **new note** titled after the email's subject|\n"
+              },
+              {
+                "evidence_id": "help:6675edca90f2d02a23c857a0:section:2:0",
+                "quote": "|```<br>[Email token]~today@amplenote.email<br>```|Your email will be added as a **task in the current daily jot**|\n"
+              }
+            ]
+          },
+          {
+            "text": "If you use the 'new note' option with the mail-to-note feature, you can tag the newly created note by including a tag in the subject line of the email before forwarding it to the dedicated address. This helps in organizing your notes with specific tags.",
+            "interpretation": true,
+            "supports": [
+              {
+                "evidence_id": "help:6675edca90f2d02a23c857a0:section:3:0",
+                "quote": "When using the \"new note\" option:"
+              },
+              {
+                "evidence_id": "help:6675edca90f2d02a23c857a0:section:3:0",
+                "quote": "```\n[Email token]@amplenote.email\n```"
+              },
+              {
+                "evidence_id": "help:6675edca90f2d02a23c857a0:section:3:0",
+                "quote": "you can instruct Amplenote to tag the newly created note for your email if you edit the Subject of the email before forwarding it to your dedicated address."
+              },
+              {
+                "evidence_id": "help:6675edca90f2d02a23c857a0:section:3:0",
+                "quote": "```\nInsurance offers for 2025 #my-tag-here\n```"
               }
             ]
           }
@@ -73,16 +576,7 @@
             "quote": "Every note offers the provision to have an email address associated with it using our [mail-to-note feature](https://www.amplenote.com/help/mail-to-note). By [creating a contact in ",
             "version": "150ae7f65d7b19ddfb782e226c74a0b0259f493879fe7d58c07d9edfcc78b2f0",
             "screenshot_url": null,
-            "availability_label": null
-          },
-          {
-            "id": "help:6675edca90f2d02a23c857a0:section:4:0",
-            "title": "mail-to-note",
-            "url": "https://www.amplenote.com/help/mail-to-note",
-            "site": "amplenote",
-            "quote": "A common use case for mail-to-note is to get emails out of your inbox and into your task list. If you expect to regularly send tasks to a note, it's smart to create a contact for that note so that ",
-            "version": "8b723411c9f8f53dad1c3012aa520e31403c59edcd3fb8190ba80994ebb5aa58",
-            "screenshot_url": null,
+            "screenshot_caption": null,
             "availability_label": null
           },
           {
@@ -93,6 +587,51 @@
             "quote": "|**Email address to use**|**What will happen to emails sent to it**|\n|---|---|\n|```<br>[Email token]~[Note ID]@amplenote.email<br>```|Your email will be added as a **task in that particular note**|\n",
             "version": "e776d233621a682611621117a16a8e04b0791768ef597975111ed2471e62fc67",
             "screenshot_url": null,
+            "screenshot_caption": null,
+            "availability_label": null
+          },
+          {
+            "id": "help:6675edca90f2d02a23c857a0:section:1:0",
+            "title": "mail-to-note",
+            "url": "https://www.amplenote.com/help/mail-to-note",
+            "site": "amplenote",
+            "quote": "You can get an email address for any note by clicking the [triple-dot icon in the upper right corner](https://images.amplenote.com/c97d12ae-eef4-11ea-9941-3294fb3dabbf/9797ea74-9ba3-4710-a0cd-2399df50",
+            "version": "9bbfb72cf1e27dd117f28731a9fb31ed50e43b9a233997c4a6603f876c9b7acf",
+            "screenshot_url": "https://images.amplenote.com/c97d12ae-eef4-11ea-9941-3294fb3dabbf/62af9073-3f3c-4ddd-bbc3-2e96c8ca092a.png",
+            "screenshot_caption": "From the help guide: Getting your dedicated mail-to-note address",
+            "availability_label": null
+          },
+          {
+            "id": "help:6675edca90f2d02a23c857a0:footnote:a88c0c53c0e1:0",
+            "title": "mail-to-note",
+            "url": "https://www.amplenote.com/help/mail-to-note",
+            "site": "amplenote",
+            "quote": "Image text supplied by the source:\nMail-to-note\n...\n# amplenote/help & # add a tag\nB Z H1 H2 H3\nMail-to-note is a powerful feature that enables a user to send images or content to a note of their ",
+            "version": "118ccaaf7af473ebbe544fab4f352b928cd43334d5c04c33756cb025a76cf21e",
+            "screenshot_url": "https://images.amplenote.com/c97d12ae-eef4-11ea-9941-3294fb3dabbf/9797ea74-9ba3-4710-a0cd-2399df50160a.png",
+            "screenshot_caption": "From the help guide: mail-to-note",
+            "availability_label": null
+          },
+          {
+            "id": "help:6675edca90f2d02a23c857a0:section:4:0",
+            "title": "mail-to-note",
+            "url": "https://www.amplenote.com/help/mail-to-note",
+            "site": "amplenote",
+            "quote": "A common use case for mail-to-note is to get emails out of your inbox and into your task list. If you expect to regularly send tasks to a note, it's smart to create a contact for that note so that ",
+            "version": "8b723411c9f8f53dad1c3012aa520e31403c59edcd3fb8190ba80994ebb5aa58",
+            "screenshot_url": null,
+            "screenshot_caption": null,
+            "availability_label": null
+          },
+          {
+            "id": "help:6675edca90f2d02a23c857a0:section:3:0",
+            "title": "mail-to-note",
+            "url": "https://www.amplenote.com/help/mail-to-note",
+            "site": "amplenote",
+            "quote": "When using the \"new note\" option:",
+            "version": "aa45e6e455d5fba019ce48d985c3fa911ddd48b59def58bd8ce99545fd7a2f6c",
+            "screenshot_url": null,
+            "screenshot_caption": null,
             "availability_label": null
           }
         ],
@@ -139,38 +678,18 @@
             "version": "d195cc8f91a363355d74b8b5373f74e8fddbac7928160a948c3f59156da7a5a7"
           }
         ],
-        "interaction_id": "98060bd8d974407dad5712159a0b58cd"
+        "interaction_id": "17af8e3927b14aacbc10918d5f8b5d2e"
       }
     },
     {
       "question": "How do I forward an email into my Amplenote task list?",
-      "seconds": 12.8,
+      "seconds": 8.76,
       "response": {
         "kind": "help",
         "message": "",
         "claims": [
           {
-            "text": "To forward an email into your Amplenote task list, use the mail-to-note feature by creating a contact in your email app (like Gmail) with your note's address.",
-            "interpretation": false,
-            "supports": [
-              {
-                "evidence_id": "help:21fb3a453586ad55424cd60f:section:6:0",
-                "quote": "Gmail](https://www.amplenote.com/help/mail-to-note#Creating_a_Contact_(Gmail)) (or your email app of choice) with your note address, you can quickly forward emails to your todo list."
-              }
-            ]
-          },
-          {
-            "text": "You can derive specific email addresses for different actions, such as adding an email as a task in a specific note by using the format [Email token]~[Note ID]@amplenote.email.",
-            "interpretation": true,
-            "supports": [
-              {
-                "evidence_id": "help:6675edca90f2d02a23c857a0:section:2:0",
-                "quote": "|**Email address to use**|**What will happen to emails sent to it**|\n|---|---|\n|```<br>[Email token]~[Note ID]@amplenote.email<br>```|Your email will be added as a **task in that particular note**|\n"
-              }
-            ]
-          },
-          {
-            "text": "Mail-to-note will forward PDF attachments into the resulting note, and you can tag newly created notes with specific tags by editing the email subject before forwarding.",
+            "text": "To forward an email into your Amplenote task list, you can use the mail-to-note feature, which allows you to send emails directly to a note, and they will be added as tasks.",
             "interpretation": true,
             "supports": [
               {
@@ -178,33 +697,69 @@
                 "quote": "*Mail-to-note will also forward PDF attachments into the resulting ample-note.*"
               },
               {
+                "evidence_id": "help:21fb3a453586ad55424cd60f:section:6:0",
+                "quote": "Gmail](https://www.amplenote.com/help/mail-to-note#Creating_a_Contact_(Gmail)) (or your email app of choice) with your note address, you can quickly forward emails to your todo list."
+              }
+            ]
+          },
+          {
+            "text": "You can get an email address for any note by clicking the triple-dot icon in the upper right corner of any note on web, then clicking 'More options' and finally 'Copy mail-to-note address'.",
+            "interpretation": true,
+            "supports": [
+              {
+                "evidence_id": "help:6675edca90f2d02a23c857a0:section:1:0",
+                "quote": "You can get an email address for any note by clicking the [triple-dot icon in the upper right corner](https://images.amplenote.com/c97d12ae-eef4-11ea-9941-3294fb3dabbf/9797ea74-9ba3-4710-a0cd-2399df50"
+              },
+              {
+                "evidence_id": "help:6675edca90f2d02a23c857a0:section:1:0",
+                "quote": "\"Copy mail-to-note address\":"
+              }
+            ]
+          },
+          {
+            "text": "Once you have the mail-to-note address, you can create a contact in your email client (like Gmail) with that address to easily forward emails to your note.",
+            "interpretation": true,
+            "supports": [
+              {
+                "evidence_id": "help:6675edca90f2d02a23c857a0:section:4:0",
+                "quote": "A common use case for mail-to-note is to get emails out of your inbox and into your task list. If you expect to regularly send tasks to a note, it's smart to create a contact for that note so that "
+              },
+              {
+                "evidence_id": "help:6675edca90f2d02a23c857a0:section:4:0",
+                "quote": "you don't have to go copy the note address every damn time."
+              }
+            ]
+          },
+          {
+            "text": "When using the mail-to-note address, you can tag a newly created note by editing the subject of the email before forwarding it to your dedicated address. For example, you can add a tag like `#my-tag-here` to the subject line.",
+            "interpretation": true,
+            "supports": [
+              {
                 "evidence_id": "help:6675edca90f2d02a23c857a0:section:3:0",
                 "quote": "you can instruct Amplenote to tag the newly created note for your email if you edit the Subject of the email before forwarding it to your dedicated address."
+              },
+              {
+                "evidence_id": "help:6675edca90f2d02a23c857a0:section:3:0",
+                "quote": "```\nInsurance offers for 2025 #my-tag-here\n```"
+              }
+            ]
+          },
+          {
+            "text": "You can also use different variations of the mail-to-note address to add emails to specific notes or daily jots. For example, using `~today@amplenote.email` will add the email as a task in the current daily jot.",
+            "interpretation": true,
+            "supports": [
+              {
+                "evidence_id": "help:6675edca90f2d02a23c857a0:section:2:0",
+                "quote": "|```<br>[Email token]~today@amplenote.email<br>```|Your email will be added as a **task in the current daily jot**|\n"
+              },
+              {
+                "evidence_id": "help:6675edca90f2d02a23c857a0:section:2:0",
+                "quote": "|```<br>[Email token]~tomorrow@amplenote.email<br>```|Your email will be added as a **task in the next day's daily jot**|"
               }
             ]
           }
         ],
         "sources": [
-          {
-            "id": "help:21fb3a453586ad55424cd60f:section:6:0",
-            "title": "create a task from a jot",
-            "url": "https://www.amplenote.com/help/create_a_task_from_a_jot",
-            "site": "amplenote",
-            "quote": "Gmail](https://www.amplenote.com/help/mail-to-note#Creating_a_Contact_(Gmail)) (or your email app of choice) with your note address, you can quickly forward emails to your todo list.",
-            "version": "150ae7f65d7b19ddfb782e226c74a0b0259f493879fe7d58c07d9edfcc78b2f0",
-            "screenshot_url": null,
-            "availability_label": null
-          },
-          {
-            "id": "help:6675edca90f2d02a23c857a0:section:2:0",
-            "title": "mail-to-note",
-            "url": "https://www.amplenote.com/help/mail-to-note",
-            "site": "amplenote",
-            "quote": "|**Email address to use**|**What will happen to emails sent to it**|\n|---|---|\n|```<br>[Email token]~[Note ID]@amplenote.email<br>```|Your email will be added as a **task in that particular note**|\n",
-            "version": "e776d233621a682611621117a16a8e04b0791768ef597975111ed2471e62fc67",
-            "screenshot_url": null,
-            "availability_label": null
-          },
           {
             "id": "help:6675edca90f2d02a23c857a0:section:0:0",
             "title": "mail-to-note",
@@ -213,6 +768,40 @@
             "quote": "*Mail-to-note will also forward PDF attachments into the resulting ample-note.*",
             "version": "4a9956b4032f18307b5d810c5fdecad08bfc00343e802288a9cb2599f3901820",
             "screenshot_url": null,
+            "screenshot_caption": null,
+            "availability_label": null
+          },
+          {
+            "id": "help:21fb3a453586ad55424cd60f:section:6:0",
+            "title": "create a task from a jot",
+            "url": "https://www.amplenote.com/help/create_a_task_from_a_jot",
+            "site": "amplenote",
+            "quote": "Gmail](https://www.amplenote.com/help/mail-to-note#Creating_a_Contact_(Gmail)) (or your email app of choice) with your note address, you can quickly forward emails to your todo list.",
+            "version": "150ae7f65d7b19ddfb782e226c74a0b0259f493879fe7d58c07d9edfcc78b2f0",
+            "screenshot_url": null,
+            "screenshot_caption": null,
+            "availability_label": null
+          },
+          {
+            "id": "help:6675edca90f2d02a23c857a0:section:1:0",
+            "title": "mail-to-note",
+            "url": "https://www.amplenote.com/help/mail-to-note",
+            "site": "amplenote",
+            "quote": "You can get an email address for any note by clicking the [triple-dot icon in the upper right corner](https://images.amplenote.com/c97d12ae-eef4-11ea-9941-3294fb3dabbf/9797ea74-9ba3-4710-a0cd-2399df50",
+            "version": "9bbfb72cf1e27dd117f28731a9fb31ed50e43b9a233997c4a6603f876c9b7acf",
+            "screenshot_url": "https://images.amplenote.com/c97d12ae-eef4-11ea-9941-3294fb3dabbf/62af9073-3f3c-4ddd-bbc3-2e96c8ca092a.png",
+            "screenshot_caption": "From the help guide: Getting your dedicated mail-to-note address",
+            "availability_label": null
+          },
+          {
+            "id": "help:6675edca90f2d02a23c857a0:section:4:0",
+            "title": "mail-to-note",
+            "url": "https://www.amplenote.com/help/mail-to-note",
+            "site": "amplenote",
+            "quote": "A common use case for mail-to-note is to get emails out of your inbox and into your task list. If you expect to regularly send tasks to a note, it's smart to create a contact for that note so that ",
+            "version": "8b723411c9f8f53dad1c3012aa520e31403c59edcd3fb8190ba80994ebb5aa58",
+            "screenshot_url": "https://images.amplenote.com/7dfc48a8-78f8-11ea-9709-4a9bae68938e/a3a82505-6980-4afe-8b02-df02628a9cf0.png",
+            "screenshot_caption": "From the help guide: Creating a Contact (Gmail)",
             "availability_label": null
           },
           {
@@ -223,6 +812,18 @@
             "quote": "you can instruct Amplenote to tag the newly created note for your email if you edit the Subject of the email before forwarding it to your dedicated address.",
             "version": "aa45e6e455d5fba019ce48d985c3fa911ddd48b59def58bd8ce99545fd7a2f6c",
             "screenshot_url": null,
+            "screenshot_caption": null,
+            "availability_label": null
+          },
+          {
+            "id": "help:6675edca90f2d02a23c857a0:section:2:0",
+            "title": "mail-to-note",
+            "url": "https://www.amplenote.com/help/mail-to-note",
+            "site": "amplenote",
+            "quote": "|```<br>[Email token]~today@amplenote.email<br>```|Your email will be added as a **task in the current daily jot**|\n",
+            "version": "e776d233621a682611621117a16a8e04b0791768ef597975111ed2471e62fc67",
+            "screenshot_url": null,
+            "screenshot_caption": null,
             "availability_label": null
           }
         ],
@@ -253,19 +854,19 @@
             "version": "c75cd81bb2f40917693b01cb72501145ae4e60d1ddd81322b47b28f2d678af65"
           }
         ],
-        "interaction_id": "99b8ea20c55745ec8a7185b80bc13f53"
+        "interaction_id": "f1e5d6b391604517945db1b74c4bb86f"
       }
     },
     {
       "question": "How can I turn a Gmail message into an Amplenote task?",
-      "seconds": 10.38,
+      "seconds": 11.46,
       "response": {
         "kind": "help",
         "message": "",
         "claims": [
           {
-            "text": "You can turn a Gmail message into an Amplenote task by using the mail-to-note feature.",
-            "interpretation": false,
+            "text": "To turn a Gmail message into an Amplenote task, you can use the mail-to-note feature by creating a dedicated email address for a note and setting up a contact in Gmail.",
+            "interpretation": true,
             "supports": [
               {
                 "evidence_id": "help:21fb3a453586ad55424cd60f:section:6:0",
@@ -274,16 +875,10 @@
               {
                 "evidence_id": "help:6675edca90f2d02a23c857a0:section:4:0",
                 "quote": "A common use case for mail-to-note is to get emails out of your inbox and into your task list. If you expect to regularly send tasks to a note, it's smart to create a contact for that note so that "
-              }
-            ]
-          },
-          {
-            "text": "To use this feature, create a contact in Gmail with your note's email address.",
-            "interpretation": false,
-            "supports": [
+              },
               {
-                "evidence_id": "help:21fb3a453586ad55424cd60f:section:6:0",
-                "quote": "Gmail](https://www.amplenote.com/help/mail-to-note#Creating_a_Contact_(Gmail)) (or your email app of choice) with your note address, you can quickly forward emails to your todo list."
+                "evidence_id": "help:6675edca90f2d02a23c857a0:section:4:0",
+                "quote": "you don't have to go copy the note address every damn time."
               },
               {
                 "evidence_id": "help:6675edca90f2d02a23c857a0:section:4:0",
@@ -292,12 +887,130 @@
             ]
           },
           {
-            "text": "Emails sent to this address will be added as a task in the specified note.",
-            "interpretation": false,
+            "text": "You can get the dedicated email address for a note by clicking the triple-dot icon in the upper right corner of the note on web, then selecting 'More options' and 'Copy mail-to-note address'.",
+            "interpretation": true,
+            "supports": [
+              {
+                "evidence_id": "help:6675edca90f2d02a23c857a0:section:1:0",
+                "quote": "You can get an email address for any note by clicking the [triple-dot icon in the upper right corner](https://images.amplenote.com/c97d12ae-eef4-11ea-9941-3294fb3dabbf/9797ea74-9ba3-4710-a0cd-2399df50"
+              },
+              {
+                "evidence_id": "help:6675edca90f2d02a23c857a0:section:1:0",
+                "quote": "160a.png)[^html1] of any note on web, then clicking \"[More options](https://images.amplenote.com/c97d12ae-eef4-11ea-9941-3294fb3dabbf/ef05375a-b212-4874-88e4-84ff5bea2253.png)[^html2]\" and finally "
+              },
+              {
+                "evidence_id": "help:6675edca90f2d02a23c857a0:section:1:0",
+                "quote": "\"Copy mail-to-note address\":"
+              },
+              {
+                "evidence_id": "help:6675edca90f2d02a23c857a0:section:1:0",
+                "quote": "After doing this, the dedicated address for that particular note will be copied to the clipboard. When you use `Ctrl-v` or `Cmd-V` to paste it in your email client, you will see something of this "
+              }
+            ]
+          },
+          {
+            "text": "Once you have the email address, you can create a contact in Gmail for that note so that you can easily send emails to it without having to copy the address each time.",
+            "interpretation": true,
+            "supports": [
+              {
+                "evidence_id": "help:6675edca90f2d02a23c857a0:section:4:0",
+                "quote": "A common use case for mail-to-note is to get emails out of your inbox and into your task list. If you expect to regularly send tasks to a note, it's smart to create a contact for that note so that "
+              },
+              {
+                "evidence_id": "help:6675edca90f2d02a23c857a0:section:4:0",
+                "quote": "you don't have to go copy the note address every damn time."
+              },
+              {
+                "evidence_id": "help:6675edca90f2d02a23c857a0:section:4:0",
+                "quote": "To create a new contact in Gmail, first click on their 9-dot button that should be located near the top of your page. Then, scroll down the options available to \"Contacts.\" As of 2020, this is the "
+              },
+              {
+                "evidence_id": "help:6675edca90f2d02a23c857a0:section:4:0",
+                "quote": "very last option shown in Google's list of services:"
+              }
+            ]
+          },
+          {
+            "text": "When you send an email to the note's dedicated email address, the content of the email will be added as a task in that note. If you want to add the email as a new note, you can use the format [Email token]@amplenote.email.",
+            "interpretation": true,
             "supports": [
               {
                 "evidence_id": "help:6675edca90f2d02a23c857a0:section:2:0",
+                "quote": "From the address obtained above, you can derive a few other addresses, based on your needs. Simply remove or edit the part after the tilde `~` sign as explained below:"
+              },
+              {
+                "evidence_id": "help:6675edca90f2d02a23c857a0:section:2:0",
                 "quote": "|**Email address to use**|**What will happen to emails sent to it**|\n|---|---|\n|```<br>[Email token]~[Note ID]@amplenote.email<br>```|Your email will be added as a **task in that particular note**|\n"
+              },
+              {
+                "evidence_id": "help:6675edca90f2d02a23c857a0:section:2:0",
+                "quote": "|```<br>[Email token]@amplenote.email<br>```|Your email will be added to a **new note** titled after the email's subject|\n"
+              },
+              {
+                "evidence_id": "help:6675edca90f2d02a23c857a0:section:2:0",
+                "quote": "|```<br>[Email token]~today@amplenote.email<br>```|Your email will be added as a **task in the current daily jot**|\n"
+              }
+            ]
+          },
+          {
+            "text": "You can also tag the newly created note by including a tag in the subject line of the email before sending it to the note's dedicated email address. For example, you can include a tag like #my-tag-here in the subject line.",
+            "interpretation": true,
+            "supports": [
+              {
+                "evidence_id": "help:6675edca90f2d02a23c857a0:section:3:0",
+                "quote": "When using the \"new note\" option:"
+              },
+              {
+                "evidence_id": "help:6675edca90f2d02a23c857a0:section:3:0",
+                "quote": "```\n[Email token]@amplenote.email\n```"
+              },
+              {
+                "evidence_id": "help:6675edca90f2d02a23c857a0:section:3:0",
+                "quote": "you can instruct Amplenote to tag the newly created note for your email if you edit the Subject of the email before forwarding it to your dedicated address."
+              },
+              {
+                "evidence_id": "help:6675edca90f2d02a23c857a0:section:3:0",
+                "quote": "For example:"
+              }
+            ]
+          },
+          {
+            "text": "If you want to add the email as a task in the current daily jot, you can use the format [Email token]~today@amplenote.email. Similarly, you can use [Email token]~tomorrow@amplenote.email to add the email as a task in the next day's daily jot.",
+            "interpretation": true,
+            "supports": [
+              {
+                "evidence_id": "help:6675edca90f2d02a23c857a0:section:2:0",
+                "quote": "From the address obtained above, you can derive a few other addresses, based on your needs. Simply remove or edit the part after the tilde `~` sign as explained below:"
+              },
+              {
+                "evidence_id": "help:6675edca90f2d02a23c857a0:section:2:0",
+                "quote": "|```<br>[Email token]~today@amplenote.email<br>```|Your email will be added as a **task in the current daily jot**|\n"
+              },
+              {
+                "evidence_id": "help:6675edca90f2d02a23c857a0:section:2:0",
+                "quote": "|```<br>[Email token]~tomorrow@amplenote.email<br>```|Your email will be added as a **task in the next day's daily jot**|"
+              }
+            ]
+          },
+          {
+            "text": "The mail-to-note feature is enabled by default for all Amplenote accounts, and you can also enable it manually by going to 'Account settings' => 'Personal Settings' => 'Enable mail-to-note'.",
+            "interpretation": true,
+            "supports": [
+              {
+                "evidence_id": "help:6675edca90f2d02a23c857a0:footnote:a88c0c53c0e1:0",
+                "quote": "Image text supplied by the source:\nMail-to-note\n...\n# amplenote/help & # add a tag\nB Z H1 H2 H3\nMail-to-note is a powerful feature that enables a user to send images or content to a note of their "
+              },
+              {
+                "evidence_id": "help:6675edca90f2d02a23c857a0:footnote:a88c0c53c0e1:0",
+                "quote": "choosing from any platform on which they can\nsend an email.\nEnabling mail-to-note (necessary Sep/20, soon to automatically enabled)\n"
+              },
+              {
+                "evidence_id": "help:6675edca90f2d02a23c857a0:footnote:a88c0c53c0e1:0",
+                "quote": "Until we automatically enable mail-to-note in the next couple months, the first step is to enable the feature. This can be accomplished by viewing\n"
+              },
+              {
+                "evidence_id": "help:6675edca90f2d02a23c857a0:footnote:a88c0c53c0e1:0",
+                "quote": "\"Account settings \" => \"Personal Settings\" => Enable mail-to-note\nMail-to-note\nWhen enabled, each of your notes w\nEnable mail-to-note\n11 emails received\nGetting a link to a note\n"
               }
             ]
           }
@@ -311,6 +1024,7 @@
             "quote": "Every note offers the provision to have an email address associated with it using our [mail-to-note feature](https://www.amplenote.com/help/mail-to-note). By [creating a contact in ",
             "version": "150ae7f65d7b19ddfb782e226c74a0b0259f493879fe7d58c07d9edfcc78b2f0",
             "screenshot_url": null,
+            "screenshot_caption": null,
             "availability_label": null
           },
           {
@@ -320,7 +1034,19 @@
             "site": "amplenote",
             "quote": "A common use case for mail-to-note is to get emails out of your inbox and into your task list. If you expect to regularly send tasks to a note, it's smart to create a contact for that note so that ",
             "version": "8b723411c9f8f53dad1c3012aa520e31403c59edcd3fb8190ba80994ebb5aa58",
-            "screenshot_url": null,
+            "screenshot_url": "https://images.amplenote.com/7dfc48a8-78f8-11ea-9709-4a9bae68938e/a3a82505-6980-4afe-8b02-df02628a9cf0.png",
+            "screenshot_caption": "From the help guide: Creating a Contact (Gmail)",
+            "availability_label": null
+          },
+          {
+            "id": "help:6675edca90f2d02a23c857a0:section:1:0",
+            "title": "mail-to-note",
+            "url": "https://www.amplenote.com/help/mail-to-note",
+            "site": "amplenote",
+            "quote": "You can get an email address for any note by clicking the [triple-dot icon in the upper right corner](https://images.amplenote.com/c97d12ae-eef4-11ea-9941-3294fb3dabbf/9797ea74-9ba3-4710-a0cd-2399df50",
+            "version": "9bbfb72cf1e27dd117f28731a9fb31ed50e43b9a233997c4a6603f876c9b7acf",
+            "screenshot_url": "https://images.amplenote.com/c97d12ae-eef4-11ea-9941-3294fb3dabbf/62af9073-3f3c-4ddd-bbc3-2e96c8ca092a.png",
+            "screenshot_caption": "From the help guide: Getting your dedicated mail-to-note address",
             "availability_label": null
           },
           {
@@ -328,9 +1054,32 @@
             "title": "mail-to-note",
             "url": "https://www.amplenote.com/help/mail-to-note",
             "site": "amplenote",
-            "quote": "|**Email address to use**|**What will happen to emails sent to it**|\n|---|---|\n|```<br>[Email token]~[Note ID]@amplenote.email<br>```|Your email will be added as a **task in that particular note**|\n",
+            "quote": "From the address obtained above, you can derive a few other addresses, based on your needs. Simply remove or edit the part after the tilde `~` sign as explained below:",
             "version": "e776d233621a682611621117a16a8e04b0791768ef597975111ed2471e62fc67",
             "screenshot_url": null,
+            "screenshot_caption": null,
+            "availability_label": null
+          },
+          {
+            "id": "help:6675edca90f2d02a23c857a0:section:3:0",
+            "title": "mail-to-note",
+            "url": "https://www.amplenote.com/help/mail-to-note",
+            "site": "amplenote",
+            "quote": "When using the \"new note\" option:",
+            "version": "aa45e6e455d5fba019ce48d985c3fa911ddd48b59def58bd8ce99545fd7a2f6c",
+            "screenshot_url": null,
+            "screenshot_caption": null,
+            "availability_label": null
+          },
+          {
+            "id": "help:6675edca90f2d02a23c857a0:footnote:a88c0c53c0e1:0",
+            "title": "mail-to-note",
+            "url": "https://www.amplenote.com/help/mail-to-note",
+            "site": "amplenote",
+            "quote": "Image text supplied by the source:\nMail-to-note\n...\n# amplenote/help & # add a tag\nB Z H1 H2 H3\nMail-to-note is a powerful feature that enables a user to send images or content to a note of their ",
+            "version": "118ccaaf7af473ebbe544fab4f352b928cd43334d5c04c33756cb025a76cf21e",
+            "screenshot_url": null,
+            "screenshot_caption": null,
             "availability_label": null
           }
         ],
@@ -361,18 +1110,18 @@
             "version": "ae2d3be85bf17c05d103c43cc86acb09cea984aca00dc368373b50e284dc453b"
           }
         ],
-        "interaction_id": "7bdb51a7f0494396b1d704c9a506aa5a"
+        "interaction_id": "82efd7f8bfc84cfb8cbf52bc4a7f0dba"
       }
     },
     {
       "question": "Why doesn't my task show up next to calendar?",
-      "seconds": 4.67,
+      "seconds": 4.68,
       "response": {
         "kind": "help",
         "message": "",
         "claims": [
           {
-            "text": "You need to set up a Task Domain for tasks to appear next to the calendar.",
+            "text": "You need to set up a Task Domain to see tasks next to the calendar.",
             "interpretation": false,
             "supports": [
               {
@@ -386,7 +1135,7 @@
             ]
           },
           {
-            "text": "The default Task Domains are 'Work', 'Personal', and 'Misc', and you can rename or hide them.",
+            "text": "The default Task Domains are 'Work,' 'Personal,' and 'Misc,' and they can be renamed or hidden.",
             "interpretation": false,
             "supports": [
               {
@@ -400,12 +1149,106 @@
             ]
           },
           {
-            "text": "Tasks from a Task Domain can be dragged onto the calendar and synchronized with external calendars.",
+            "text": "Tasks can be drag-and-dropped directly on the Amplenote calendar and synchronized to external calendars.",
             "interpretation": false,
             "supports": [
               {
                 "evidence_id": "help:27931d965fef42291c447db5:section:0:0",
                 "quote": "The tasks you schedule from a Task Domain can be drag-and-dropped directly on the Amplenote calendar and they can be automatically synchronized to one or more external Google or Outlook calendars."
+              }
+            ]
+          },
+          {
+            "text": "If a task is not showing up on the calendar, it might be because it's not included in the Task Domain you're viewing.",
+            "interpretation": false,
+            "supports": [
+              {
+                "evidence_id": "help:b6993c1e373fe4c5b05d350a:section:8:0",
+                "quote": "Most likely, you are looking at a task that has been scheduled from within a note that is not included in the Task Calendar Domain you're viewing."
+              },
+              {
+                "evidence_id": "help:b6993c1e373fe4c5b05d350a:section:8:0",
+                "quote": "[Here is a 3-minute video](https://www.youtube.com/watch?v=4cNj7otqr48) and [here is a help page](https://www.amplenote.com/help/using_calendar_task_domains) that explain how to set up Calendar Task "
+              },
+              {
+                "evidence_id": "help:b6993c1e373fe4c5b05d350a:section:8:0",
+                "quote": "Domains. Basically, you need to pick one or more base tags to be scanned for tasks when looking at a \"Work\" or \"Personal\" or custom calendar tab. We do this to prevent stressing users out if they "
+              },
+              {
+                "evidence_id": "help:b6993c1e373fe4c5b05d350a:section:8:0",
+                "quote": "want to peek at their calendar on the weekend[^html2]."
+              }
+            ]
+          },
+          {
+            "text": "You can add a tag to a note to ensure it is included in the Task Domain you're viewing.",
+            "interpretation": false,
+            "supports": [
+              {
+                "evidence_id": "help:b6993c1e373fe4c5b05d350a:section:8:0",
+                "quote": "Visit your new \"Project Tasks\" note and add a tag that begins with \"`todo`\" (the tag that your \"Work\" Task Domain looks for). For example, `todo/client-projects` or `todo/december-2024`"
+              },
+              {
+                "evidence_id": "help:b6993c1e373fe4c5b05d350a:section:8:0",
+                "quote": "Use the `!move` task action to move your scheduled task to a different note that has a `todo` tag applied to it (whether it is `todo/projects/recent` or just `todo`, both will work)"
+              },
+              {
+                "evidence_id": "help:b6993c1e373fe4c5b05d350a:section:8:0",
+                "quote": "Visit your \"Task Domain\" settings and add either the \"Project Tasks\" note to your \"Work\" Task Domain, or add a new root tag to the \"Work\" Task Domain, that you will apply to the Project Tasks note."
+              }
+            ]
+          },
+          {
+            "text": "You can adjust the Task Domain settings to include specific notes or tags.",
+            "interpretation": false,
+            "supports": [
+              {
+                "evidence_id": "help:b6993c1e373fe4c5b05d350a:section:8:0",
+                "quote": "Visit your \"Task Domain\" settings and add either the \"Project Tasks\" note to your \"Work\" Task Domain, or add a new root tag to the \"Work\" Task Domain, that you will apply to the Project Tasks note."
+              },
+              {
+                "evidence_id": "help:27931d965fef42291c447db5:section:3:0",
+                "quote": "Each Task Domain has several options that control what will show up when you view your Amplenote calendar."
+              },
+              {
+                "evidence_id": "help:27931d965fef42291c447db5:section:12:0",
+                "quote": "If you don't want all three Task Domains to show from the calendar, you can use this box to hide the task domain."
+              }
+            ]
+          },
+          {
+            "text": "You can customize the color of calendar events based on tags or external calendars.",
+            "interpretation": false,
+            "supports": [
+              {
+                "evidence_id": "help:b6993c1e373fe4c5b05d350a:section:5:0",
+                "quote": "The simplest set up you can use is to create two tags, one called `work` and one called `personal`, and assign visually distinctive colors to them. Any tasks added to a note part of the `work` tag "
+              },
+              {
+                "evidence_id": "help:b6993c1e373fe4c5b05d350a:section:5:0",
+                "quote": "(or a subtag of that tag) will be colored in orange, while tasks from the `personal` notes will be light green. Colors - especially contrasting colors - are much easier to spot than text, so your "
+              },
+              {
+                "evidence_id": "help:b6993c1e373fe4c5b05d350a:section:5:0",
+                "quote": "brain registers that a task is a \"personal\" task or a \"work\" task way before it has to actually *read* the task description."
+              },
+              {
+                "evidence_id": "help:b6993c1e373fe4c5b05d350a:section:5:0",
+                "quote": "Essentially, adding colors to your Calendar is like a small super power, where you are able to navigate it much faster by getting a quick overview of how your day is split between your main life "
+              }
+            ]
+          },
+          {
+            "text": "You can set up a 'Home' or 'Hobby' task domain to hide or de-emphasize certain tasks on the calendar.",
+            "interpretation": false,
+            "supports": [
+              {
+                "evidence_id": "help:b6993c1e373fe4c5b05d350a:footnote:693e4dc17c05:0",
+                "quote": "If you look at your calendar on Saturday morning, you probably don't want to be reminded of all the upcoming work tasks you have. So, you can set up a \"Home\" or a \"Hobby\" task domain, which will "
+              },
+              {
+                "evidence_id": "help:b6993c1e373fe4c5b05d350a:footnote:693e4dc17c05:0",
+                "quote": "either hide tasks pertaining to work, or de-emphasize the tasks as gray, depending on which options you picked in your settings.\n"
               }
             ]
           }
@@ -419,6 +1262,62 @@
             "quote": "calendar](https://www.amplenote.com/help/calendar_visual_guided_walkthrough)[^html1]. Until you've set up a Task Domain, you won't see tasks next to the calendar.",
             "version": "d195cc8f91a363355d74b8b5373f74e8fddbac7928160a948c3f59156da7a5a7",
             "screenshot_url": null,
+            "screenshot_caption": null,
+            "availability_label": null
+          },
+          {
+            "id": "help:b6993c1e373fe4c5b05d350a:section:8:0",
+            "title": "color calendar events",
+            "url": "https://www.amplenote.com/help/color_calendar_events",
+            "site": "amplenote",
+            "quote": "Most likely, you are looking at a task that has been scheduled from within a note that is not included in the Task Calendar Domain you're viewing.",
+            "version": "21c09364b227b808db305eb835cfefe5f18cd973ff6599a323a9421681ca5fd1",
+            "screenshot_url": "https://images.amplenote.com/ef8c307c-f9ca-11ed-9bd0-aa1e76b1d5f5/f5bddc12-9bd3-46c1-a7e6-001430b65092.png",
+            "screenshot_caption": "From the help guide: Why do my calendar events/tasks appear gray (lacking color), even after I followed the steps above to apply a color?",
+            "availability_label": null
+          },
+          {
+            "id": "help:27931d965fef42291c447db5:section:3:0",
+            "title": "using calendar task domains",
+            "url": "https://www.amplenote.com/help/using_calendar_task_domains",
+            "site": "amplenote",
+            "quote": "Each Task Domain has several options that control what will show up when you view your Amplenote calendar.",
+            "version": "082a186c5825aeee778fd2540e1fdb5f13c3d2e9d78bdbaeedd395b636b55c49",
+            "screenshot_url": "https://images.amplenote.com/e0b7ce82-60eb-11eb-bad5-2a844617cbef/84c1dd59-e96f-486c-8cbc-63519dfbe939.png",
+            "screenshot_caption": "From the help guide: Task Domains Options",
+            "availability_label": null
+          },
+          {
+            "id": "help:27931d965fef42291c447db5:section:12:0",
+            "title": "using calendar task domains",
+            "url": "https://www.amplenote.com/help/using_calendar_task_domains",
+            "site": "amplenote",
+            "quote": "If you don't want all three Task Domains to show from the calendar, you can use this box to hide the task domain.",
+            "version": "209aa2fed986c94952378887e899d2a4aea2edea437b5fa9bcd20cafa49fd9f6",
+            "screenshot_url": null,
+            "screenshot_caption": null,
+            "availability_label": null
+          },
+          {
+            "id": "help:b6993c1e373fe4c5b05d350a:section:5:0",
+            "title": "color calendar events",
+            "url": "https://www.amplenote.com/help/color_calendar_events",
+            "site": "amplenote",
+            "quote": "The simplest set up you can use is to create two tags, one called `work` and one called `personal`, and assign visually distinctive colors to them. Any tasks added to a note part of the `work` tag ",
+            "version": "ff0331d74b6631ddd3b23beb0c47ca9628ee20d27e130085212ca1e037298b1a",
+            "screenshot_url": null,
+            "screenshot_caption": null,
+            "availability_label": null
+          },
+          {
+            "id": "help:b6993c1e373fe4c5b05d350a:footnote:693e4dc17c05:0",
+            "title": "color calendar events",
+            "url": "https://www.amplenote.com/help/color_calendar_events",
+            "site": "amplenote",
+            "quote": "If you look at your calendar on Saturday morning, you probably don't want to be reminded of all the upcoming work tasks you have. So, you can set up a \"Home\" or a \"Hobby\" task domain, which will ",
+            "version": "7c0b0378e4d0d5beb45999b7dd52168155fd5b014b713dd96c47bc4eb97677d0",
+            "screenshot_url": null,
+            "screenshot_caption": null,
             "availability_label": null
           }
         ],
@@ -433,20 +1332,20 @@
             "version": "d195cc8f91a363355d74b8b5373f74e8fddbac7928160a948c3f59156da7a5a7"
           },
           {
-            "document_id": "help:27b4b425b0cd426c43ce2de1",
-            "title": "Connect Google, Outlook, or Apple Calendars with two-way sync",
-            "url": "https://www.amplenote.com/help/connect_a_calendar",
-            "snippet": "Amplenote makes it possible to connect Google, Outlook or Apple calendars to your Amplenote calendar. With a Pro subscription or higher, you can set up two-way calendar sync: when you schedule a task in Amplenote, it automatically shows up on other relevant calendars you designat",
-            "evidence_id": "help:27b4b425b0cd426c43ce2de1:section:0:0",
-            "version": "f4dcef7faa2aae360e4a04801b5d450740d23dc8fa76bf69e9aee8fd473a386c"
-          },
-          {
             "document_id": "help:b6993c1e373fe4c5b05d350a",
             "title": "Color external and internal calendar events and tasks",
             "url": "https://www.amplenote.com/help/color_calendar_events",
             "snippet": "# Color external and internal calendar events and tasks",
             "evidence_id": "help:b6993c1e373fe4c5b05d350a:section:0:0",
             "version": "c7117ce24b92d435f16178c6fdd95c15dda7737c63ddbc584dc63ba1c91be546"
+          },
+          {
+            "document_id": "help:27b4b425b0cd426c43ce2de1",
+            "title": "Connect Google, Outlook, or Apple Calendars with two-way sync",
+            "url": "https://www.amplenote.com/help/connect_a_calendar",
+            "snippet": "Amplenote makes it possible to connect Google, Outlook or Apple calendars to your Amplenote calendar. With a Pro subscription or higher, you can set up two-way calendar sync: when you schedule a task in Amplenote, it automatically shows up on other relevant calendars you designat",
+            "evidence_id": "help:27b4b425b0cd426c43ce2de1:section:0:0",
+            "version": "f4dcef7faa2aae360e4a04801b5d450740d23dc8fa76bf69e9aee8fd473a386c"
           },
           {
             "document_id": "help:517344d87949f117cf07fec0",
@@ -457,65 +1356,127 @@
             "version": "75d352e443cd9a6972ce893a344362d0ea1347404f425deddd3e346bfcd097ca"
           },
           {
-            "document_id": "help:4afee92d696eb8953c71229f",
-            "title": "Plugin API Reference Documentation: Appendix I: Types",
-            "url": "https://www.amplenote.com/help/developing_amplenote_plugins/appendix_i",
-            "snippet": "# Plugin API Reference Documentation: Appendix I: Types",
-            "evidence_id": "help:4afee92d696eb8953c71229f:section:0:0",
-            "version": "8842f3bbb7bf5323feadefbbfcab359f1eac90a8cb1cc8feee2322afcdec0c2f"
+            "document_id": "help:4d59bf97e1cce07878695cb4",
+            "title": "Scheduling events vs scheduling tasks (how to schedule events)",
+            "url": "https://www.amplenote.com/help/calendar_events_vs_tasks",
+            "snippet": "Amplenote recognizes the distinction between a \"task\" and an \"event\" as follows: || Task|Event| |---|---|---| |Appearance|open_in_new|open_in_new| |Visibility|Shows up in calendar|Shows up in calendar| |Repeat|Can be set up to repeat|Can be set up to repeat| |External calendar sy",
+            "evidence_id": "help:4d59bf97e1cce07878695cb4:section:0:0",
+            "version": "94532b0e8e60ba28ce2334073b63e901b0b318f52bf31139a2eaed6509fb86be"
           }
         ],
-        "interaction_id": "2d4f876d14444475812465cc46b2f4f7"
+        "interaction_id": "bb380a9a3e28448e9378c56bcc43cfed"
       }
     },
     {
       "question": "My calendar sidebar has no tasks. What should I check?",
-      "seconds": 8.33,
+      "seconds": 9.81,
       "response": {
         "kind": "help",
         "message": "",
         "claims": [
           {
-            "text": "Check if you have set up a Task Domain, as tasks are extracted from notes and tags within these domains to populate the calendar sidebar.",
+            "text": "Check if you have set up a Task Domain, as this is necessary for tasks to appear next to the calendar.",
             "interpretation": false,
             "supports": [
               {
                 "evidence_id": "help:27931d965fef42291c447db5:section:0:0",
                 "quote": "calendar](https://www.amplenote.com/help/calendar_visual_guided_walkthrough)[^html1]. Until you've set up a Task Domain, you won't see tasks next to the calendar."
               },
+              {
+                "evidence_id": "help:27931d965fef42291c447db5:section:0:0",
+                "quote": "Task Domains are *collections of notes+tags* that Amplenote extracts to-do's from in order to populate the task list [you see next to the "
+              }
+            ]
+          },
+          {
+            "text": "Verify that you have configured at least one Task Domain, such as 'Work,' 'Personal,' or 'Misc,' which are the default options.",
+            "interpretation": false,
+            "supports": [
               {
                 "evidence_id": "help:27931d965fef42291c447db5:section:0:0",
                 "quote": "The three default Task Domains we offer are \"Work,\" \"Personal,\" and \"Misc.\" As discussed below, any of these Task Domains can be renamed or hidden. The purpose of configuring a Task Domain like "
               },
               {
                 "evidence_id": "help:27931d965fef42291c447db5:section:0:0",
-                "quote": "calendar](https://www.amplenote.com/help/calendar_visual_guided_walkthrough)[^html1]. Until you've set up a Task Domain, you won't see tasks next to the calendar."
-              },
-              {
-                "evidence_id": "help:27931d965fef42291c447db5:section:1:0",
-                "quote": "Task Domains exist in order to allow you to specify all of the **notes** and **tags** that contain tasks you aspire to get done within a particular realm of your life."
+                "quote": "\"Work\" is to declare the superset of notes and tags that contain tasks relevant to all the projects you aspire to make progress on."
               }
             ]
           },
           {
-            "text": "Ensure that the tasks you want to see are included in the Task Domain you are currently viewing.",
+            "text": "Ensure that the Task Domain you have set up includes the notes and tags that contain the tasks you want to see on the calendar.",
             "interpretation": false,
             "supports": [
               {
-                "evidence_id": "help:b6993c1e373fe4c5b05d350a:section:8:0",
-                "quote": "Visit your new \"Project Tasks\" note and add a tag that begins with \"`todo`\" (the tag that your \"Work\" Task Domain looks for). For example, `todo/client-projects` or `todo/december-2024`"
+                "evidence_id": "help:27931d965fef42291c447db5:section:0:0",
+                "quote": "\"Work\" is to declare the superset of notes and tags that contain tasks relevant to all the projects you aspire to make progress on."
               },
               {
-                "evidence_id": "help:b6993c1e373fe4c5b05d350a:section:8:0",
-                "quote": "Use the `!move` task action to move your scheduled task to a different note that has a `todo` tag applied to it (whether it is `todo/projects/recent` or just `todo`, both will work)"
+                "evidence_id": "help:27931d965fef42291c447db5:section:0:0",
+                "quote": "The tasks you schedule from a Task Domain can be drag-and-dropped directly on the Amplenote calendar and they can be automatically synchronized to one or more external Google or Outlook calendars."
+              }
+            ]
+          },
+          {
+            "text": "Check if the Task Domain is active and not hidden, as hidden Task Domains will not display tasks on the calendar.",
+            "interpretation": false,
+            "supports": [
+              {
+                "evidence_id": "help:27931d965fef42291c447db5:section:12:0",
+                "quote": "If you don't want all three Task Domains to show from the calendar, you can use this box to hide the task domain."
+              }
+            ]
+          },
+          {
+            "text": "Confirm that the tasks you are trying to view have been added to the Calendar Sidebar Task List by being scheduled or dragged onto the calendar.",
+            "interpretation": false,
+            "supports": [
+              {
+                "evidence_id": "help:517344d87949f117cf07fec0:section:11:0",
+                "quote": "Once you're focused down to the tasks that you want to get done, you can drag them from the Calendar Sidebar Task List onto the calendar:"
               },
               {
-                "evidence_id": "help:b6993c1e373fe4c5b05d350a:section:8:0",
-                "quote": "Visit your \"Task Domain\" settings and add either the \"Project Tasks\" note to your \"Work\" Task Domain, or add a new root tag to the \"Work\" Task Domain, that you will apply to the Project Tasks note."
+                "evidence_id": "help:517344d87949f117cf07fec0:section:11:0",
+                "quote": "*Dragging a task from the sidebar to the calendar, scheduling its Start Time on all synchronized calendars*"
+              }
+            ]
+          },
+          {
+            "text": "Check if the Task Domain has been configured to include the specific notes and tags that contain the tasks you are trying to view.",
+            "interpretation": false,
+            "supports": [
+              {
+                "evidence_id": "help:27931d965fef42291c447db5:section:1:0",
+                "quote": "Task Domains exist in order to allow you to specify all of the **notes** and **tags** that contain tasks you aspire to get done within a particular realm of your life."
               },
               {
-                "evidence_id": "help:b6993c1e373fe4c5b05d350a:section:8:0",
-                "quote": "[Here is a 3-minute video](https://www.youtube.com/watch?v=4cNj7otqr48) and [here is a help page](https://www.amplenote.com/help/using_calendar_task_domains) that explain how to set up Calendar Task "
+                "evidence_id": "help:27931d965fef42291c447db5:section:1:0",
+                "quote": "It's expected that a broad Task Domain like \"Work\" will include numerous disparate projects: some old, some new, some still relevant, some not. Don't worry -- once you're interacting with the Task "
+              },
+              {
+                "evidence_id": "help:27931d965fef42291c447db5:section:1:0",
+                "quote": "Domain in [Calendar View mode](https://www.amplenote.com/help/calendar_visual_guided_walkthrough), we make it super fast to zoom in from the entire contents of the Task Domain, [down to the "
+              },
+              {
+                "evidence_id": "help:27931d965fef42291c447db5:section:1:0",
+                "quote": "particular project](https://www.amplenote.com/help/calendar_visual_guided_walkthrough#Active_Note_Selector) (i.e., note or tag) so you can focus on that particular project. As described in the "
+              }
+            ]
+          },
+          {
+            "text": "Verify that the Task Domain is set up to include the specific tags that are associated with the tasks you are trying to view.",
+            "interpretation": false,
+            "supports": [
+              {
+                "evidence_id": "help:27931d965fef42291c447db5:section:1:0",
+                "quote": "When you add a **tag** to a Task Domain, Amplenote will scan all of the notes that contain that tag in search of tasks. For example, if you add `todo/marketing` as a tag in your Task Domain, and you "
+              },
+              {
+                "evidence_id": "help:27931d965fef42291c447db5:section:1:0",
+                "quote": "have a note tagged with `todo/marketing/client-a` that contains 10 tasks, those 10 tasks will show up in the Calendar Sidebar Task List unless they have a Start Time already set, in which case they "
+              },
+              {
+                "evidence_id": "help:27931d965fef42291c447db5:section:1:0",
+                "quote": "will show up on the calendar itself."
               }
             ]
           }
@@ -529,6 +1490,29 @@
             "quote": "calendar](https://www.amplenote.com/help/calendar_visual_guided_walkthrough)[^html1]. Until you've set up a Task Domain, you won't see tasks next to the calendar.",
             "version": "d195cc8f91a363355d74b8b5373f74e8fddbac7928160a948c3f59156da7a5a7",
             "screenshot_url": null,
+            "screenshot_caption": null,
+            "availability_label": null
+          },
+          {
+            "id": "help:27931d965fef42291c447db5:section:12:0",
+            "title": "using calendar task domains",
+            "url": "https://www.amplenote.com/help/using_calendar_task_domains",
+            "site": "amplenote",
+            "quote": "If you don't want all three Task Domains to show from the calendar, you can use this box to hide the task domain.",
+            "version": "209aa2fed986c94952378887e899d2a4aea2edea437b5fa9bcd20cafa49fd9f6",
+            "screenshot_url": null,
+            "screenshot_caption": null,
+            "availability_label": null
+          },
+          {
+            "id": "help:517344d87949f117cf07fec0:section:11:0",
+            "title": "calendar visual guided walkthrough",
+            "url": "https://www.amplenote.com/help/calendar_visual_guided_walkthrough",
+            "site": "amplenote",
+            "quote": "Once you're focused down to the tasks that you want to get done, you can drag them from the Calendar Sidebar Task List onto the calendar:",
+            "version": "55169a44007a92015eac6d7433c36acbc59750ac3b310a222d933d6920ebe50b",
+            "screenshot_url": "https://images.amplenote.com/c5a402ac-90e1-11eb-bbea-1e34e7aa6740/08977df3-5218-4a93-a2f0-810479cb7cd2.png",
+            "screenshot_caption": "From the help guide: Calendar Sidebar Task List",
             "availability_label": null
           },
           {
@@ -538,17 +1522,8 @@
             "site": "amplenote",
             "quote": "Task Domains exist in order to allow you to specify all of the **notes** and **tags** that contain tasks you aspire to get done within a particular realm of your life.",
             "version": "20dcef414f2b7a732f5b0b50bd2b2170803f606126487ce93014b808d573f42a",
-            "screenshot_url": null,
-            "availability_label": null
-          },
-          {
-            "id": "help:b6993c1e373fe4c5b05d350a:section:8:0",
-            "title": "color calendar events",
-            "url": "https://www.amplenote.com/help/color_calendar_events",
-            "site": "amplenote",
-            "quote": "Visit your new \"Project Tasks\" note and add a tag that begins with \"`todo`\" (the tag that your \"Work\" Task Domain looks for). For example, `todo/client-projects` or `todo/december-2024`",
-            "version": "21c09364b227b808db305eb835cfefe5f18cd973ff6599a323a9421681ca5fd1",
-            "screenshot_url": null,
+            "screenshot_url": "https://images.amplenote.com/e0b7ce82-60eb-11eb-bad5-2a844617cbef/31195eb5-0581-48a2-85ab-71639eaa1784.png",
+            "screenshot_caption": "From the help guide: Why should I care about Task Domains? What's their purpose?",
             "availability_label": null
           }
         ],
@@ -563,20 +1538,20 @@
             "version": "d195cc8f91a363355d74b8b5373f74e8fddbac7928160a948c3f59156da7a5a7"
           },
           {
-            "document_id": "help:b6993c1e373fe4c5b05d350a",
-            "title": "Color external and internal calendar events and tasks",
-            "url": "https://www.amplenote.com/help/color_calendar_events",
-            "snippet": "# Color external and internal calendar events and tasks",
-            "evidence_id": "help:b6993c1e373fe4c5b05d350a:section:0:0",
-            "version": "c7117ce24b92d435f16178c6fdd95c15dda7737c63ddbc584dc63ba1c91be546"
-          },
-          {
             "document_id": "help:517344d87949f117cf07fec0",
             "title": "Calendar View: Detailed Visual Guide",
             "url": "https://www.amplenote.com/help/calendar_visual_guided_walkthrough",
             "snippet": "# Calendar View: Detailed Visual Guide",
             "evidence_id": "help:517344d87949f117cf07fec0:section:0:0",
             "version": "75d352e443cd9a6972ce893a344362d0ea1347404f425deddd3e346bfcd097ca"
+          },
+          {
+            "document_id": "help:b6993c1e373fe4c5b05d350a",
+            "title": "Color external and internal calendar events and tasks",
+            "url": "https://www.amplenote.com/help/color_calendar_events",
+            "snippet": "# Color external and internal calendar events and tasks",
+            "evidence_id": "help:b6993c1e373fe4c5b05d350a:section:0:0",
+            "version": "c7117ce24b92d435f16178c6fdd95c15dda7737c63ddbc584dc63ba1c91be546"
           },
           {
             "document_id": "help:27b4b425b0cd426c43ce2de1",
@@ -587,27 +1562,27 @@
             "version": "f4dcef7faa2aae360e4a04801b5d450740d23dc8fa76bf69e9aee8fd473a386c"
           },
           {
-            "document_id": "help:4d59bf97e1cce07878695cb4",
-            "title": "Scheduling events vs scheduling tasks (how to schedule events)",
-            "url": "https://www.amplenote.com/help/calendar_events_vs_tasks",
-            "snippet": "Amplenote recognizes the distinction between a \"task\" and an \"event\" as follows: || Task|Event| |---|---|---| |Appearance|open_in_new|open_in_new| |Visibility|Shows up in calendar|Shows up in calendar| |Repeat|Can be set up to repeat|Can be set up to repeat| |External calendar sy",
-            "evidence_id": "help:4d59bf97e1cce07878695cb4:section:0:0",
-            "version": "94532b0e8e60ba28ce2334073b63e901b0b318f52bf31139a2eaed6509fb86be"
+            "document_id": "help:aeaa0b0a83378b2e941ef9ea",
+            "title": "Tasks Mode Overview, and how to show visible due/starting time",
+            "url": "https://www.amplenote.com/help/organizing_sorting_viewing_task_lists",
+            "snippet": "For a video tutorial on tasks mode, check out: Tasks in Amplenote usually begin within individual notes (and jots), but when it comes to viewing your full list of tasks, the Task View is often the best bet. It's available in the leftmost navigation pane, or by entering Quick Open",
+            "evidence_id": "help:aeaa0b0a83378b2e941ef9ea:section:0:0",
+            "version": "dfbdaf91b060bea11f7b6295150f96a755f8c15fccbf02091e674bfedcf6dab3"
           }
         ],
-        "interaction_id": "b69876738eda495fa40c97ddd83bb381"
+        "interaction_id": "739f0d01ee614dab979b096514ae5610"
       }
     },
     {
       "question": "Where do I choose which notes and tags supply the calendar task list?",
-      "seconds": 8.18,
+      "seconds": 10.4,
       "response": {
         "kind": "help",
         "message": "",
         "claims": [
           {
-            "text": "You choose which notes and tags supply the calendar task list by configuring Task Domains in Amplenote.",
-            "interpretation": true,
+            "text": "To choose which notes and tags supply the calendar task list, you need to configure Task Domains in Amplenote.",
+            "interpretation": false,
             "supports": [
               {
                 "evidence_id": "help:27931d965fef42291c447db5:section:0:0",
@@ -618,12 +1593,114 @@
                 "quote": "calendar](https://www.amplenote.com/help/calendar_visual_guided_walkthrough)[^html1]. Until you've set up a Task Domain, you won't see tasks next to the calendar."
               },
               {
+                "evidence_id": "help:27931d965fef42291c447db5:section:0:0",
+                "quote": "The three default Task Domains we offer are \"Work,\" \"Personal,\" and \"Misc.\" As discussed below, any of these Task Domains can be renamed or hidden. The purpose of configuring a Task Domain like "
+              },
+              {
+                "evidence_id": "help:27931d965fef42291c447db5:section:0:0",
+                "quote": "\"Work\" is to declare the superset of notes and tags that contain tasks relevant to all the projects you aspire to make progress on."
+              }
+            ]
+          },
+          {
+            "text": "Task Domains are collections of notes and tags that Amplenote extracts to-do's from in order to populate the task list next to the calendar.",
+            "interpretation": false,
+            "supports": [
+              {
+                "evidence_id": "help:27931d965fef42291c447db5:section:0:0",
+                "quote": "Task Domains are *collections of notes+tags* that Amplenote extracts to-do's from in order to populate the task list [you see next to the "
+              },
+              {
+                "evidence_id": "help:27931d965fef42291c447db5:section:0:0",
+                "quote": "calendar](https://www.amplenote.com/help/calendar_visual_guided_walkthrough)[^html1]. Until you've set up a Task Domain, you won't see tasks next to the calendar."
+              },
+              {
+                "evidence_id": "help:27931d965fef42291c447db5:section:0:0",
+                "quote": "The three default Task Domains we offer are \"Work,\" \"Personal,\" and \"Misc.\" As discussed below, any of these Task Domains can be renamed or hidden. The purpose of configuring a Task Domain like "
+              },
+              {
+                "evidence_id": "help:27931d965fef42291c447db5:section:0:0",
+                "quote": "\"Work\" is to declare the superset of notes and tags that contain tasks relevant to all the projects you aspire to make progress on."
+              }
+            ]
+          },
+          {
+            "text": "The three default Task Domains are 'Work,' 'Personal,' and 'Misc,' and they can be renamed or hidden.",
+            "interpretation": false,
+            "supports": [
+              {
+                "evidence_id": "help:27931d965fef42291c447db5:section:0:0",
+                "quote": "The three default Task Domains we offer are \"Work,\" \"Personal,\" and \"Misc.\" As discussed below, any of these Task Domains can be renamed or hidden. The purpose of configuring a Task Domain like "
+              },
+              {
+                "evidence_id": "help:27931d965fef42291c447db5:section:0:0",
+                "quote": "\"Work\" is to declare the superset of notes and tags that contain tasks relevant to all the projects you aspire to make progress on."
+              }
+            ]
+          },
+          {
+            "text": "You can configure Task Domains by adding or removing notes and tags under the 'Account Settings -> Task Domains' section.",
+            "interpretation": false,
+            "supports": [
+              {
+                "evidence_id": "help:517344d87949f117cf07fec0:section:3:0",
+                "quote": "Task Domains can be renamed, defined, and enabled/disabled under [Account Settings -> Task Domains](https://images.amplenote.com/c5a402ac-90e1-11eb-bbea-1e34e7aa6740/6c9b065a-e759-41c0-b88d-4d8870f7ed"
+              },
+              {
                 "evidence_id": "help:517344d87949f117cf07fec0:footnote:a88c0c53c0e1:0",
                 "quote": "- Add/remove notes whose tasks should be shown in calendar sidebar"
               },
               {
                 "evidence_id": "help:517344d87949f117cf07fec0:footnote:a88c0c53c0e1:0",
                 "quote": "- Add/remove tags whose tasks should be shown in calendar sidebar"
+              },
+              {
+                "evidence_id": "help:517344d87949f117cf07fec0:footnote:a88c0c53c0e1:0",
+                "quote": "- Set the default interval for newly created tasks"
+              }
+            ]
+          },
+          {
+            "text": "When you add a note or tag to a Task Domain, tasks from that note or tag will be eligible to appear on the Calendar Sidebar Task List when the Task Domain is selected.",
+            "interpretation": false,
+            "supports": [
+              {
+                "evidence_id": "help:27931d965fef42291c447db5:section:1:0",
+                "quote": "When you add a **note** to a Task Domain, the tasks from that note will be eligible to appear on the [Calendar Sidebar Task "
+              },
+              {
+                "evidence_id": "help:27931d965fef42291c447db5:section:1:0",
+                "quote": "List](https://www.amplenote.com/help/calendar_visual_guided_walkthrough#Calendar_Sidebar_Task_List) when you have the Task Domain selected. Tasks that have a Start Time set (either by setting [Start "
+              },
+              {
+                "evidence_id": "help:27931d965fef42291c447db5:section:1:0",
+                "quote": "Time explicitly in the Task Details](https://images.amplenote.com/e0b7ce82-60eb-11eb-bad5-2a844617cbef/70fdbce2-e67c-407c-be28-2537b1152bd4.png)[^html2], or by dragging the task onto the calendar), "
+              },
+              {
+                "evidence_id": "help:27931d965fef42291c447db5:section:1:0",
+                "quote": "the task will be synced to all the calendars specified in the \"Calendar Sync\" region of the Task Domain. Tasks that are scheduled are removed from list of tasks in the Calendar Sidebar since there is "
+              }
+            ]
+          },
+          {
+            "text": "You can also set the default note for new calendar tasks by clicking the icon next to a note in the Active Note Selector.",
+            "interpretation": false,
+            "supports": [
+              {
+                "evidence_id": "help:517344d87949f117cf07fec0:section:15:0",
+                "quote": "Each Task Domain can have a default note set. This is the note that will be used as a default when you use the Add a Task Menu. This \"default note\" is chosen by clicking the icon next to a note in "
+              },
+              {
+                "evidence_id": "help:517344d87949f117cf07fec0:section:15:0",
+                "quote": "the Active Note Selector:"
+              },
+              {
+                "evidence_id": "help:517344d87949f117cf07fec0:section:15:0",
+                "quote": "*Clicking the icon next to a note changes the default note to be used for newly added tasks*"
+              },
+              {
+                "evidence_id": "help:517344d87949f117cf07fec0:section:15:0",
+                "quote": "If you don't set a default note, then when you add new tasks they will be put in whatever note was most recently changed or viewed. You can always change the note destination of a new task but using "
               }
             ]
           }
@@ -637,6 +1714,18 @@
             "quote": "Task Domains are *collections of notes+tags* that Amplenote extracts to-do's from in order to populate the task list [you see next to the ",
             "version": "d195cc8f91a363355d74b8b5373f74e8fddbac7928160a948c3f59156da7a5a7",
             "screenshot_url": null,
+            "screenshot_caption": null,
+            "availability_label": null
+          },
+          {
+            "id": "help:517344d87949f117cf07fec0:section:3:0",
+            "title": "calendar visual guided walkthrough",
+            "url": "https://www.amplenote.com/help/calendar_visual_guided_walkthrough",
+            "site": "amplenote",
+            "quote": "Task Domains can be renamed, defined, and enabled/disabled under [Account Settings -> Task Domains](https://images.amplenote.com/c5a402ac-90e1-11eb-bbea-1e34e7aa6740/6c9b065a-e759-41c0-b88d-4d8870f7ed",
+            "version": "986cceb4e1f121da9b4a8443629c79b6d54044f9cfadcc7e9ba163d93a58c6c8",
+            "screenshot_url": "https://images.amplenote.com/c5a402ac-90e1-11eb-bbea-1e34e7aa6740/740cbb57-dfda-4058-ba87-341fa3584199.png",
+            "screenshot_caption": "From the help guide: Selected Task Domain",
             "availability_label": null
           },
           {
@@ -646,7 +1735,30 @@
             "site": "amplenote",
             "quote": "- Add/remove notes whose tasks should be shown in calendar sidebar",
             "version": "73a649b65fc299c8b24349f57c4810f84b728a0a9c75d6661b72e6159ce0ae67",
+            "screenshot_url": "https://images.amplenote.com/c5a402ac-90e1-11eb-bbea-1e34e7aa6740/6c9b065a-e759-41c0-b88d-4d8870f7ed96.png",
+            "screenshot_caption": "From the help guide: calendar visual guided walkthrough",
+            "availability_label": null
+          },
+          {
+            "id": "help:27931d965fef42291c447db5:section:1:0",
+            "title": "using calendar task domains",
+            "url": "https://www.amplenote.com/help/using_calendar_task_domains",
+            "site": "amplenote",
+            "quote": "When you add a **note** to a Task Domain, the tasks from that note will be eligible to appear on the [Calendar Sidebar Task ",
+            "version": "20dcef414f2b7a732f5b0b50bd2b2170803f606126487ce93014b808d573f42a",
             "screenshot_url": null,
+            "screenshot_caption": null,
+            "availability_label": null
+          },
+          {
+            "id": "help:517344d87949f117cf07fec0:section:15:0",
+            "title": "calendar visual guided walkthrough",
+            "url": "https://www.amplenote.com/help/calendar_visual_guided_walkthrough",
+            "site": "amplenote",
+            "quote": "Each Task Domain can have a default note set. This is the note that will be used as a default when you use the Add a Task Menu. This \"default note\" is chosen by clicking the icon next to a note in ",
+            "version": "41ae17668b30b3f770bdf52d1254e32c8155744d8d441e0e727f7eb42a777024",
+            "screenshot_url": null,
+            "screenshot_caption": null,
             "availability_label": null
           }
         ],
@@ -693,27 +1805,89 @@
             "version": "11cddcae628fe69b0174f91fa7ee4208f7c5f3bb118b95198b0809c83cd38037"
           }
         ],
-        "interaction_id": "a483ce75c1df44218d6a151cbe983087"
+        "interaction_id": "e588653441bc4c13af83eb687799ac8b"
       }
     },
     {
       "question": "How do Rich Footnotes work?",
-      "seconds": 1.6,
+      "seconds": 3.48,
       "response": {
         "kind": "help",
         "message": "",
         "claims": [
           {
-            "text": "Rich Footnotes allow users to add context to text, enabling a more detailed exploration of ideas.",
-            "interpretation": true,
+            "text": "Rich Footnotes are a feature that allows users to add context to text, enabling a more immersive writing experience.",
+            "interpretation": false,
             "supports": [
               {
                 "evidence_id": "help:dea8e449cb48c3b1127e7264:section:0:0",
                 "quote": "Rich Footnotes are a feature that lets Amplenote users imbue **text** with** ****context**[^html1]."
+              }
+            ]
+          },
+          {
+            "text": "Rich Footnotes can include various types of content such as images, videos, links, and even previews of other notes.",
+            "interpretation": false,
+            "supports": [
+              {
+                "evidence_id": "help:dea8e449cb48c3b1127e7264:section:1:0",
+                "quote": "As you can see by clicking any of these list items, Rich Footnotes can imbue plain text (and by extension, text in Amplenote tasks and calendar events) with all sorts of extra meaning:"
               },
+              {
+                "evidence_id": "help:dea8e449cb48c3b1127e7264:section:1:0",
+                "quote": "- [🖼️  Image](https://images.amplenote.com/0bbee202-0327-11e9-b258-7a639e48bef6/4363d48b-4c60-41c4-ac01-0b3a8816de8a.png)[^html2]"
+              },
+              {
+                "evidence_id": "help:dea8e449cb48c3b1127e7264:section:1:0",
+                "quote": "- [📽️  Mp4 video](https://images.amplenote.com/0bbee202-0327-11e9-b258-7a639e48bef6/3dbb2789-129a-491c-b6cb-f01414ed4a81.mp4)[^html3]"
+              },
+              {
+                "evidence_id": "help:dea8e449cb48c3b1127e7264:section:1:0",
+                "quote": "- 🔡  Text[^html4]"
+              }
+            ]
+          },
+          {
+            "text": "Users can create Rich Footnotes by selecting text and using keyboard shortcuts or toolbar icons on desktop, or by tapping the link icon on mobile.",
+            "interpretation": false,
+            "supports": [
+              {
+                "evidence_id": "help:dea8e449cb48c3b1127e7264:section:3:0",
+                "quote": "If you want to insert a **link** (which includes links to Youtube videos, tweets, etc[^html27]), **image, **or **video** into text, just select and paste. Single keystroke -- can't be easier."
+              },
+              {
+                "evidence_id": "help:dea8e449cb48c3b1127e7264:section:3:0",
+                "quote": "If you want to create a Rich Footnote that includes commentary, or if you want to look up a note to link to, open the Rich Footnote dialog. You can do this by highlighting a word or phrase and use "
+              },
+              {
+                "evidence_id": "help:dea8e449cb48c3b1127e7264:section:3:0",
+                "quote": "the keyboard shortcut (`Ctrl K` for Windows or `Cmd K` for Mac). Or, you can click the toolbar icons available. On desktop:"
+              },
+              {
+                "evidence_id": "help:dea8e449cb48c3b1127e7264:section:3:0",
+                "quote": "*If you're not into using Ctrl-K or Cmd-K, you can click an icon to insert context into your text*"
+              }
+            ]
+          },
+          {
+            "text": "Rich Footnotes can enhance writing by allowing writers to include extra details that readers can explore if they are interested.",
+            "interpretation": false,
+            "supports": [
               {
                 "evidence_id": "help:dea8e449cb48c3b1127e7264:footnote:a88c0c53c0e1:0",
                 "quote": "Which is to say, any given word can diverge from the main topic. This offers extra details to a subset of curious users. Some readers drop with mental energy to dig further into phrases to fully "
+              },
+              {
+                "evidence_id": "help:dea8e449cb48c3b1127e7264:footnote:a88c0c53c0e1:0",
+                "quote": "grasp context. Others are in a hurry and skip the detours, as is their prerogative."
+              },
+              {
+                "evidence_id": "help:dea8e449cb48c3b1127e7264:footnote:a88c0c53c0e1:0",
+                "quote": "All of which is to say: Heya, curious subset of users! 👋 😊 "
+              },
+              {
+                "evidence_id": "help:dea8e449cb48c3b1127e7264:footnote:a88c0c53c0e1:0",
+                "quote": "As an energetic mind, you might be likely to think in multiple directions at once? Such is the audience we hope will try out Rich Footnotes for themselves"
               }
             ]
           }
@@ -727,6 +1901,29 @@
             "quote": "Rich Footnotes are a feature that lets Amplenote users imbue **text** with** ****context**[^html1].",
             "version": "42118064229efd268da9ba762cf77be08fe3c282f142c7d7f98296503eb95aaf",
             "screenshot_url": null,
+            "screenshot_caption": null,
+            "availability_label": null
+          },
+          {
+            "id": "help:dea8e449cb48c3b1127e7264:section:1:0",
+            "title": "rich footnotes content preview",
+            "url": "https://www.amplenote.com/help/rich_footnotes_content_preview",
+            "site": "amplenote",
+            "quote": "As you can see by clicking any of these list items, Rich Footnotes can imbue plain text (and by extension, text in Amplenote tasks and calendar events) with all sorts of extra meaning:",
+            "version": "ce3efc8a4f87cdb2edde85ec9b2b8363cbe32a6320e16990c7c3c20e27b4ed08",
+            "screenshot_url": "https://images.amplenote.com/0bbee202-0327-11e9-b258-7a639e48bef6/4363d48b-4c60-41c4-ac01-0b3a8816de8a.png",
+            "screenshot_caption": "From the help guide: What Goes In Rich Footnotes?",
+            "availability_label": null
+          },
+          {
+            "id": "help:dea8e449cb48c3b1127e7264:section:3:0",
+            "title": "rich footnotes content preview",
+            "url": "https://www.amplenote.com/help/rich_footnotes_content_preview",
+            "site": "amplenote",
+            "quote": "If you want to insert a **link** (which includes links to Youtube videos, tweets, etc[^html27]), **image, **or **video** into text, just select and paste. Single keystroke -- can't be easier.",
+            "version": "6ef646e08418055f93fe4cf3163b6528ea7a419dd26daa725a5bcd4362a346f3",
+            "screenshot_url": "https://images.amplenote.com/e10026fa-9e4b-11ee-a0ca-cac1ebefa4fe/7c674626-7fe0-43fa-aaf1-bcc1b29efbc7.gif",
+            "screenshot_caption": "From the help guide: Creating Rich Footnotes",
             "availability_label": null
           },
           {
@@ -737,6 +1934,7 @@
             "quote": "Which is to say, any given word can diverge from the main topic. This offers extra details to a subset of curious users. Some readers drop with mental energy to dig further into phrases to fully ",
             "version": "b7c81b64f3c0fd97f41389a9f2503abbaa310fc2c2fce04918da56517cd13cfc",
             "screenshot_url": null,
+            "screenshot_caption": null,
             "availability_label": null
           }
         ],
@@ -767,18 +1965,18 @@
             "version": "d8b4cb62718af6a2f450a49b654b68c867185d57449fc37384fee5b849a7509f"
           }
         ],
-        "interaction_id": "5ef4187caba3453bbe4f9778e8117b71"
+        "interaction_id": "349037abb38b4d2e953ef5db04fa2cd5"
       }
     },
     {
       "question": "Can those include images?",
-      "seconds": 1.15,
+      "seconds": 8.55,
       "response": {
         "kind": "help",
         "message": "",
         "claims": [
           {
-            "text": "Rich Footnotes can include images.",
+            "text": "Rich Footnotes in Amplenote can include images.",
             "interpretation": false,
             "supports": [
               {
@@ -788,6 +1986,50 @@
               {
                 "evidence_id": "help:a8117f9627d36fd81aeac0f1:section:13:0",
                 "quote": "This task references an [image](https://images.amplenote.com/0bbee202-0327-11e9-b258-7a639e48bef6/4363d48b-4c60-41c4-ac01-0b3a8816de8a.png)[^html8], "
+              },
+              {
+                "evidence_id": "help:dea8e449cb48c3b1127e7264:section:1:0",
+                "quote": "- [🖼️  Image](https://images.amplenote.com/0bbee202-0327-11e9-b258-7a639e48bef6/4363d48b-4c60-41c4-ac01-0b3a8816de8a.png)[^html2]"
+              }
+            ]
+          },
+          {
+            "text": "Users can add images to tasks through Rich Footnotes.",
+            "interpretation": false,
+            "supports": [
+              {
+                "evidence_id": "help:a8117f9627d36fd81aeac0f1:section:13:0",
+                "quote": "to do this in Amplenote is through [Rich Footnotes and content previews](https://www.amplenote.com/help/rich_footnotes_content_preview)."
+              },
+              {
+                "evidence_id": "help:a8117f9627d36fd81aeac0f1:section:13:0",
+                "quote": "This task references an [image](https://images.amplenote.com/0bbee202-0327-11e9-b258-7a639e48bef6/4363d48b-4c60-41c4-ac01-0b3a8816de8a.png)[^html8], "
+              },
+              {
+                "evidence_id": "help:a8117f9627d36fd81aeac0f1:section:13:0",
+                "quote": "[video](https://images.amplenote.com/0bbee202-0327-11e9-b258-7a639e48bef6/3dbb2789-129a-491c-b6cb-f01414ed4a81.mp4)[^html9], text[^html10] , a [link](https://www.amplenote.com/blog) plus [a "
+              }
+            ]
+          },
+          {
+            "text": "Rich Footnotes can include a variety of content types, including images, videos, text, links, and more.",
+            "interpretation": false,
+            "supports": [
+              {
+                "evidence_id": "help:dea8e449cb48c3b1127e7264:section:1:0",
+                "quote": "As you can see by clicking any of these list items, Rich Footnotes can imbue plain text (and by extension, text in Amplenote tasks and calendar events) with all sorts of extra meaning:"
+              },
+              {
+                "evidence_id": "help:dea8e449cb48c3b1127e7264:section:1:0",
+                "quote": "- [🖼️  Image](https://images.amplenote.com/0bbee202-0327-11e9-b258-7a639e48bef6/4363d48b-4c60-41c4-ac01-0b3a8816de8a.png)[^html2]"
+              },
+              {
+                "evidence_id": "help:dea8e449cb48c3b1127e7264:section:1:0",
+                "quote": "- [📽️  Mp4 video](https://images.amplenote.com/0bbee202-0327-11e9-b258-7a639e48bef6/3dbb2789-129a-491c-b6cb-f01414ed4a81.mp4)[^html3]"
+              },
+              {
+                "evidence_id": "help:dea8e449cb48c3b1127e7264:section:1:0",
+                "quote": "- 🔡  Text[^html4]"
               }
             ]
           }
@@ -800,7 +2042,19 @@
             "site": "amplenote",
             "quote": "- [Image](https://images.amplenote.com/0bbee202-0327-11e9-b258-7a639e48bef6/4363d48b-4c60-41c4-ac01-0b3a8816de8a.png)[^html2]",
             "version": "9625c90b8d8abdada62a1c8ba8bc2427a369094c5192637bbc58638adf027985",
-            "screenshot_url": null,
+            "screenshot_url": "https://images.amplenote.com/0bbee202-0327-11e9-b258-7a639e48bef6/3c8cbba8-4897-4c0f-9723-46fbf95446e8.png",
+            "screenshot_caption": "From the help guide: How can I add images, text, and other details to a task?",
+            "availability_label": null
+          },
+          {
+            "id": "help:dea8e449cb48c3b1127e7264:section:1:0",
+            "title": "rich footnotes content preview",
+            "url": "https://www.amplenote.com/help/rich_footnotes_content_preview",
+            "site": "amplenote",
+            "quote": "- [🖼️  Image](https://images.amplenote.com/0bbee202-0327-11e9-b258-7a639e48bef6/4363d48b-4c60-41c4-ac01-0b3a8816de8a.png)[^html2]",
+            "version": "ce3efc8a4f87cdb2edde85ec9b2b8363cbe32a6320e16990c7c3c20e27b4ed08",
+            "screenshot_url": "https://images.amplenote.com/0bbee202-0327-11e9-b258-7a639e48bef6/4363d48b-4c60-41c4-ac01-0b3a8816de8a.png",
+            "screenshot_caption": "From the help guide: What Goes In Rich Footnotes?",
             "availability_label": null
           }
         ],
@@ -847,12 +2101,12 @@
             "version": "cfcc9527b65df9787bf2546c6ce876f19fc87b3c4af54a8fe5d638c8fc7be7e7"
           }
         ],
-        "interaction_id": "b26138f6ec9a4f2eae012802dbef02dc"
+        "interaction_id": "b29e749b4c504104865d5b68d7d860e9"
       }
     },
     {
       "question": "Does Amplenote support filtering search results by note author?",
-      "seconds": 2.25,
+      "seconds": 1.47,
       "response": {
         "kind": "feature",
         "message": "The help articles didn't answer this directly. Here is what NoteApps records about Amplenote; this confirms feature status, not instructions for using it.",
@@ -877,6 +2131,7 @@
             "quote": "Feature is available publicly.",
             "version": "61d752504c34deb995a19e6d1199b3cda738de76e01e9badbeadcb8256818203",
             "screenshot_url": "https://da6jagld7tjfl.cloudfront.net/cnrsinvv1y43bvsgkz7i5eq9qbde",
+            "screenshot_caption": "Recorded feature screenshot: Amplenote — Full text search => Filter on author",
             "availability_label": "Available publicly."
           }
         ],
@@ -923,12 +2178,12 @@
             "version": "83369187f4b899436f542125347a443b998d570c2fcb78fcc098be80f042ed89"
           }
         ],
-        "interaction_id": "d6672c464d8c49209ef6bf514d64b5b3"
+        "interaction_id": "ca1a6b93a51b4e3e95e843209d0186e2"
       }
     },
     {
       "question": "Does Amplenote support handwriting recognition?",
-      "seconds": 7.86,
+      "seconds": 5.36,
       "response": {
         "kind": "feature",
         "message": "The help articles didn't answer this directly. Here is what NoteApps records about Amplenote; this confirms feature status, not instructions for using it.",
@@ -953,6 +2208,7 @@
             "quote": "Feature is available publicly.",
             "version": "90b5b4dc3ca49edcbb80cfadc936e1b46cb2e47537f674e15528c6ca43a661c2",
             "screenshot_url": "https://da6jagld7tjfl.cloudfront.net/jkwzv5g5hz7ds77i4pi96oks8m8u",
+            "screenshot_caption": "Recorded feature screenshot: Amplenote — Drawing/Handwriting => Handwriting to text",
             "availability_label": "Available publicly."
           }
         ],
@@ -991,15 +2247,15 @@
             "version": "678d05371cfb49b58a526e9c7713cc9fe5c0ca4e37fcfcddafc214043ca26988"
           },
           {
-            "document_id": "help:6ffc41b30af37dde805d217a",
-            "title": "Peek Viewer: Sidebar for multi-note viewing",
-            "url": "https://www.amplenote.com/help/peek_viewer_sidebar_note_view",
-            "snippet": "For desktop users with a Pro subscription or above, Amplenote offers a feature called \"Peek Viewer\" that allows opening an unlimited number of notes in the right sidebar. When writing a note that references other notes, Peek Viewer comes to the rescue: open_in_new",
-            "evidence_id": "help:6ffc41b30af37dde805d217a:section:0:0",
-            "version": "b7c25aa77be3d040e7b50adfeef9ccbb3ea2d7e2f0641f6892bdbb8730f9c1e5"
+            "document_id": "help:be78faa19feba211b209573a",
+            "title": "Images & Videos: Mastering the medium, plus suggested use cases",
+            "url": "https://www.amplenote.com/help/using_videos",
+            "snippet": "# Images & Videos: Mastering the medium, plus suggested use cases",
+            "evidence_id": "help:be78faa19feba211b209573a:section:0:0",
+            "version": "d8b4cb62718af6a2f450a49b654b68c867185d57449fc37384fee5b849a7509f"
           }
         ],
-        "interaction_id": "054732dff8424737add430847a38b436"
+        "interaction_id": "dec1bc91a0534f5cb9e0b94eb0a84a4e"
       }
     }
   ],
@@ -1023,6 +2279,96 @@
   ],
   "screenshots": [
     {
+      "url": "https://images.amplenote.com/f8609366-38db-11f1-835b-e59b1941e7c9/5daefbae-77d6-4cbe-88bd-805fc462495b.png",
+      "status": 200,
+      "content_type": "image/png",
+      "verified_format": "png"
+    },
+    {
+      "url": "https://images.amplenote.com/f8609366-38db-11f1-835b-e59b1941e7c9/4a3bfb29-1822-4d9a-a7aa-9c3d38cb2571.png",
+      "status": 200,
+      "content_type": "image/png",
+      "verified_format": "png"
+    },
+    {
+      "url": "https://images.amplenote.com/f8609366-38db-11f1-835b-e59b1941e7c9/8724488f-9e7f-44a8-8d68-88202ff5e2fe.png",
+      "status": 200,
+      "content_type": "image/png",
+      "verified_format": "png"
+    },
+    {
+      "url": "https://images.amplenote.com/c97d12ae-eef4-11ea-9941-3294fb3dabbf/62af9073-3f3c-4ddd-bbc3-2e96c8ca092a.png",
+      "status": 200,
+      "content_type": "image/png",
+      "verified_format": "png"
+    },
+    {
+      "url": "https://images.amplenote.com/c97d12ae-eef4-11ea-9941-3294fb3dabbf/9797ea74-9ba3-4710-a0cd-2399df50160a.png",
+      "status": 200,
+      "content_type": "image/png",
+      "verified_format": "png"
+    },
+    {
+      "url": "https://images.amplenote.com/7dfc48a8-78f8-11ea-9709-4a9bae68938e/a3a82505-6980-4afe-8b02-df02628a9cf0.png",
+      "status": 200,
+      "content_type": "image/png",
+      "verified_format": "png"
+    },
+    {
+      "url": "https://images.amplenote.com/ef8c307c-f9ca-11ed-9bd0-aa1e76b1d5f5/f5bddc12-9bd3-46c1-a7e6-001430b65092.png",
+      "status": 200,
+      "content_type": "image/png",
+      "verified_format": "png"
+    },
+    {
+      "url": "https://images.amplenote.com/e0b7ce82-60eb-11eb-bad5-2a844617cbef/84c1dd59-e96f-486c-8cbc-63519dfbe939.png",
+      "status": 200,
+      "content_type": "image/png",
+      "verified_format": "png"
+    },
+    {
+      "url": "https://images.amplenote.com/c5a402ac-90e1-11eb-bbea-1e34e7aa6740/08977df3-5218-4a93-a2f0-810479cb7cd2.png",
+      "status": 200,
+      "content_type": "image/png",
+      "verified_format": "png"
+    },
+    {
+      "url": "https://images.amplenote.com/e0b7ce82-60eb-11eb-bad5-2a844617cbef/31195eb5-0581-48a2-85ab-71639eaa1784.png",
+      "status": 200,
+      "content_type": "image/png",
+      "verified_format": "png"
+    },
+    {
+      "url": "https://images.amplenote.com/c5a402ac-90e1-11eb-bbea-1e34e7aa6740/740cbb57-dfda-4058-ba87-341fa3584199.png",
+      "status": 200,
+      "content_type": "image/png",
+      "verified_format": "png"
+    },
+    {
+      "url": "https://images.amplenote.com/c5a402ac-90e1-11eb-bbea-1e34e7aa6740/6c9b065a-e759-41c0-b88d-4d8870f7ed96.png",
+      "status": 200,
+      "content_type": "image/png",
+      "verified_format": "png"
+    },
+    {
+      "url": "https://images.amplenote.com/0bbee202-0327-11e9-b258-7a639e48bef6/4363d48b-4c60-41c4-ac01-0b3a8816de8a.png",
+      "status": 200,
+      "content_type": "image/png",
+      "verified_format": "png"
+    },
+    {
+      "url": "https://images.amplenote.com/e10026fa-9e4b-11ee-a0ca-cac1ebefa4fe/7c674626-7fe0-43fa-aaf1-bcc1b29efbc7.gif",
+      "status": 200,
+      "content_type": "image/gif",
+      "verified_format": "gif"
+    },
+    {
+      "url": "https://images.amplenote.com/0bbee202-0327-11e9-b258-7a639e48bef6/3c8cbba8-4897-4c0f-9723-46fbf95446e8.png",
+      "status": 200,
+      "content_type": "image/png",
+      "verified_format": "png"
+    },
+    {
       "url": "https://da6jagld7tjfl.cloudfront.net/cnrsinvv1y43bvsgkz7i5eq9qbde",
       "status": 200,
       "content_type": "image/png",
@@ -1036,7 +2382,7 @@
     }
   ],
   "feedback": {
-    "interaction_id": "98060bd8d974407dad5712159a0b58cd",
+    "interaction_id": "52f8cc47f52c4014b004522e38239cc8",
     "valid_vote_status": 200,
     "invalid_token_status": 404
   }

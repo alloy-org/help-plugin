@@ -114,3 +114,20 @@ HELP_API_URL=https://example.com/help npm run build
 ```
 
 Only HTTPS endpoints, or HTTP on localhost for development, are accepted at build time.
+
+## Fuller answers and current AI guides
+
+Suggested topics share one horizontally scrollable row so they leave room for the composer.
+For general AI questions, the maintained topic entry point is Ample Agent Pro. The retriever
+loads relevant sections from that guide and retains the MCP and AmpleAI guides as alternatives.
+Explicit questions about a named tool keep their own retrieval priority. This routing is an
+editorial preference; every returned factual claim still requires indexed source evidence.
+Broad requests can use five articles and up to eight verified points, with larger generation
+and verification budgets. Focused questions still follow the requested workflow. Follow-up
+history keeps a short excerpt of every returned point so later options are not lost.
+
+When a cited help section (or its own rich footnote) includes a suitable image, up to two
+distinct screenshots appear inline with captions and links to the originating help page.
+Only stored image URLs on Amplenote's image host or the NoteApps screenshot CDN are accepted.
+Unavailable images disappear while source links remain available. These are source illustrations,
+not a view of the user's private account.

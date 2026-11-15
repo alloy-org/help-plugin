@@ -6,6 +6,8 @@ const base = process.env.HELP_API_URL || "https://amplenote.noteapps.info/help";
 const report = { tested_at: new Date().toISOString(), endpoint: base, cases: [], boundary: [], screenshots: [] };
 const first = "How do Rich Footnotes work?";
 const cases = [
+  { question: "How do I have AI write a note for me?", kind: "help", agentPro: true, helpScreenshot: true },
+  { question: "What AI features are available in Amplenote?", kind: "help", agentPro: true, broadAI: true },
   { question: "How do I insert a task from an email", kind: "help", mailToNote: true },
   { question: "How do I forward an email into my Amplenote task list?", kind: "help", mailToNote: true },
   { question: "How can I turn a Gmail message into an Amplenote task?", kind: "help", mailToNote: true },
@@ -38,6 +40,18 @@ for (const item of cases) {
     assert.ok(answer.articles.slice(0, 3).some(article => article.url.endsWith("/mail-to-note")), "Mail-to-Note appears among the first three recommendations");
     assert.match(answer.claims.map(claim => claim.text).join(" "), /mail-to-note|forward|email address/i);
     assert.ok(answer.sources.every(source => !source.url.endsWith("/task_digest_emails")), "Incoming email capture must not cite an outgoing task digest");
+  }
+  if (item.agentPro) {
+    assert.match(answer.claims.map(claim=>claim.text).join(" "), /agent pro/i);
+    assert.ok(answer.sources.some(source=>source.url.endsWith("/ample_agent_pro_quick_start_usage")), "AI answer cites the current Agent Pro guide");
+    assert.ok(answer.articles[0].url.endsWith("/ample_agent_pro_quick_start_usage"), "Current primary guide leads recommendations");
+  }
+  if (item.broadAI) {
+    assert.ok(answer.claims.length >= 4, "A broad overview should cover multiple substantive points");
+    assert.ok(new Set(answer.sources.map(source=>source.url)).size >= 2, "Overview covers documented alternatives");
+  }
+  if (item.helpScreenshot) {
+    assert.ok(answer.sources.some(source=>source.screenshot_url?.startsWith("https://images.amplenote.com/") && source.screenshot_caption), "Relevant help screenshot includes a caption and a source-page record");
   }
   const sources = new Map(answer.sources.map(source => [source.id, source]));
   for (const claim of answer.claims) {
