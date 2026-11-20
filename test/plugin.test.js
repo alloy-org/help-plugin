@@ -19,6 +19,16 @@ test("compiled artifact evaluates to a plugin and opens a prompt embed without r
   assert.match(plugin.renderEmbed.run(), /id="question-form"/);
 });
 
+test("sidebar option shows a help icon and opens the same prompt embed", async () => {
+  const plugin = loadPlugin();
+  const option = plugin.sidebarOption["Ask a question"];
+  assert.deepEqual({ ...option.check() }, { icon: "contact_support" });
+  let invocation;
+  await option.run({ prompt: async (...args) => { invocation = args; } });
+  assert.equal(invocation[1].inputs[0].type, "embed");
+  assert.equal(invocation[1].desiredWidth, 900);
+});
+
 test("prompt retries without desiredWidth on clients that reject the key", async () => {
   const plugin = loadPlugin();
   const calls = [];

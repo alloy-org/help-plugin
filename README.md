@@ -25,6 +25,8 @@ npm run build
    [plugin development guide](https://www.amplenote.com/help/developing_amplenote_plugins).
 4. In a note, type `/help` and choose the **Help** plugin action. It is also available through
    Quick Open. The action opens an `app.prompt` containing the chat embed.
+   Clients that support sidebar options also show an **Ask a question** button in the web sidebar
+   and an option in the mobile account menu, which opens the same prompt.
 5. Ask a question, ask a follow-up, and expand a source card to inspect its quotation or screenshot.
 6. Choose **Expand chat** in the prompt footer to open the full-width plugin view. This starts a new chat.
 
@@ -51,7 +53,7 @@ storage. The Help action does not insert an answer into your current note.
 
 | File | Responsibility |
 | --- | --- |
-| `lib/plugin.js` | Help action, prompt embed, bounded HTTP bridge |
+| `lib/plugin.js` | Help action and sidebar option, prompt embed, bounded HTTP bridge |
 | `lib/render-embed.js` | Self-contained HTML document |
 | `lib/chat-client.js` | Chat, citations, source cards, screenshots, follow-ups, retries |
 | `lib/chat.css` | Responsive light/dark layout |
