@@ -231,6 +231,21 @@ test("Expand opens the full-width plugin section and prompt height follows the b
     dom.window.dispatchEvent(new dom.window.Event("resize"));
     assert.equal(heights.at(-1), 220);
   } finally {dom.window.close();}
+  // Mobile app WebView: outerHeight is the embed's own height, so it sizes from the screen and doesn't shrink itself
+  const appHeights = [];
+  const appDom = new JSDOM(plugin.renderEmbed.run(), {runScripts: "dangerously", beforeParse(window) {
+    window.innerHeight = window.outerHeight = 800;
+    Object.defineProperty(window.screen, "availHeight", {value: 1194});
+    window.setAmplenoteEmbedHeight = height => {
+      appHeights.push(height);
+      window.innerHeight = window.outerHeight = height;
+    };
+  }});
+  try {
+    assert.equal(appHeights[0], 520);
+    appDom.window.dispatchEvent(new appDom.window.Event("resize"));
+    assert.equal(appHeights.at(-1), 520);
+  } finally {appDom.window.close();}
   assert.match(plugin.renderEmbed.run({context: {renderEmbedTarget: "section"}}), /data-view="full"/);
 });
 
